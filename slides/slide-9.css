@@ -1,0 +1,219 @@
+/* =========================================================================
+   SLIDE 09 — CREDIT FEATURES
+   ========================================================================= */
+
+.s9-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.s9-feature-card {
+  background: linear-gradient(
+    145deg,
+    rgba(25, 34, 43, 0.88) 0%,
+    rgba(17, 24, 31, 0.92) 100%
+  );
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: start;
+  transform-origin: top center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* نوار رنگی بالای کارت */
+.s9-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--s9-accent, var(--persian-green));
+  transition: height 0.25s ease;
+}
+
+.s9-feature-card:hover {
+  transform: none !important;
+  z-index: 10;
+}
+
+.s9-feature-card:hover::before {
+  height: 5px;
+}
+
+/* رنگ‌های اختصاصی هر کارت */
+.s9-card-green {
+  --s9-accent: var(--persian-green);
+}
+.s9-card-green:hover {
+  border-color: var(--persian-green);
+  box-shadow: 0 20px 44px rgba(0, 212, 180, 0.18);
+}
+
+.s9-card-orange {
+  --s9-accent: var(--persian-orange);
+}
+.s9-card-orange:hover {
+  border-color: var(--persian-orange);
+  box-shadow: 0 20px 44px rgba(255, 119, 34, 0.18);
+}
+
+.s9-card-sky {
+  --s9-accent: var(--sky-blue);
+}
+.s9-card-sky:hover {
+  border-color: var(--sky-blue);
+  box-shadow: 0 20px 44px rgba(0, 147, 221, 0.18);
+}
+
+.s9-card-pastel {
+  --s9-accent: var(--pastel-green, #3dd598);
+}
+.s9-card-pastel:hover {
+  border-color: var(--pastel-green, #3dd598);
+  box-shadow: 0 20px 44px rgba(61, 213, 152, 0.18);
+}
+
+.s9-card-yellow {
+  --s9-accent: var(--supernova, #ffdb04);
+}
+.s9-card-yellow:hover {
+  border-color: var(--supernova, #ffdb04);
+  box-shadow: 0 20px 44px rgba(255, 219, 4, 0.18);
+}
+
+.s9-card-purple {
+  --s9-accent: #a78bfa;
+}
+.s9-card-purple:hover {
+  border-color: #a78bfa;
+  box-shadow: 0 20px 44px rgba(167, 139, 250, 0.18);
+}
+
+/* آیکون (ایموجی) */
+.s9-icon {
+  font-size: clamp(28px, 2.5vw, 36px);
+  line-height: 1;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.25s ease;
+}
+
+.s9-feature-card:hover .s9-icon {
+  transform: scale(1.05);
+}
+
+/* عنوان */
+.s9-title {
+  font-size: clamp(18px, 1.2vw, 20px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+/* متن: در حالت عادی مخفی */
+.s9-text {
+  font-size: clamp(12.5px, 0.95vw, 14px);
+  line-height: 1.75;
+  color: #cbd5e1;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin 0.35s ease !important;
+}
+
+.s9-feature-card:hover .s9-text,
+.s9-feature-card:focus-within .s9-text {
+  max-height: 300px !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  margin-top: 8px !important;
+  transform: translateY(0);
+}
+
+.s9-text strong {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* =========================================================================
+   SLIDE 09 — RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 1280px) {
+  .s9-features-grid {
+    gap: 14px;
+  }
+  .s9-feature-card {
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .s9-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .s9-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .s9-feature-card {
+    padding: 16px 18px;
+    gap: 8px;
+  }
+  .s9-title {
+    font-size: 14.5px;
+  }
+  .s9-text {
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+  .s9-icon {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .s9-features-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .s9-feature-card {
+    padding: 14px 16px;
+    border-radius: 16px;
+  }
+  .s9-icon {
+    font-size: 28px;
+    margin-bottom: 2px;
+  }
+  .s9-title {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .s9-text {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}

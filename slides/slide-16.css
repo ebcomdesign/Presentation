@@ -1,0 +1,344 @@
+/* =========================================================================
+   SLIDE 16 — WELFARE CATEGORIES
+   ========================================================================= */
+
+/* نوار دسته‌بندی‌ها */
+.s16-categories-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* پیل‌های دسته */
+.s16-categories-strip .welfare-cat-pill {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: clamp(12px, 0.95vw, 14px);
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.s16-categories-strip .welfare-cat-pill.wcat-active {
+  background: var(--persian-green);
+  color: #0b0f13;
+  border: 1.5px solid var(--persian-green);
+  font-weight: 900;
+  box-shadow: 0 4px 16px var(--persian-green-glow);
+}
+
+.s16-categories-strip
+  .welfare-cat-pill:not(.wcat-active):not(.wcat-orange):not(.wcat-muted) {
+  background: rgba(0, 212, 180, 0.14);
+  border: 1.5px solid var(--border-green);
+  color: #ffffff;
+}
+
+.s16-categories-strip .welfare-cat-pill.wcat-orange {
+  background: rgba(255, 119, 34, 0.16);
+  border: 1.5px solid rgba(255, 119, 34, 0.45);
+  color: var(--persian-orange);
+}
+
+.s16-categories-strip .welfare-cat-pill.wcat-muted {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid var(--border-glass);
+  color: #cbd5e1;
+}
+
+.s16-categories-strip .welfare-cat-pill:hover {
+  transform: translateY(-2px);
+}
+
+/* گرید ۳ کارت */
+.s16-showcases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  margin-top: 8px;
+}
+
+/* کارت رفاهی */
+.s16-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 22px;
+  border-radius: 20px;
+  align-self: start;
+  transform-origin: top center;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.s16-card:hover {
+  transform: none !important;
+  z-index: 10;
+}
+
+/* نوار رنگی بالای کارت‌ها */
+.s16-card-green {
+  border-top: 4px solid var(--persian-green) !important;
+}
+.s16-card-green:hover {
+  border-top: 5px solid var(--persian-green) !important;
+  border-color: var(--persian-green) !important;
+  box-shadow: 0 20px 48px rgba(0, 212, 180, 0.35) !important;
+}
+
+.s16-card-orange {
+  border-top: 4px solid var(--persian-orange) !important;
+}
+.s16-card-orange:hover {
+  border-top: 5px solid var(--persian-orange) !important;
+  border-color: var(--persian-orange) !important;
+  box-shadow: 0 20px 48px rgba(255, 119, 34, 0.35) !important;
+}
+
+.s16-card-sky {
+  border-top: 4px solid var(--sky-blue) !important;
+}
+.s16-card-sky:hover {
+  border-top: 5px solid var(--sky-blue) !important;
+  border-color: var(--sky-blue) !important;
+  box-shadow: 0 20px 48px rgba(0, 147, 221, 0.35) !important;
+}
+
+/* badge بالای کارت */
+.s16-card-badge {
+  align-self: flex-start;
+  font-size: clamp(10.5px, 0.8vw, 12px);
+  padding: 4px 12px;
+  margin: 0;
+}
+
+/* عنوان کارت */
+.s16-card-title {
+  font-size: clamp(16px, 1.25vw, 19px);
+  font-weight: 900;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* متن کارت (مخفی در حالت عادی) */
+.s16-card-text {
+  font-size: clamp(12px, 0.9vw, 13.5px);
+  line-height: 1.75;
+  color: #cbd5e1;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin 0.35s ease !important;
+  display: block !important;
+}
+
+/* ردیف برندها (مخفی در حالت عادی) */
+.s16-brands-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin 0.35s ease !important;
+}
+
+/* نمایش متن و برندها هنگام هاور کارت */
+.s16-card:hover .s16-card-text,
+.s16-card:focus-within .s16-card-text {
+  max-height: 200px !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  margin-top: 8px !important;
+  transform: translateY(0);
+}
+
+.s16-card:hover .s16-brands-row,
+.s16-card:focus-within .s16-brands-row {
+  max-height: 250px !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  margin-top: 10px !important;
+  padding-top: 4px !important;
+  transform: translateY(0);
+}
+
+/* پیل برند */
+.s16-brands-row .co-pill.brand-logo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px !important;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  font-size: clamp(11px, 0.85vw, 12.5px);
+  font-weight: 400;
+  color: #ffffff;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.s16-brands-row .co-pill.brand-logo-pill:hover {
+  background: rgba(0, 212, 180, 0.1);
+  border-color: rgba(0, 212, 180, 0.4);
+}
+
+/* لوگوی برند */
+.s16-brands-row .pill-brand-logo {
+  width: clamp(18px, 1.4vw, 22px);
+  height: clamp(18px, 1.4vw, 22px);
+  border-radius: 5px;
+  padding: 1px;
+  background: #ffffff;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* placeholder برند */
+.s16-brands-row .pill-brand-placeholder {
+  width: clamp(18px, 1.4vw, 22px);
+  height: clamp(18px, 1.4vw, 22px);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 212, 180, 0.2);
+  color: var(--persian-green);
+  font-size: clamp(10px, 0.75vw, 11px);
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* =========================================================================
+   SLIDE 16 — RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 1280px) {
+  .s16-showcases-grid {
+    gap: 14px;
+  }
+  .s16-card {
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .s16-showcases-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  /* کارت سوم تمام عرض */
+  .s16-card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .s16-categories-strip {
+    gap: 8px;
+  }
+  .s16-categories-strip .welfare-cat-pill {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+  .s16-showcases-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .s16-card:nth-child(3) {
+    grid-column: auto;
+  }
+  .s16-card {
+    padding: 16px 18px;
+    gap: 10px;
+  }
+  .s16-card-title {
+    font-size: 16px;
+  }
+  .s16-card-text {
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .s16-categories-strip {
+    gap: 6px;
+  }
+  .s16-categories-strip .welfare-cat-pill {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+  .s16-card {
+    padding: 14px 16px;
+    border-radius: 16px;
+    gap: 8px;
+  }
+  .s16-card-badge {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+  .s16-card-title {
+    font-size: 15px;
+    line-height: 1.35;
+  }
+  .s16-card-text {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+  .s16-brands-row {
+    gap: 6px;
+  }
+  .s16-brands-row .co-pill.brand-logo-pill {
+    padding: 4px 8px !important;
+    font-size: 11px;
+  }
+  .s16-brands-row .pill-brand-logo,
+  .s16-brands-row .pill-brand-placeholder {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .s16-categories-strip .welfare-cat-pill {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  .s16-card-title {
+    font-size: 14px;
+  }
+  .s16-card-text {
+    font-size: 11.5px;
+  }
+  .s16-brands-row .co-pill.brand-logo-pill {
+    font-size: 10.5px;
+  }
+}

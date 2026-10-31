@@ -1,0 +1,323 @@
+/* =========================================================================
+   SLIDE 12 — JOURNEY STEP 2 (Shopping & Usage)
+   ========================================================================= */
+
+/* پنل اصلی — مشابه اسلاید ۱۱ */
+.s12-panel {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.s12-main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 22px 24px;
+  border-right-width: 5px !important;
+  border-right-style: solid;
+  height: 100%;
+}
+
+/* رنگ نوار سمت راست کارت اصلی */
+.s12-main-card-sky {
+  border-right: 5px solid var(--sky-blue);
+}
+
+.s12-main-card-sky:hover {
+  border-right: 5px solid var(--sky-blue) !important;
+  border-color: var(--sky-blue) !important;
+  box-shadow: 0 20px 48px rgba(0, 147, 221, 0.35) !important;
+  z-index: 10;
+}
+
+.s12-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.s12-step-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  background: var(--sky-blue);
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: clamp(11px, 0.9vw, 13px);
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 147, 221, 0.35);
+}
+
+.s12-step-hint {
+  font-size: clamp(12px, 0.95vw, 14px);
+  color: var(--sky-blue);
+  font-weight: 900;
+}
+
+.s12-main-title {
+  font-size: clamp(20px, 1.9vw, 30px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+/* متن اصلی کارت: در حالت عادی مخفی */
+.s12-main-text {
+  font-size: clamp(13px, 1.05vw, 15.5px);
+  line-height: 1.85;
+  color: #cbd5e1;
+  text-align: justify;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin 0.35s ease !important;
+  display: block !important;
+}
+
+/* نمایش متن اصلی کارت در هاور */
+.s12-main-card:hover .s12-main-text,
+.s12-main-card:focus-within .s12-main-text {
+  max-height: 300px !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  margin-top: 10px !important;
+  transform: translateY(0);
+}
+
+.s12-main-text strong {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+/* ---------- ۲ باکس نکته ---------- */
+.s12-tips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.s12-tip-box {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  padding: 12px 14px;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.s12-tip-sky {
+  border: 1px solid rgba(0, 147, 221, 0.4);
+}
+
+.s12-tip-sky:hover {
+  background: rgba(0, 147, 221, 0.08);
+  border-color: var(--sky-blue);
+  box-shadow: 0 6px 20px rgba(0, 147, 221, 0.15);
+}
+
+.s12-tip-green {
+  border: 1px solid var(--border-green);
+}
+
+.s12-tip-green:hover {
+  background: rgba(0, 212, 180, 0.08);
+  border-color: var(--persian-green);
+  box-shadow: 0 6px 20px rgba(0, 212, 180, 0.15);
+}
+
+.s12-tip-title {
+  font-size: clamp(12px, 0.95vw, 14px);
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.s12-tip-sky .s12-tip-title {
+  color: var(--sky-blue);
+}
+.s12-tip-green .s12-tip-title {
+  color: var(--persian-green);
+}
+
+/* متن زیرنویس نکات: در حالت عادی مخفی */
+.s12-tip-sub {
+  font-size: clamp(10.5px, 0.8vw, 12px);
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-weight: 700;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translateY(-4px);
+  transition:
+    max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease,
+    transform 0.35s ease,
+    margin 0.3s ease !important;
+}
+
+/* نمایش متن زیرنویس در هاور */
+.s12-tip-box:hover .s12-tip-sub,
+.s12-tip-box:focus-within .s12-tip-sub {
+  max-height: 150px !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  margin-top: 6px !important;
+  transform: translateY(0);
+}
+
+/* ---------- ستون ویژوال ---------- */
+.s12-visual-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.s12-visual-sky {
+  border-color: rgba(0, 147, 221, 0.5) !important;
+}
+
+.s12-visual-svg {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.s12-visual-title {
+  font-size: clamp(13px, 1.05vw, 15.5px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.s12-visual-sub {
+  font-size: clamp(10.5px, 0.85vw, 12.5px);
+  color: var(--sky-blue);
+  line-height: 1.55;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* =========================================================================
+   SLIDE 12 — RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 1100px) {
+  .s12-panel {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .s12-visual-box {
+    min-height: 280px;
+    height: auto;
+  }
+  .s12-visual-svg {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .s12-main-card {
+    padding: 18px 20px;
+    gap: 12px;
+  }
+  .s12-main-title {
+    font-size: 19px;
+  }
+  .s12-main-text {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .s12-tips-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .s12-tip-box {
+    padding: 10px 12px;
+  }
+  .s12-tip-title {
+    font-size: 12.5px;
+  }
+  .s12-tip-sub {
+    font-size: 11px;
+  }
+  .s12-visual-box {
+    min-height: 240px;
+    padding: 18px 16px !important;
+  }
+  .s12-visual-svg {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .s12-main-card {
+    padding: 16px 16px;
+    gap: 10px;
+    border-right-width: 4px !important;
+  }
+  .s12-step-badge {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+  .s12-step-hint {
+    font-size: 11.5px;
+  }
+  .s12-main-title {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .s12-main-text {
+    font-size: 12.5px;
+    line-height: 1.75;
+  }
+  .s12-tip-box {
+    padding: 9px 11px;
+    border-radius: 12px;
+  }
+  .s12-tip-title {
+    font-size: 12px;
+  }
+  .s12-tip-sub {
+    font-size: 10.5px;
+  }
+  .s12-visual-box {
+    min-height: 220px;
+    padding: 16px 12px !important;
+    gap: 10px;
+  }
+  .s12-visual-svg {
+    max-width: 160px;
+  }
+  .s12-visual-title {
+    font-size: 12.5px;
+  }
+  .s12-visual-sub {
+    font-size: 10.5px;
+  }
+}

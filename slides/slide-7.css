@@ -1,0 +1,376 @@
+/* =========================================================================
+   SLIDE 07 — EBCOM & WELFARE
+   ========================================================================= */
+
+/* گرید اصلی — دو ستون هم‌ارتفاع */
+.slide7-aligned-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 22px;
+  align-items: stretch !important;
+}
+
+/* ---------- ستون راست: EBCOM ---------- */
+.slide7-right-box {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: flex-start;
+}
+
+.s7-main-title {
+  font-size: clamp(17px, 1.45vw, 22px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+.s7-main-text {
+  font-size: clamp(13px, 1vw, 14.5px);
+  line-height: 1.85;
+  color: #cbd5e1;
+  text-align: justify;
+  margin: 0;
+}
+
+/* ---------- نمودار Flow ---------- */
+.s7-flow {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 20px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  flex-wrap: nowrap;
+}
+
+.s7-flow-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.s7-node {
+  min-width: 62px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: clamp(12px, 0.95vw, 14px);
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.s7-node-muted {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 8px;
+}
+
+.s7-node-green {
+  background: var(--persian-green);
+  color: #0b0f13;
+  box-shadow: 0 6px 18px var(--persian-green-glow);
+}
+
+.s7-node-label {
+  font-size: clamp(10px, 0.75vw, 11.5px);
+  color: var(--text-muted);
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.s7-node-label-green {
+  color: var(--persian-green);
+  font-weight: 900;
+}
+
+/* خطوط بین نودها */
+.s7-flow-line {
+  flex: 1;
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s7-flow-line svg {
+  width: 100%;
+  height: 24px;
+  display: block;
+  overflow: visible;
+}
+
+/* ---------- ستون چپ: کارت‌های ویژگی ---------- */
+.slide7-left-stack {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.slide7-left-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: 100% !important;
+  gap: 12px !important;
+  align-self: start !important;
+  transform-origin: top center !important;
+  transition:
+    transform 0.25s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.slide7-left-item:hover {
+  transform: none !important;
+  z-index: 10;
+}
+
+.s7-item-num {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.slide7-left-item:hover .s7-item-num {
+  transform: scale(1.08);
+}
+
+.s7-num-green {
+  background: rgba(0, 212, 180, 0.14);
+  color: var(--persian-green);
+  border: 1px solid rgba(0, 212, 180, 0.3);
+}
+.s7-num-orange {
+  background: rgba(255, 119, 34, 0.14);
+  color: var(--persian-orange);
+  border: 1px solid rgba(255, 119, 34, 0.3);
+}
+.s7-num-sky {
+  background: rgba(0, 147, 221, 0.14);
+  color: var(--sky-blue);
+  border: 1px solid rgba(0, 147, 221, 0.3);
+}
+.s7-num-purple {
+  background: rgba(167, 139, 250, 0.14);
+  color: #a78bfa;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+.s7-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.s7-item-title {
+  font-size: clamp(13.5px, 1.05vw, 15.5px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* متن توضیحات آیتم‌ها: در حالت عادی مخفی */
+.s7-item-text {
+  font-size: clamp(11.5px, 0.88vw, 13px);
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin 0.35s ease !important;
+}
+
+/* نمایش متن هنگام هاور شدن کارت */
+.slide7-left-item:hover .s7-item-text,
+.slide7-left-item:focus-within .s7-item-text {
+  max-height: 200px !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  margin-top: 6px !important;
+  transform: translateY(0);
+}
+
+/* پرسنالایز رنگ هاور ۴ کارت مطابق شماره کارت */
+.slide7-left-item:has(.s7-num-green):hover,
+.slide7-left-stack .slide7-left-item:nth-child(1):hover {
+  border-color: var(--persian-green) !important;
+  box-shadow: 0 18px 42px rgba(0, 212, 180, 0.35) !important;
+}
+.slide7-left-item:has(.s7-num-orange):hover,
+.slide7-left-stack .slide7-left-item:nth-child(2):hover {
+  border-color: var(--persian-orange) !important;
+  box-shadow: 0 18px 42px rgba(255, 119, 34, 0.35) !important;
+}
+.slide7-left-item:has(.s7-num-sky):hover,
+.slide7-left-stack .slide7-left-item:nth-child(3):hover {
+  border-color: var(--sky-blue) !important;
+  box-shadow: 0 18px 42px rgba(0, 147, 221, 0.35) !important;
+}
+.slide7-left-item:has(.s7-num-purple):hover,
+.slide7-left-stack .slide7-left-item:nth-child(4):hover {
+  border-color: #a78bfa !important;
+  box-shadow: 0 18px 42px rgba(167, 139, 250, 0.35) !important;
+}
+
+/* =========================================================================
+   SLIDE 07 — RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 1100px) {
+  .slide7-aligned-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+  .slide7-right-box {
+    min-height: auto;
+  }
+  .slide7-left-stack {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .s7-flow {
+    padding: 12px 10px;
+    gap: 4px;
+  }
+  .s7-node {
+    min-width: 52px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .s7-node-label {
+    font-size: 10px;
+  }
+  .s7-main-title {
+    font-size: 17px;
+  }
+  .s7-main-text {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .s7-item-title {
+    font-size: 13.5px;
+  }
+  .s7-item-text {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .s7-flow {
+    flex-direction: column;
+    padding: 14px 12px;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .s7-flow-node {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .s7-flow-line {
+    width: 100%;
+    min-width: 0;
+    height: 20px;
+  }
+  .s7-flow-line svg {
+    width: 40px;
+    height: 20px;
+    margin: 0 auto;
+    transform: rotate(90deg);
+  }
+  .s7-node {
+    min-width: 80px;
+    padding: 8px 14px;
+    font-size: 12.5px;
+  }
+  .s7-node-label {
+    font-size: 11px;
+    text-align: right;
+  }
+  .slide7-left-item {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .s7-item-num {
+    width: 38px;
+    height: 38px;
+    font-size: 13.5px;
+    border-radius: 10px;
+  }
+  .s7-item-title {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .s7-item-text {
+    font-size: 11.5px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .s7-main-title {
+    font-size: 16px;
+  }
+  .s7-main-text {
+    font-size: 12.5px;
+  }
+  .s7-flow {
+    padding: 12px 10px;
+  }
+  .s7-node {
+    min-width: 70px;
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+  .s7-item-title {
+    font-size: 12.5px;
+  }
+  .s7-item-text {
+    font-size: 11px;
+  }
+  .s7-item-num {
+    width: 34px;
+    height: 34px;
+    font-size: 12.5px;
+  }
+}
