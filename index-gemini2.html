@@ -1,0 +1,3056 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      پرزنتیشن جامع راهکارهای سازمانی و اعتباری اوانو | Ewano B2B Interactive
+      Deck
+    </title>
+    <meta
+      name="description"
+      content="پرزنتیشن تعاملی راهکارهای سازمانی، اعتباری و رفاهی اوانو — با پشتوانه اکوسیستم همراه اول و EBCOM."
+    />
+    <meta name="theme-color" content="#00D4B4" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/images/logos/partners/ewano.svg"
+    />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/slide-1.css" />
+  </head>
+  <body>
+    <!-- بک گراند -->
+    <div class="ambient-canvas">
+      <div class="ambient-grid"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <!-- هدر -->
+    <header class="deck-header">
+      <div class="brand-cluster">
+        <div
+          class="header-ewano-logo"
+          onclick="goToSlide(0)"
+          title="اوانو"
+          style="cursor: pointer"
+        >
+          <img
+            src="assets/images/logos/partners/ewano.svg"
+            alt="Ewano"
+            style="
+              height: 44px;
+              width: auto;
+              border-radius: 10px;
+              display: block;
+            "
+          />
+        </div>
+        <div
+          class="header-partner-logos"
+          style="
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-right: 16px;
+            border-right: 1px solid rgba(255, 255, 255, 0.15);
+          "
+        >
+          <img
+            src="assets/images/logos/partners/ebcom.svg"
+            alt="EBCOM"
+            style="height: 28px; width: auto; display: block"
+            title="همراه کسب‌وکارهای هوشمند (EBCOM)"
+          />
+          <span
+            style="
+              display: inline-block;
+              width: 1px;
+              height: 24px;
+              background: rgba(255, 255, 255, 0.18);
+            "
+          ></span>
+          <img
+            src="assets/images/logos/partners/mci.svg"
+            alt="MCI"
+            style="height: 28px; width: auto; display: block"
+            title="همراه اول"
+          />
+        </div>
+      </div>
+      <nav class="chapter-nav" id="chapterNav">
+        <button class="chapter-btn active" onclick="goToSlide(0)">
+          ۱. اکوسیستم و اوانو
+        </button>
+        <button class="chapter-btn" onclick="goToSlide(5)">
+          ۲. دمو و ماشین‌حساب
+        </button>
+        <button class="chapter-btn" onclick="goToSlide(10)">
+          ۳. مسیر ۶ مرحله‌ای اعتبار
+        </button>
+        <button class="chapter-btn" onclick="goToSlide(15)">
+          ۴. رفاهیات و راهکار نقدی
+        </button>
+        <button class="chapter-btn" onclick="goToSlide(19)">
+          ۵. شبکه پذیرندگی و آمار
+        </button>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" onclick="toggleDrawer()">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+          <span>فهرست اسلایدها (۲۱)</span>
+        </button>
+        <button
+          class="icon-btn"
+          onclick="toggleFullScreen()"
+          title="نمایش تمام‌صفحه (کلید F)"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+          >
+            <path
+              d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+            />
+          </svg>
+          <span>تمام‌صفحه</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- کانتینر اصلی اسلایدها -->
+    <main class="stage-container" id="stageContainer">
+      <!-- SLIDE 1: HERO -->
+      <section
+        class="slide active"
+        data-chapter="0"
+        data-title="صفحه عنوان: راهکارهای سازمانی و اعتباری اوانو"
+      >
+        <div class="slide-inner">
+          <div class="hero-grid grid-2-asym">
+            <div class="hero-text-col flex-col flex-gap-20">
+              <div class="anim-up delay-1 flex flex-gap-10 flex-wrap">
+                <span class="eyebrow-badge"
+                  >ارائه حضوری راهکارهای سازمانی B2B</span
+                >
+                <span class="eyebrow-badge orange"
+                  >ویژه مدیران ارشد، منابع انسانی و مالی</span
+                >
+              </div>
+              <h1 class="slide-headline hero-headline anim-up delay-2">
+                اعتبار و خدمات رفاهی کارکنان،<br />
+                <span class="accent-green">متناسب با نیاز سازمان شما</span>
+              </h1>
+              <p class="slide-subtitle anim-up delay-3">
+                با راهکارهای سازمانی <strong>اوانو</strong> و زیرساخت مالی
+                <strong>همراه کسب‌وکارهای هوشمند (EBCOM)</strong>، مجموعه‌ای
+                یکپارچه از خدمات اعتباری، رفاهی و نقدی را در اختیار کارکنان خود
+                قرار دهید و مدیریت مزایای سازمانی را ساده، شفاف و هوشمند پیش
+                ببرید.
+              </p>
+              <div class="hero-stats grid-3 anim-up delay-4">
+                <div class="glass-card hero-stat-card border-right-green">
+                  <div class="hero-stat-value text-green">+۲۸ میلیون</div>
+                  <p class="hero-stat-label">کاربر فعال در اکوسیستم اوانو</p>
+                </div>
+                <div class="glass-card hero-stat-card border-right-orange">
+                  <div class="hero-stat-value text-orange">۹٬۴۱۵ مرچنت</div>
+                  <p class="hero-stat-label">۱۰٬۴۷۲ نقطه و شعبه پذیرندگی</p>
+                </div>
+                <div class="glass-card hero-stat-card border-right-sky">
+                  <div class="hero-stat-value text-sky">+۲۰ همت</div>
+                  <p class="hero-stat-label">
+                    حجم خرید و ۱۵ میلیون تراکنش ماهانه
+                  </p>
+                </div>
+              </div>
+              <div class="hero-cta-row anim-up delay-5">
+                <button
+                  class="nav-arrow-btn hero-btn-primary"
+                  onclick="nextSlide()"
+                >
+                  <span>شروع پرزنتیشن</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <line x1="19" y1="12" x2="5" y2="12" />
+                    <polyline points="12 19 5 12 12 5" />
+                  </svg>
+                </button>
+                <button
+                  class="nav-arrow-btn hero-btn-secondary"
+                  onclick="goToSlide(10)"
+                >
+                  <span>مشاهده مسیر ۶ مرحله‌ای اعتبار</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-cards-stage anim-up delay-3">
+              <div class="ewano-3d-card card-welfare">
+                <div class="card-top-row">
+                  <div class="card-chip"></div>
+                  <span class="text-xs font-black rounded-pill card-badge"
+                    >WELFARE BALANCE</span
+                  >
+                </div>
+                <div>
+                  <div class="card-balance-title">موجودی رفاهی سازمانی</div>
+                  <div class="card-balance-sub">
+                    تخصیص مزایا در سرفصل‌های معیشتی، سفر و بیمه
+                  </div>
+                </div>
+                <div class="flex-between text-xs font-black">
+                  <span>شارژ تشویقی تا ۶٪</span>
+                  <span>ewano.app</span>
+                </div>
+              </div>
+
+              <div class="ewano-3d-card card-credit">
+                <div class="card-top-row">
+                  <div class="card-chip"></div>
+                  <span class="text-xs font-black rounded-pill card-badge"
+                    >CORPORATE CREDIT</span
+                  >
+                </div>
+                <div>
+                  <div class="card-balance-title">موجودی اعتبار اوانو</div>
+                  <div class="card-balance-sub">
+                    خرید اقساطی ۴ تا ۲۴ ماهه با ضمانت کسر از حقوق (ریوالوینگ)
+                  </div>
+                </div>
+                <div class="flex-between text-xs font-black">
+                  <span>بدون اعتبارسنجی بانکی</span>
+                  <span>EBCOM</span>
+                </div>
+              </div>
+
+              <div class="ewano-3d-card card-cash">
+                <div class="card-top-row">
+                  <div class="card-chip"></div>
+                  <span class="text-xs font-black rounded-pill card-badge"
+                    >CASH & GIFT CARD</span
+                  >
+                </div>
+                <div>
+                  <div class="card-balance-title">موجودی نقدی و گیفت‌کارت</div>
+                  <div class="card-balance-sub">
+                    شارژ مستقیم کیف پول نقدی و ووچرکارت‌های سازمانی
+                  </div>
+                </div>
+                <div class="flex-between text-xs font-black">
+                  <span>کارت به کارت و پرداخت آنی</span>
+                  <span>EWANO WALLET</span>
+                </div>
+              </div>
+
+              <div
+                class="ewano-3d-card card-debit-black"
+                id="debitCardFlipper"
+                onclick="toggleDebitCardFlip(this)"
+                title="برای مشاهده پشت کارت کلیک کنید"
+                style="cursor: pointer"
+              >
+                <div class="debit-flipper-inner">
+                  <div class="debit-side debit-front">
+                    <img
+                      src="assets/images/cards/debit-front.png"
+                      alt="روی دبیت کارت اوانو"
+                      class="debit-img"
+                    />
+                  </div>
+                  <div class="debit-side debit-back">
+                    <img
+                      src="assets/images/cards/debit-back.png"
+                      alt="پشت دبیت کارت اوانو"
+                      class="debit-img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: ECOSYSTEM -->
+      <section
+        class="slide"
+        data-chapter="0"
+        data-title="اکوسیستم همراه اول و شرکت‌های کلیدی"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge">فصل اول · پشتوانه راهبردی</span>
+            <span class="text-sm text-muted"
+              >زنجیره یکپارچه ارتباطات، فناوری، خدمات دیجیتال و مالی</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            اکوسیستم <span class="accent-green">همراه اول</span>؛ بزرگ‌ترین
+            اپراتور ارتباطی و دیجیتال کشور
+          </h2>
+          <p class="slide-subtitle anim-up delay-2">
+            همراه اول با تکیه بر مجموعه‌ای از شرکت‌ها و کسب‌وکارهای تخصصی،
+            زنجیره‌ای گسترده از خدمات ارتباطی، دیجیتال، فناوری و مالی را توسعه
+            داده است.
+          </p>
+
+          <div class="ecosystem-layout anim-up delay-3">
+            <div class="glass-card ecosystem-companies-card">
+              <div class="ecosystem-card-header">
+                <h3>۱۲ شرکت کلیدی اکوسیستم همراه اول</h3>
+                <span class="ecosystem-card-header-badge"
+                  >بازوهای اجرایی و تخصصی</span
+                >
+              </div>
+
+              <div class="companies-grid">
+                <div class="company-pill featured-ebcom">
+                  <span class="comp-logo-box bg-white"
+                    ><img
+                      src="assets/images/logos/partners/ebcom.svg"
+                      alt="EBCOM"
+                  /></span>
+                  <span class="comp-name">EBCOM</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box bg-white"
+                    ><img
+                      src="assets/images/cards/voucher-1.png"
+                      alt="نقش اول کیفیت"
+                  /></span>
+                  <span class="comp-name">نقش اول کیفیت</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box bg-white"
+                    ><img
+                      src="assets/images/logos/partners/ebcom-2.svg"
+                      alt="مبین‌نت"
+                  /></span>
+                  <span class="comp-name">مبین‌نت</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box bg-white"
+                    ><img
+                      src="assets/images/logos/partners/naghsh-aval.svg"
+                      alt="همراه اول"
+                  /></span>
+                  <span class="comp-name">همراه اول</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box bg-white"
+                    ><img src="assets/images/cards/voucher-2.png" alt="بهسا"
+                  /></span>
+                  <span class="comp-name">بهسا</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box bg-white"
+                    ><img
+                      src="assets/images/cards/voucher-3.png"
+                      alt="هاب هوشمند"
+                  /></span>
+                  <span class="comp-name">هاب هوشمند</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box placeholder-logo">س</span>
+                  <span class="comp-name">ستاره اول</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box placeholder-logo">ر</span>
+                  <span class="comp-name">روبیکا</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box placeholder-logo">ت</span>
+                  <span class="comp-name">توسعه نور دنا</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box placeholder-logo">ح</span>
+                  <span class="comp-name">حرکت اول</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box placeholder-logo">آ</span>
+                  <span class="comp-name">آرمان</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box placeholder-logo">ج</span>
+                  <span class="comp-name">جیرینگ</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box placeholder-logo">پ</span>
+                  <span class="comp-name">پارسا شریف</span>
+                </div>
+                <div class="company-pill">
+                  <span class="comp-logo-box placeholder-logo">ا</span>
+                  <span class="comp-name">افرانت</span>
+                </div>
+              </div>
+
+              <div class="ecosystem-services-footer">
+                <div class="ecosystem-services-title">
+                  سرویس‌های دیجیتال شاخص شرکت همراه اول:
+                </div>
+                <div class="ecosystem-services-list">
+                  <span class="service-pill service-pill-featured"
+                    >اوانو (Ewano)</span
+                  >
+                  <span class="service-pill">ستاره یک</span>
+                  <span class="service-pill">ذره‌بین</span>
+                  <span class="service-pill">همراه من</span>
+                  <span class="service-pill">شاد</span>
+                  <span class="service-pill">بومینو</span>
+                  <span class="service-pill">روبیکا</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card no-collapse s2-diagram-card">
+              <svg viewBox="0 0 540 435" class="s2-diagram-svg">
+                <defs>
+                  <radialGradient id="mciCore2" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#00D4B4" />
+                    <stop offset="100%" stop-color="#007A66" />
+                  </radialGradient>
+                </defs>
+                <circle
+                  cx="270"
+                  cy="218"
+                  r="185"
+                  fill="none"
+                  stroke="rgba(0,212,180,0.25)"
+                  stroke-width="2"
+                  class="svg-flow-line"
+                />
+                <circle
+                  cx="270"
+                  cy="218"
+                  r="118"
+                  fill="none"
+                  stroke="rgba(255,119,34,0.32)"
+                  stroke-width="2"
+                  stroke-dasharray="6 6"
+                />
+                <line
+                  x1="270"
+                  y1="218"
+                  x2="270"
+                  y2="35"
+                  stroke="rgba(0,212,180,0.4)"
+                  stroke-width="2.5"
+                />
+                <line
+                  x1="270"
+                  y1="218"
+                  x2="435"
+                  y2="128"
+                  stroke="rgba(255,255,255,0.18)"
+                  stroke-width="2"
+                />
+                <line
+                  x1="270"
+                  y1="218"
+                  x2="435"
+                  y2="308"
+                  stroke="rgba(255,255,255,0.18)"
+                  stroke-width="2"
+                />
+                <line
+                  x1="270"
+                  y1="218"
+                  x2="105"
+                  y2="128"
+                  stroke="rgba(255,255,255,0.18)"
+                  stroke-width="2"
+                />
+                <line
+                  x1="270"
+                  y1="218"
+                  x2="105"
+                  y2="308"
+                  stroke="rgba(255,255,255,0.18)"
+                  stroke-width="2"
+                />
+                <line
+                  x1="270"
+                  y1="218"
+                  x2="270"
+                  y2="400"
+                  stroke="rgba(255,119,34,0.4)"
+                  stroke-width="2.5"
+                />
+                <circle
+                  cx="270"
+                  cy="218"
+                  r="70"
+                  fill="url(#mciCore2)"
+                  class="svg-pulse"
+                />
+                <text
+                  x="270"
+                  y="213"
+                  text-anchor="middle"
+                  fill="#0B0F13"
+                  font-size="20"
+                  font-weight="900"
+                >
+                  همراه اول
+                </text>
+                <text
+                  x="270"
+                  y="238"
+                  text-anchor="middle"
+                  fill="#0B0F13"
+                  font-size="14"
+                  font-weight="800"
+                >
+                  MCI Ecosystem
+                </text>
+                <rect
+                  x="180"
+                  y="10"
+                  width="180"
+                  height="50"
+                  rx="25"
+                  fill="#00D4B4"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="270"
+                  y="40"
+                  text-anchor="middle"
+                  fill="#0B0F13"
+                  font-size="17"
+                  font-weight="900"
+                >
+                  EBCOM (فین‌تک)
+                </text>
+                <rect
+                  x="180"
+                  y="375"
+                  width="180"
+                  height="50"
+                  rx="25"
+                  fill="#FF7722"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="270"
+                  y="407"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="17"
+                  font-weight="900"
+                >
+                  پلتفرم اوانو
+                </text>
+                <rect
+                  x="355"
+                  y="102"
+                  width="165"
+                  height="48"
+                  rx="24"
+                  fill="#171F26"
+                  stroke="#00D4B4"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="437"
+                  y="132"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="15"
+                  font-weight="800"
+                >
+                  ارتباطات و ابری
+                </text>
+                <rect
+                  x="355"
+                  y="284"
+                  width="165"
+                  height="48"
+                  rx="24"
+                  fill="#171F26"
+                  stroke="#00D4B4"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="437"
+                  y="314"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="15"
+                  font-weight="800"
+                >
+                  مالی و پرداخت
+                </text>
+                <rect
+                  x="20"
+                  y="102"
+                  width="170"
+                  height="48"
+                  rx="24"
+                  fill="#171F26"
+                  stroke="#00D4B4"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="105"
+                  y="132"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="15"
+                  font-weight="800"
+                >
+                  پلتفرم‌های دیجیتال
+                </text>
+                <rect
+                  x="20"
+                  y="284"
+                  width="170"
+                  height="48"
+                  rx="24"
+                  fill="#171F26"
+                  stroke="#00D4B4"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="105"
+                  y="314"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="15"
+                  font-weight="800"
+                >
+                  زیرساخت سازمانی
+                </text>
+              </svg>
+              <div class="s2-diagram-caption">
+                پشتوانه تامین سرمایه، زیرساخت ارتباطی و شبکه مالی در مقیاس ملی
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: EBCOM & EWANO -->
+      <section
+        class="slide"
+        data-chapter="0"
+        data-title="درباره EBCOM و پلتفرم استراتژیک اوانو"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge">فصل اول · بازوی فین‌تک همراه اول</span>
+            <span class="text-sm text-muted"
+              >قابل استفاده برای کاربران تمامی اپراتورها</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            درباره <span class="accent-green">EBCOM</span> و جایگاه
+            <span class="vessel-pill">اوانو</span>
+          </h2>
+
+          <div class="slide3-equal-grid anim-up delay-3">
+            <div class="glass-card slide3-equal-card border-top-green">
+              <div class="s3-card-header">
+                <span class="eyebrow-badge">EBCOM</span>
+                <span class="s3-card-badge s3-card-badge-green"
+                  >بازوی تخصصی فین‌تک</span
+                >
+              </div>
+              <h3 class="s3-card-title">
+                توسعه اقتصاد دیجیتال و راهکارهای نوآورانه مالی
+              </h3>
+              <p class="s3-card-text">
+                شرکت <strong>همراه کسب‌وکارهای هوشمند (EBCOM)</strong>، به‌عنوان
+                بازوی فین‌تک همراه اول، با هدف توسعه اقتصاد دیجیتال و خلق ارزش
+                از طریق راهکارهای نوآورانه در حوزه
+                <strong>خدمات مالی، پرداخت و اعتبار</strong> فعالیت می‌کند.
+              </p>
+              <div class="s3-features-grid">
+                <div class="s3-feature-box s3-feature-green">
+                  <div class="s3-feature-title text-green">خدمات مالی</div>
+                  <p class="s3-feature-sub">کیف پول و بانکی</p>
+                </div>
+                <div class="s3-feature-box s3-feature-orange">
+                  <div class="s3-feature-title text-orange">راهکار اعتباری</div>
+                  <p class="s3-feature-sub">تأمین مالی و BNPL</p>
+                </div>
+                <div class="s3-feature-box s3-feature-sky">
+                  <div class="s3-feature-title text-sky">خدمات سازمانی</div>
+                  <p class="s3-feature-sub">رفاهیات و B2B</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card slide3-equal-card border-top-orange">
+              <div class="s3-card-header">
+                <span class="eyebrow-badge orange"
+                  >اوانو؛ پلتفرم استراتژیک EBCOM</span
+                >
+                <span class="s3-card-badge s3-card-badge-orange"
+                  >فراتر از یک اپراتور</span
+                >
+              </div>
+              <h3 class="s3-card-title">
+                خلق تجربه‌ای متفاوت از زندگی دیجیتال برای همه
+              </h3>
+              <p class="s3-card-text">
+                <strong>اوانو</strong> پلتفرمی یکپارچه برای ارائه خدمات دیجیتال
+                و مالی است که برای
+                <strong>کاربران تمامی اپراتورها</strong> (همراه اول، ایرانسل،
+                رایتل و...) قابل استفاده است.
+              </p>
+              <div class="s3-features-grid">
+                <div class="s3-feature-box s3-feature-green">
+                  <div class="s3-feature-title text-green">۱. دسترسی آسان</div>
+                  <p class="s3-feature-sub">خدمات متنوع در یک سوپراپ</p>
+                </div>
+                <div class="s3-feature-box s3-feature-orange">
+                  <div class="s3-feature-title text-orange">
+                    ۲. ارائه اعتبار
+                  </div>
+                  <p class="s3-feature-sub">تأمین مالی منعطف و فوری</p>
+                </div>
+                <div class="s3-feature-box s3-feature-sky">
+                  <div class="s3-feature-title text-sky">۳. پرداخت هوشمند</div>
+                  <p class="s3-feature-sub">بارکدخوان، درگاه و کیف پول</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: 10 SERVICES -->
+      <section
+        class="slide"
+        data-chapter="0"
+        data-title="خدمات اوانو در یک نگاه (۱۰ حوزه کلیدی)"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge">فصل اول · سوپراپلیکیشن جامع</span>
+            <span class="text-sm text-muted"
+              >پوشش کامل نیازهای روزمره، مالی و سبک زندگی کارکنان</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            خدمات <span class="accent-green">اوانو</span> در یک نگاه؛ ۱۰ حوزه
+            خدماتی در یک سوپراپ
+          </h2>
+
+          <div class="s4-services-grid anim-up delay-3">
+            <div class="s4-service-tile active">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="5" width="20" height="14" rx="2" />
+                  <line x1="2" y1="10" x2="22" y2="10" />
+                </svg>
+              </div>
+              <h4>۱. خدمات بانکی و مالی</h4>
+              <p>کارت‌به‌کارت، کیف پول و خدمات بانکی</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="5" y="2" width="14" height="20" rx="2" />
+                  <line x1="12" y1="18" x2="12.01" y2="18" />
+                </svg>
+              </div>
+              <h4>۲. خدمات اپراتوری</h4>
+              <p>خرید شارژ، اینترنت و قبوض</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h4>۳. خدمات بیمه</h4>
+              <p>استعلام، مقایسه و خرید بیمه‌نامه</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="9" cy="21" r="1" />
+                  <circle cx="20" cy="21" r="1" />
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  />
+                </svg>
+              </div>
+              <h4>۴. خدمات فروشگاهی</h4>
+              <p>خرید آنلاین و حضوری از پذیرندگان</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"
+                  />
+                </svg>
+              </div>
+              <h4>۵. سفر و گردشگری</h4>
+              <p>بلیط پرواز، قطار و رزرو هتل</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  />
+                </svg>
+              </div>
+              <h4>۶. نیکوکاری</h4>
+              <p>مشارکت در پویش‌های مهربانی</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h4>۷. خدمات سلامتی</h4>
+              <p>نوبت‌دهی پزشک و داروخانه</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <h4>۸. آموزش و توسعه</h4>
+              <p>دوره‌های آموزشی و کتاب صوتی</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"
+                  />
+                  <circle cx="6.5" cy="16.5" r="2.5" />
+                  <circle cx="16.5" cy="16.5" r="2.5" />
+                </svg>
+              </div>
+              <h4>۹. خدمات خودرویی</h4>
+              <p>عوارض آزادراهی و خلافی خودرو</p>
+            </div>
+
+            <div class="s4-service-tile">
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M3 21h18" />
+                  <path d="M5 21V7l8-4v18" />
+                  <path d="M19 21V11l-6-4" />
+                </svg>
+              </div>
+              <h4>۱۰. خدمات شهروندی</h4>
+              <p>شارژ بلیت مترو و اتوبوس شهری</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: 25 BRANDS -->
+      <section
+        class="slide"
+        data-chapter="0"
+        data-title="شرکای تجاری کیف پول اوانو (۲۵ برند برتر)"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge">فصل اول · اکوسیستم پذیرندگی</span>
+            <span class="text-sm text-muted"
+              >منبع: تیم توسعه کسب‌وکار اوانو</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            شرکای تجاری کیف پول <span class="accent-green">اوانو</span>؛ حضور
+            برترین برندهای ایران
+          </h2>
+
+          <div class="s5-brands-grid anim-up delay-3">
+            <div class="s5-brand-tile" style="--brand-color: #00d170">
+              <span class="brand-logo-slot"
+                ><img src="assets/images/logos/partners/snapp.svg" alt="اسنپ"
+              /></span>
+              <span class="brand-tile-name">اسنپ (Snapp!)</span>
+              <span class="brand-tile-cat">سوپراپ</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #9c27b0">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/snapp-shop.svg"
+                  alt="اسنپ‌شاپ"
+              /></span>
+              <span class="brand-tile-name">اسنپ‌شاپ</span>
+              <span class="brand-tile-cat">فروشگاه آنلاین</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #ff00a6">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/snapp-food.svg"
+                  alt="اسنپ‌فود"
+              /></span>
+              <span class="brand-tile-name">اسنپ‌فود</span>
+              <span class="brand-tile-cat">سفارش غذا</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #ff6600">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/snapp-market.svg"
+                  alt="اسنپ‌مارکت"
+              /></span>
+              <span class="brand-tile-name">اسنپ‌مارکت</span>
+              <span class="brand-tile-cat">سوپرمارکت</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #00aeef">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/snapp-doctor.svg"
+                  alt="اسنپ‌دکتر"
+              /></span>
+              <span class="brand-tile-name">اسنپ‌دکتر</span>
+              <span class="brand-tile-cat">سلامت و دارو</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #ff2a2a">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/snapp-trip.svg"
+                  alt="اسنپ‌تریپ"
+              /></span>
+              <span class="brand-tile-name">اسنپ‌تریپ</span>
+              <span class="brand-tile-cat">سفر و هتل</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #ef394e">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/digikala.svg"
+                  alt="دیجی‌کالا"
+              /></span>
+              <span class="brand-tile-name">دیجی‌کالا</span>
+              <span class="brand-tile-cat">خرده‌فروشی</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #ff7722">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/digikala-jet.svg"
+                  alt="دیجی‌کالا جت"
+              /></span>
+              <span class="brand-tile-name">دیجی‌کالا جت</span>
+              <span class="brand-tile-cat">تحویل فوری</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #ff5722">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/tapsi-shop.svg"
+                  alt="تپسی‌شاپ"
+              /></span>
+              <span class="brand-tile-name">تپسی‌شاپ</span>
+              <span class="brand-tile-cat">فروشگاه آنلاین</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #e31e24">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/ofogh-kourosh.svg"
+                  alt="افق کوروش"
+              /></span>
+              <span class="brand-tile-name">افق کوروش</span>
+              <span class="brand-tile-cat">۲٬۸۰۰ شعبه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #e53935">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/hyperstar.svg"
+                  alt="هایپراستار"
+              /></span>
+              <span class="brand-tile-name">هایپراستار</span>
+              <span class="brand-tile-cat">هایپرمارکت</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #00acc1">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/hyperfamily.svg"
+                  alt="هایپر فمیلی"
+              /></span>
+              <span class="brand-tile-name">هایپر فمیلی</span>
+              <span class="brand-tile-cat">۸۰ شعبه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #fbc02d">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/hyperme.svg"
+                  alt="هایپرمی"
+              /></span>
+              <span class="brand-tile-name">هایپرمی</span>
+              <span class="brand-tile-cat">۲۶ شعبه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #00897b">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/refah.svg"
+                  alt="فروشگاه رفاه"
+              /></span>
+              <span class="brand-tile-name">فروشگاه‌های رفاه</span>
+              <span class="brand-tile-cat">۷۰۰ شعبه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #d32f2f">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/shahrvand.svg"
+                  alt="شهروند"
+              /></span>
+              <span class="brand-tile-name">فروشگاه شهروند</span>
+              <span class="brand-tile-cat">۵۰ شعبه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #43a047">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/daily-market.svg"
+                  alt="دیلی‌مارکت"
+              /></span>
+              <span class="brand-tile-name">دیلی‌مارکت</span>
+              <span class="brand-tile-cat">۱٬۴۰۰ شعبه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #8e24aa">
+              <span class="brand-logo-slot"
+                ><img src="assets/images/logos/partners/gandom.svg" alt="گندم"
+              /></span>
+              <span class="brand-tile-name">فروشگاه گندم</span>
+              <span class="brand-tile-cat">۷۵۰ شعبه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #1e88e5">
+              <span class="brand-logo-slot"
+                ><img src="assets/images/logos/partners/haft.svg" alt="هفت"
+              /></span>
+              <span class="brand-tile-name">فروشگاه هفت</span>
+              <span class="brand-tile-cat">۶۰۰ شعبه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #00bfa5">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/achareh.svg"
+                  alt="آچاره"
+              /></span>
+              <span class="brand-tile-name">آچاره</span>
+              <span class="brand-tile-cat">خدمات منزل</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #1565c0">
+              <span class="brand-logo-slot"
+                ><img
+                  src="assets/images/logos/partners/technolife.svg"
+                  alt="تکنولایف"
+              /></span>
+              <span class="brand-tile-name">تکنولایف</span>
+              <span class="brand-tile-cat">کالای دیجیتال</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #e91e63">
+              <span class="brand-logo-slot"
+                ><img src="assets/images/logos/partners/okala.svg" alt="اُکالا"
+              /></span>
+              <span class="brand-tile-name">اُکالا (Okala)</span>
+              <span class="brand-tile-cat">سوپرمارکت آنلاین</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #ffd54f">
+              <span class="brand-logo-slot placeholder-brand">ط</span>
+              <span class="brand-tile-name">طلاسی</span>
+              <span class="brand-tile-cat">خرید آنلاین طلا</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #0288d1">
+              <span class="brand-logo-slot placeholder-brand">ف</span>
+              <span class="brand-tile-name">فلای‌تودی</span>
+              <span class="brand-tile-cat">پرواز و هتل</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #26a69a">
+              <span class="brand-logo-slot placeholder-brand">ف</span>
+              <span class="brand-tile-name">فیدیلیو</span>
+              <span class="brand-tile-cat">رستوران و کافه</span>
+            </div>
+
+            <div class="s5-brand-tile" style="--brand-color: #3949ab">
+              <span class="brand-logo-slot placeholder-brand">ش</span>
+              <span class="brand-tile-name">شب (Shab)</span>
+              <span class="brand-tile-cat">اجاره اقامتگاه</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: CHALLENGES -->
+      <section
+        class="slide"
+        data-chapter="1"
+        data-title="چالش‌های مدیریت مزایا و خدمات رفاهی کارکنان"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge orange"
+              >فصل دوم · مسئله‌شناسی سازمانی</span
+            >
+            <span class="text-sm text-muted"
+              >چرا سازمان‌ها به یک زیرساخت متمرکز نیاز دارند؟</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            مدیریت خدمات و مزایای کارکنان
+            <span class="accent-orange">همیشه ساده نیست!</span>
+          </h2>
+          <p class="slide-subtitle anim-up delay-2">
+            با افزایش تعداد کارکنان و تنوع نیازهای آن‌ها، مدیریت خدمات رفاهی و
+            اعتباری به فرآیندی پیچیده و زمان‌بر تبدیل می‌شود.
+          </p>
+
+          <div class="s6-challenges-grid anim-up delay-3">
+            <div class="s6-challenge-card">
+              <div class="s6-num">۰۱</div>
+              <h4 class="s6-challenge-title">خدمات و مزایای پراکنده</h4>
+              <p class="s6-challenge-text">
+                مدیریت چندین خدمت و ارائه‌دهنده مختلف، فرآیندهای اجرایی را
+                پیچیده می‌کند.
+              </p>
+              <div class="s6-solution">
+                <span class="s6-check">✓</span
+                ><span>راهکار اوانو: تجمیع در یک پلتفرم</span>
+              </div>
+            </div>
+
+            <div class="s6-challenge-card">
+              <div class="s6-num">۰۲</div>
+              <h4 class="s6-challenge-title">فرآیندهای زمان‌بر اجرایی</h4>
+              <p class="s6-challenge-text">
+                ارائه، توزیع و پیگیری مزایا برای پرسنل نیازمند زمان و منابع
+                قابل‌توجه است.
+              </p>
+              <div class="s6-solution">
+                <span class="s6-check">✓</span
+                ><span>راهکار اوانو: تخصیص آنی و خودکار</span>
+              </div>
+            </div>
+
+            <div class="s6-challenge-card">
+              <div class="s6-num">۰۳</div>
+              <h4 class="s6-challenge-title">کنترل و مدیریت هزینه‌ها</h4>
+              <p class="s6-challenge-text">
+                مدیریت بودجه و نظارت دقیق بر نحوه مصرف اعتبارات رفاهی
+                چالش‌برانگیز است.
+              </p>
+              <div class="s6-solution">
+                <span class="s6-check">✓</span
+                ><span>راهکار اوانو: داشبورد گزارش‌گیری</span>
+              </div>
+            </div>
+
+            <div class="s6-challenge-card">
+              <div class="s6-num">۰۴</div>
+              <h4 class="s6-challenge-title">نیازهای متفاوت کارکنان</h4>
+              <p class="s6-challenge-text">
+                کارکنان ترجیحات متفاوتی دارند و یک بسته ثابت پاسخگوی همه نیست.
+              </p>
+              <div class="s6-solution">
+                <span class="s6-check">✓</span
+                ><span>راهکار اوانو: تخصیص بر اساس سیاست</span>
+              </div>
+            </div>
+
+            <div class="s6-challenge-card">
+              <div class="s6-num">۰۵</div>
+              <h4 class="s6-challenge-title">انتظار مزایای متنوع‌تر</h4>
+              <p class="s6-challenge-text">
+                کارکنان به دنبال آزادی انتخاب میان فروشگاه‌های آنلاین و حضوری
+                هستند.
+              </p>
+              <div class="s6-solution">
+                <span class="s6-check">✓</span
+                ><span>راهکار اوانو: شبکه ۹٬۴۱۵ پذیرنده</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: EBCOM CREDIT -->
+      <section
+        class="slide"
+        data-chapter="1"
+        data-title="راهکارهای اعتباری EBCOM و رفاهیات سازمانی"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge">فصل دوم · معماری راهکار سازمانی</span>
+            <span class="text-sm text-muted"
+              >تلفیق زیرساخت مالی EBCOM با شبکه گسترده پذیرندگان</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            راهکارهای اعتباری <span class="accent-green">EBCOM</span> و مدیریت
+            متمرکز
+            <span class="accent-orange">رفاهیات سازمانی</span>
+          </h2>
+
+          <div class="slide7-aligned-grid anim-up delay-3">
+            <div class="glass-card slide7-right-box">
+              <span class="eyebrow-badge" style="align-self: flex-start"
+                >زیرساخت مالی و اعتباری EBCOM</span
+              >
+              <h3 class="s7-main-title">تأمین و مدیریت منعطف اعتبار سازمانی</h3>
+              <p class="s7-main-text">
+                <strong>EBCOM</strong> با بهره‌گیری از زیرساخت مالی خود،
+                راهکارهایی منعطف و قابل مدیریت برای تأمین اعتبار سازمان‌ها ارائه
+                می‌کند تا کارکنان از آزادی انتخاب بهره‌مند شوند.
+              </p>
+
+              <div class="s7-flow">
+                <div class="s7-flow-node">
+                  <div class="s7-node s7-node-muted">سازمان</div>
+                  <span class="s7-node-label">تعریف سیاست</span>
+                </div>
+                <div class="s7-flow-line">
+                  <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                    <line
+                      x1="2"
+                      y1="10"
+                      x2="98"
+                      y2="10"
+                      stroke="#00D4B4"
+                      stroke-width="3"
+                      stroke-dasharray="6 4"
+                      class="svg-flow-line"
+                    />
+                  </svg>
+                </div>
+                <div class="s7-flow-node">
+                  <div class="s7-node s7-node-green">اوانو</div>
+                  <span class="s7-node-label s7-node-label-green"
+                    >تخصیص هوشمند</span
+                  >
+                </div>
+                <div class="s7-flow-line">
+                  <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                    <line
+                      x1="2"
+                      y1="10"
+                      x2="98"
+                      y2="10"
+                      stroke="#FF7722"
+                      stroke-width="3"
+                      stroke-dasharray="6 4"
+                      class="svg-flow-line"
+                    />
+                  </svg>
+                </div>
+                <div class="s7-flow-node">
+                  <div class="s7-node s7-node-muted">کارکنان</div>
+                  <span class="s7-node-label">آزادی انتخاب</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide7-left-stack">
+              <div class="glass-card slide7-left-item">
+                <div class="s7-item-num s7-num-green">۱</div>
+                <div class="s7-item-body">
+                  <h4 class="s7-item-title">مدیریت متمرکز اعتبارات رفاهی</h4>
+                  <p class="s7-item-text">
+                    کنترل یکپارچه تمام منابع رفاهی سازمان در یک پنل اختصاصی
+                  </p>
+                </div>
+              </div>
+
+              <div class="glass-card slide7-left-item">
+                <div class="s7-item-num s7-num-orange">۲</div>
+                <div class="s7-item-body">
+                  <h4 class="s7-item-title">تخصیص انعطاف‌پذیر سازمانی</h4>
+                  <p class="s7-item-text">
+                    امکان تعریف اعتبار بر اساس سنوات، جایگاه و گروه‌های پرسنلی
+                  </p>
+                </div>
+              </div>
+
+              <div class="glass-card slide7-left-item">
+                <div class="s7-item-num s7-num-sky">۳</div>
+                <div class="s7-item-body">
+                  <h4 class="s7-item-title">گستره متنوع پذیرندگان</h4>
+                  <p class="s7-item-text">
+                    دسترسی بی‌مرز به هزاران فروشگاه زنجیره‌ای، آنلاین و مراکز
+                    خرید
+                  </p>
+                </div>
+              </div>
+
+              <div class="glass-card slide7-left-item">
+                <div class="s7-item-num s7-num-purple">۴</div>
+                <div class="s7-item-body">
+                  <h4 class="s7-item-title">کاهش بروکراسی اجرایی</h4>
+                  <p class="s7-item-text">
+                    حذف فرآیندهای کاغذی و تسویه سنتی با رضایت حداکثری کارکنان
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: PWA DEMO -->
+      <section
+        class="slide"
+        data-chapter="1"
+        data-title="دموی تعاملی سوپراپلیکیشن اوانو و سه بالانس سازمانی"
+      >
+        <div class="slide-inner">
+          <div class="demo-slide-grid anim-up delay-3">
+            <!-- ستون راست: تیتر و ۳ کارت بالانس -->
+            <div class="demo-left-col">
+              <!-- هدر اسلاید و تیتر یکپارچه -->
+              <div class="s8-header-wrapper">
+                <div class="slide-top-meta s8-top-meta anim-up delay-1">
+                  <span class="eyebrow-badge"
+                    >دموی تعاملی سوپراپلیکیشن اوانو</span
+                  >
+                  <span>اجرا و بررسی مستقیم سوپراپلیکیشن اوانو</span>
+                </div>
+
+                <h2 class="slide-headline s8-headline anim-up delay-2">
+                  دموی تعاملی
+                  <span class="accent-green">سوپراپلیکیشن اوانو</span>:
+                  <span class="accent-orange">اعتباری</span>
+                  <span class="headline-divider">|</span>
+                  <span class="text-sky">رفاهی</span>
+                  <span class="headline-divider">|</span>
+                  <span class="accent-green">نقدی</span>
+                </h2>
+              </div>
+
+              <!-- کارت ۱: رفاهی (آبی) -->
+              <div class="glass-card s8-balance-card" id="balCard-welfare">
+                <div class="s8-balance-head">
+                  <h3 class="s8-balance-title text-sky">
+                    ۱. موجودی رفاهی سازمانی
+                  </h3>
+                  <span class="s8-balance-badge s8-badge-sky"
+                    >سرفصل‌های انتخابی</span
+                  >
+                </div>
+                <p class="s8-balance-text">
+                  شارژ رفاهی مستقیم یا تجمیعی برای خرید ارزاق، پوشاک، سفر و
+                  آموزش در شبکه پذیرندگان منتخب سازمان (پیش‌پرداخت با تا ۶٪ شارژ
+                  تشویقی یا پس‌پرداخت).
+                </p>
+              </div>
+
+              <!-- کارت ۲: اعتباری (نارنجی) -->
+              <div class="glass-card s8-balance-card" id="balCard-credit">
+                <div class="s8-balance-head">
+                  <h3 class="s8-balance-title text-orange">
+                    ۲. موجودی اعتباری (BNPL)
+                  </h3>
+                  <span class="s8-balance-badge s8-badge-orange"
+                    >اقساطی ۱۲ ماهه</span
+                  >
+                </div>
+                <p class="s8-balance-text">
+                  خرید اقساطی بدون ضامن با بازپرداخت تا ۱۲ ماه و چرخه ریوالوینگ؛
+                  شارژ مجدد اعتبار همزمان با پرداخت هر قسط ماهانه توسط کاربر.
+                </p>
+              </div>
+
+              <!-- کارت ۳: نقدی (سبز) -->
+              <div class="glass-card s8-balance-card" id="balCard-cash">
+                <div class="s8-balance-head">
+                  <h3 class="s8-balance-title text-green">
+                    ۳. موجودی نقدی (اوانو کارت)
+                  </h3>
+                  <span class="s8-balance-badge s8-badge-green"
+                    >متصل به شتاب</span
+                  >
+                </div>
+                <p class="s8-balance-text">
+                  کارت نقدی عضو شبکه شتاب با همکاری بانک پارسیان (همپا)؛ امکان
+                  خرید حضوری، اینترنتی، کارت‌به‌کارت و مدیریت جریان نقدی پرسنل.
+                </p>
+              </div>
+            </div>
+
+            <!-- ستون چپ: فریم گوشی iPhone -->
+            <div class="demo-phone-col">
+              <div class="iphone-18-pro-max">
+                <div class="iphone-dynamic-island">
+                  <div class="island-camera"></div>
+                  <div class="island-sensor"></div>
+                </div>
+                <div class="iphone-screen-wrap">
+                  <iframe
+                    src="https://static-ebcom.mci.ir/ecm/ewano/pwa"
+                    class="iphone-pwa-iframe"
+                    title="دموی تعاملی سوپراپلیکیشن اوانو"
+                    allow="geolocation; microphone; camera; payment"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: FEATURES -->
+      <section
+        class="slide"
+        data-chapter="1"
+        data-title="ویژگی‌های کلیدی اعتبار سازمانی اوانو"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge"
+              >فصل دوم · مزیت‌های رقابتی اعتبار سازمانی</span
+            >
+            <span class="text-sm text-muted"
+              >طراحی‌شده بر اساس نیازهای واقعی مدیران منابع انسانی و مالی</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            ویژگی‌های کلیدی
+            <span class="accent-green">اعتبار سازمانی</span> اوانو و EBCOM
+          </h2>
+
+          <div class="s9-features-grid anim-up delay-3">
+            <div class="s9-feature-card s9-card-green">
+              <div class="s9-icon">🏦</div>
+              <h3 class="s9-title">بدون نیاز به اعتبارسنجی بانکی</h3>
+              <p class="s9-text">
+                حذف کامل بروکراسی‌های سنتی، ضامن و چک؛ تخصیص اعتبار صرفاً با
+                ضمانت کسر از حقوق سازمان.
+              </p>
+            </div>
+
+            <div class="s9-feature-card s9-card-orange">
+              <div class="s9-icon">💎</div>
+              <h3 class="s9-title">تأمین سرمایه از طریق همراه اول</h3>
+              <p class="s9-text">
+                پشتوانه مالی قدرتمند برای تأمین پایدار خطوط اعتباری بدون ایجاد
+                بار نقدینگی اولیه برای سازمان.
+              </p>
+            </div>
+
+            <div class="s9-feature-card s9-card-sky">
+              <div class="s9-icon">⚙️</div>
+              <h3 class="s9-title">تخصیص بر اساس سیاست‌های سازمان</h3>
+              <p class="s9-text">
+                تعیین سقف و ضوابط اعتبار بر مبنای سنوات خدمت، میزان حقوق و
+                جایگاه سازمانی پرسنل.
+              </p>
+            </div>
+
+            <div class="s9-feature-card s9-card-pastel">
+              <div class="s9-icon">🎛️</div>
+              <h3 class="s9-title">امکان کنترل و مدیریت مصرف اعتبار</h3>
+              <p class="s9-text">
+                مدیریت کامل سقف‌ها، دسته‌بندی‌های مجاز و پایش لحظه‌ای میزان
+                اعتبار مصرف‌شده توسط پرسنل.
+              </p>
+            </div>
+
+            <div class="s9-feature-card s9-card-yellow">
+              <div class="s9-icon">🛍️</div>
+              <h3 class="s9-title">استفاده در شبکه گسترده پذیرندگان</h3>
+              <p class="s9-text">
+                امکان خرید آسان از ۹٬۴۱۵ پذیرنده آنلاین و حضوری با بیش از ۱۰٬۴۷۲
+                شعبه در سراسر کشور.
+              </p>
+            </div>
+
+            <div class="s9-feature-card s9-card-purple">
+              <div class="s9-icon">📊</div>
+              <h3 class="s9-title">شفافیت و گزارش‌پذیری تراکنش‌ها</h3>
+              <p class="s9-text">
+                دسترسی آنی مدیران مالی به گزارش‌های دقیق مصرف، صورتحساب‌های
+                ماهانه و وضعیت تسویه کارکنان.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: CALCULATOR -->
+      <section
+        class="slide"
+        data-chapter="1"
+        data-title="ماشین حساب اعتبار خرید و نحوه محاسبه اقساط"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge"
+              >فصل دوم · شبیه‌ساز مالی و محاسبه اقساط اعتبار</span
+            >
+            <span class="slide-top-meta-formula s10-formula-hint"
+              >مبلغ هر قسط = (اصل اعتبار ÷ تعداد اقساط) + (اصل اعتبار × درصد
+              کارمزد)</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            ماشین حساب <span class="accent-green">اعتبار خرید</span> و محاسبه
+            اقساط ماهانه
+          </h2>
+
+          <div class="s10-calc-grid anim-up delay-3">
+            <div class="calc no-collapse" id="creditCalc">
+              <div class="calc-inputs">
+                <div class="calc-row">
+                  <div class="calc-row-head">
+                    <label for="calcAmount"
+                      >اصل مبلغ اعتبار مصرفی (تومان)</label
+                    >
+                    <output
+                      id="calcAmountOut"
+                      for="calcAmount"
+                      class="calc-amount"
+                    ></output>
+                  </div>
+                  <div class="calc-track">
+                    <div class="calc-line" aria-hidden="true"><i></i></div>
+                    <div class="calc-ticks" aria-hidden="true"></div>
+                    <span class="calc-pin" aria-hidden="true">
+                      <svg viewBox="0 0 24 28">
+                        <path
+                          fill="currentColor"
+                          d="M12 1C6.2 1 1.8 5.4 1.8 11c0 7.3 8.7 14.9 9.5 15.6.4.3 1 .3 1.4 0 .8-.7 9.5-8.3 9.5-15.6C22.2 5.4 17.8 1 12 1Z"
+                        />
+                        <circle cx="12" cy="11" r="4.2" fill="#fff" />
+                      </svg>
+                    </span>
+                    <input
+                      type="range"
+                      id="calcAmount"
+                      class="calc-range"
+                      min="20000000"
+                      max="200000000"
+                      step="20000000"
+                      value="100000000"
+                    />
+                  </div>
+                </div>
+
+                <div class="calc-row">
+                  <div class="calc-row-head">
+                    <label for="calcCountIdx"
+                      >تعداد اقساط (۴، ۶، ۱۲، ۱۸ یا ۲۴ ماهه)</label
+                    >
+                    <output
+                      id="calcCountOut"
+                      for="calcCountIdx"
+                      class="calc-amount"
+                    ></output>
+                  </div>
+                  <div class="calc-track">
+                    <div class="calc-line" aria-hidden="true"><i></i></div>
+                    <div class="calc-ticks" aria-hidden="true"></div>
+                    <span class="calc-pin" aria-hidden="true">
+                      <svg viewBox="0 0 24 28">
+                        <path
+                          fill="currentColor"
+                          d="M12 1C6.2 1 1.8 5.4 1.8 11c0 7.3 8.7 14.9 9.5 15.6.4.3 1 .3 1.4 0 .8-.7 9.5-8.3 9.5-15.6C22.2 5.4 17.8 1 12 1Z"
+                        />
+                        <circle cx="12" cy="11" r="4.2" fill="#fff" />
+                      </svg>
+                    </span>
+                    <input
+                      type="range"
+                      id="calcCountIdx"
+                      class="calc-range"
+                      min="0"
+                      max="4"
+                      step="1"
+                      value="2"
+                    />
+                  </div>
+                </div>
+
+                <div class="calc-row">
+                  <div class="calc-row-head">
+                    <label for="calcFeeRate"
+                      >درصد کارمزد ماهانه (متغیر بر اساس توافق سازمان)</label
+                    >
+                    <div class="s10-fee-wrap">
+                      <input
+                        type="number"
+                        id="calcFeeInput"
+                        class="s10-fee-input"
+                        min="0"
+                        max="5"
+                        step="0.1"
+                        value="1.9"
+                        dir="ltr"
+                      />
+                      <output
+                        id="calcFeeOut"
+                        for="calcFeeRate"
+                        class="calc-amount text-orange"
+                      ></output>
+                    </div>
+                  </div>
+                  <div class="calc-track">
+                    <div class="calc-line" aria-hidden="true"><i></i></div>
+                    <div class="calc-ticks" aria-hidden="true"></div>
+                    <span class="calc-pin" aria-hidden="true">
+                      <svg viewBox="0 0 24 28">
+                        <path
+                          fill="currentColor"
+                          d="M12 1C6.2 1 1.8 5.4 1.8 11c0 7.3 8.7 14.9 9.5 15.6.4.3 1 .3 1.4 0 .8-.7 9.5-8.3 9.5-15.6C22.2 5.4 17.8 1 12 1Z"
+                        />
+                        <circle cx="12" cy="11" r="4.2" fill="#fff" />
+                      </svg>
+                    </span>
+                    <input
+                      type="range"
+                      id="calcFeeRate"
+                      class="calc-range"
+                      min="0"
+                      max="4"
+                      step="0.1"
+                      value="1.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-result" aria-live="polite">
+                <div class="s10-result-main">
+                  <span class="calc-res-lbl">مبلغ هر قسط ماهانه</span>
+                  <div class="calc-res-main">
+                    <b id="calcInst">۱۰٬۲۳۳٬۳۳۳</b><span>تومان در ماه</span>
+                  </div>
+                  <div id="calcFormulaText" class="s10-formula-text">
+                    (100,000,000 ÷ 12) + (100,000,000 × 1.9%) = 10,233,333
+                  </div>
+                </div>
+                <dl class="s10-res-list">
+                  <div>
+                    <dt>سهم اصل در هر قسط</dt>
+                    <dd id="calcResBase">۸٬۳۳۳٬۳۳۳ تومان</dd>
+                  </div>
+                  <div>
+                    <dt>مبلغ کارمزد هر قسط</dt>
+                    <dd id="calcResFee" class="text-orange">۱٬۹۰۰٬۰۰۰ تومان</dd>
+                  </div>
+                  <div>
+                    <dt>تعداد و نرخ کارمزد</dt>
+                    <dd id="calcResCount">۱۲ ماهه · کارمزد ۱٫۹٪</dd>
+                  </div>
+                  <div>
+                    <dt>مجموع بازپرداخت</dt>
+                    <dd id="calcResTotal" class="text-green">
+                      ۱۲۲٬۸۰۰٬۰۰۰ تومان
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="s10-side-stack">
+              <div class="glass-card s10-side-card s10-side-green">
+                <span class="eyebrow-badge s10-side-badge"
+                  >فرمول محاسبه اقساط</span
+                >
+                <h3 class="s10-side-title">ساختار شفاف محاسبه هر قسط</h3>
+                <p class="s10-side-text">
+                  مبلغ هر قسط از مجموع «اصل اعتبار تقسیم بر تعداد اقساط» به
+                  همراه «درصد کارمزد در اصل اعتبار» به دست می‌آید:
+                  <br /><strong class="s10-side-formula"
+                    >مبلغ قسط = (اصل ÷ تعداد) + (اصل × کارمزد)</strong
+                  >
+                </p>
+              </div>
+
+              <div class="glass-card s10-side-card s10-side-orange">
+                <span class="eyebrow-badge orange s10-side-badge"
+                  >مثال مرجع</span
+                >
+                <h3 class="s10-side-title">
+                  اعتبار ۱۰۰ میلیونی (۱۲ ماهه - کارمزد ۱٫۹٪)
+                </h3>
+                <p class="s10-side-text">
+                  • سهم اصل: <strong>۸٬۳۳۳٬۳۳۳ تومان</strong><br />
+                  • کارمزد قسط: <strong>۱٬۹۰۰٬۰۰۰ تومان</strong><br />
+                  • <strong>مبلغ نهایی هر قسط: ۱۰٬۲۳۳٬۳۳۳ تومان</strong>
+                </p>
+              </div>
+
+              <div class="glass-card s10-side-card s10-side-sky">
+                <span class="eyebrow-badge sky s10-side-badge"
+                  >انعطاف دوره‌ها</span
+                >
+                <h3 class="s10-side-title">
+                  اقساط ۴ تا ۲۴ ماهه با کارمزد متغیر
+                </h3>
+                <p class="s10-side-text">
+                  تعداد اقساط در بازه‌های ۴، ۶، ۱۲، ۱۸ و ۲۴ ماه قابل تعریف بوده
+                  و نرخ کارمزد متناسب با توافق سازمانی تنظیم می‌شود.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: JOURNEY 1 -->
+      <section
+        class="slide"
+        data-chapter="2"
+        data-title="مسیر اعتبار (گام ۱ از ۶): شارژ اعتبار پرسنل"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge"
+              >فصل سوم · مسیر استفاده از اعتبار سازمانی (گام ۱ از ۶)</span
+            >
+            <span class="slide-top-meta-formula"
+              >از شارژ اعتبار تا تسویه کامل، شفاف و قابل پیش‌بینی</span
+            >
+          </div>
+
+          <div class="journey-progress-rail anim-up delay-2">
+            <div class="rail-step current" onclick="goToSlide(10)">
+              <div class="rail-num">۱</div>
+              <div class="rail-label">شارژ اعتبار پرسنل</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(11)">
+              <div class="rail-num">۲</div>
+              <div class="rail-label">استفاده و خرید</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(12)">
+              <div class="rail-num">۳</div>
+              <div class="rail-label">صدور صورتحساب و تنفس</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(13)">
+              <div class="rail-num">۴</div>
+              <div class="rail-label">پرداخت اولین قسط</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(14)">
+              <div class="rail-num">۵</div>
+              <div class="rail-label">روز معرفی به سازمان</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(15)">
+              <div class="rail-num">۶</div>
+              <div class="rail-label">روز تسویه سازمان</div>
+            </div>
+          </div>
+
+          <div class="step-hero-panel s11-panel anim-up delay-3">
+            <div class="glass-card s11-main-card s11-main-card-green">
+              <div class="s11-badge-row">
+                <span class="s11-step-badge">گام اول</span>
+                <span class="s11-step-hint">شروع چرخه اعتبار سازمانی</span>
+              </div>
+              <h2 class="s11-main-title">۱. شارژ اعتبار پرسنل توسط سازمان</h2>
+              <p class="s11-main-text">
+                در گام نخست، سازمان بر اساس سیاست‌های داخلی خود، لیست پرسنل و
+                سقف اعتبار هر فرد را مشخص می‌کند و
+                <strong>اعتبار به صورت آنی در کیف پول اعتباری اوانو</strong>
+                شارژ می‌شود.
+              </p>
+
+              <div class="s11-tips-grid">
+                <div class="s11-tip-box">
+                  <div class="s11-tip-title">
+                    ✓ فعال‌سازی آنی و بدون بروکراسی
+                  </div>
+                  <div class="s11-tip-sub">
+                    اطلاع‌رسانی پیامکی فوری به کارمند پس از شارژ کیف پول
+                  </div>
+                </div>
+                <div class="s11-tip-box">
+                  <div class="s11-tip-title">✓ گروه‌بندی منعطف پرسنل</div>
+                  <div class="s11-tip-sub">
+                    تخصیص مبالغ متفاوت به سطوح مختلف شغلی و شعب
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card step-visual-box s11-visual-box">
+              <svg class="s11-visual-svg" viewBox="0 0 260 220">
+                <circle
+                  cx="130"
+                  cy="110"
+                  r="82"
+                  fill="rgba(0,212,180,0.12)"
+                  class="svg-pulse"
+                />
+                <rect
+                  x="75"
+                  y="55"
+                  width="110"
+                  height="110"
+                  rx="24"
+                  fill="#171F26"
+                  stroke="#00D4B4"
+                  stroke-width="3"
+                />
+                <path
+                  d="M105 140V85l25-15 25 15v55"
+                  fill="none"
+                  stroke="#00D4B4"
+                  stroke-width="3.5"
+                  stroke-linejoin="round"
+                />
+                <line
+                  x1="95"
+                  y1="140"
+                  x2="165"
+                  y2="140"
+                  stroke="#00D4B4"
+                  stroke-width="3.5"
+                  stroke-linecap="round"
+                />
+                <rect
+                  x="120"
+                  y="95"
+                  width="20"
+                  height="15"
+                  rx="2"
+                  fill="#FF7722"
+                />
+                <rect x="122" y="120" width="16" height="20" fill="#00D4B4" />
+              </svg>
+              <div class="s11-visual-title">
+                تخصیص اعتبار توسط سازمان به پرسنل
+              </div>
+              <div class="s11-visual-sub">
+                همه‌چیز شفاف، سیستمی و مطابق با سیاست‌های سازمان شما
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: JOURNEY 2 -->
+      <section
+        class="slide"
+        data-chapter="2"
+        data-title="مسیر اعتبار (گام ۲ از ۶): استفاده از اعتبار و خرید"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge"
+              >فصل سوم · مسیر استفاده از اعتبار سازمانی (گام ۲ از ۶)</span
+            >
+            <span class="slide-top-meta-formula"
+              >آزادی انتخاب در سراسر کشور</span
+            >
+          </div>
+
+          <div class="journey-progress-rail anim-up delay-2">
+            <div class="rail-step done" onclick="goToSlide(10)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">شارژ اعتبار پرسنل</div>
+            </div>
+            <div class="rail-step current" onclick="goToSlide(11)">
+              <div class="rail-num">۲</div>
+              <div class="rail-label">استفاده و خرید</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(12)">
+              <div class="rail-num">۳</div>
+              <div class="rail-label">صدور صورتحساب و تنفس</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(13)">
+              <div class="rail-num">۴</div>
+              <div class="rail-label">پرداخت اولین قسط</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(14)">
+              <div class="rail-num">۵</div>
+              <div class="rail-label">روز معرفی به سازمان</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(15)">
+              <div class="rail-num">۶</div>
+              <div class="rail-label">روز تسویه سازمان</div>
+            </div>
+          </div>
+
+          <div class="step-hero-panel s12-panel anim-up delay-3">
+            <div class="glass-card s12-main-card s12-main-card-sky">
+              <div class="s12-badge-row">
+                <span class="s12-step-badge">گام دوم</span>
+                <span class="s12-step-hint"
+                  >تجربه خرید بی‌مرز آنلاین و حضوری</span
+                >
+              </div>
+              <h2 class="s12-main-title">
+                ۲. استفاده از اعتبار و خرید از شبکه پذیرندگان
+              </h2>
+              <p class="s12-main-text">
+                کارکنان می‌توانند در هر زمان از شبانه‌روز از
+                <strong>شبکه گسترده پذیرندگان آنلاین و حضوری اوانو</strong> در
+                سراسر کشور خرید کنند.
+              </p>
+
+              <div class="s12-tips-grid">
+                <div class="s12-tip-box s12-tip-sky">
+                  <div class="s12-tip-title">🛒 خرید آنلاین از فروشگاه‌ها</div>
+                  <div class="s12-tip-sub">
+                    انتخاب درگاه اوانو در دیجی‌کالا، اسنپ، تکنولایف و...
+                  </div>
+                </div>
+                <div class="s12-tip-box s12-tip-green">
+                  <div class="s12-tip-title">📱 خرید حضوری با بارکد QR</div>
+                  <div class="s12-tip-sub">
+                    پرداخت آنی در افق کوروش، دیلی‌مارکت، رفاه و مال‌ها
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="glass-card step-visual-box s12-visual-box s12-visual-sky"
+            >
+              <svg class="s12-visual-svg" viewBox="0 0 260 220">
+                <circle
+                  cx="130"
+                  cy="110"
+                  r="82"
+                  fill="rgba(0,147,221,0.14)"
+                  class="svg-pulse"
+                />
+                <rect
+                  x="75"
+                  y="55"
+                  width="110"
+                  height="110"
+                  rx="24"
+                  fill="#171F26"
+                  stroke="#0093DD"
+                  stroke-width="3"
+                />
+                <circle cx="112" cy="142" r="6" fill="#00D4B4" />
+                <circle cx="148" cy="142" r="6" fill="#00D4B4" />
+                <path
+                  d="M92 80h14l10 44h38l8-30H104"
+                  fill="none"
+                  stroke="#0093DD"
+                  stroke-width="3.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div class="s12-visual-title">
+                خرید از شبکه پذیرندگان آنلاین و حضوری
+              </div>
+              <div class="s12-visual-sub">
+                ۹٬۴۱۵ مرچنت فعال و ۱۰٬۴۷۲ نقطه فروش در سراسر کشور
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: JOURNEY 3 -->
+      <section
+        class="slide"
+        data-chapter="2"
+        data-title="مسیر اعتبار (گام ۳ از ۶): صدور صورتحساب و دوره تنفس ۳ روزه"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge"
+              >فصل سوم · مسیر استفاده از اعتبار سازمانی (گام ۳ از ۶)</span
+            >
+            <span class="slide-top-meta-formula s13-hint-purple"
+              >نقطه انعطاف‌پذیری: انتخاب بین تسویه نقدی یا اقساطی</span
+            >
+          </div>
+
+          <div class="journey-progress-rail anim-up delay-2">
+            <div class="rail-step done" onclick="goToSlide(10)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">شارژ اعتبار پرسنل</div>
+            </div>
+            <div class="rail-step done" onclick="goToSlide(11)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">استفاده و خرید</div>
+            </div>
+            <div class="rail-step current" onclick="goToSlide(12)">
+              <div class="rail-num">۳</div>
+              <div class="rail-label">صدور صورتحساب و تنفس</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(13)">
+              <div class="rail-num">۴</div>
+              <div class="rail-label">پرداخت اولین قسط</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(14)">
+              <div class="rail-num">۵</div>
+              <div class="rail-label">روز معرفی به سازمان</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(15)">
+              <div class="rail-num">۶</div>
+              <div class="rail-label">روز تسویه سازمان</div>
+            </div>
+          </div>
+
+          <div class="step-hero-panel s13-panel anim-up delay-3">
+            <div class="glass-card s13-main-card s13-main-card-purple">
+              <div class="s13-badge-row">
+                <span class="s13-step-badge">گام سوم + دوره تنفس ۳ روزه</span>
+                <span class="s13-step-hint"
+                  >تاریخ کلیدی اول: روز صدور صورتحساب</span
+                >
+              </div>
+              <h2 class="s13-main-title">
+                ۳. صدور صورتحساب و
+                <span class="accent-green">دوره تنفس ۳ روزه</span>
+              </h2>
+              <p class="s13-main-text">
+                کاربر جزئیات خریدهای ماهانه خود را مشاهده می‌کند و
+                <strong>۳ روز دوره تنفس</strong> دارد تا نحوه بازپرداخت را تعیین
+                کند:
+              </p>
+
+              <div class="s13-options-grid">
+                <div class="s13-option s13-option-cash">
+                  <div class="s13-option-title text-green">
+                    گزینه اول: تسویه نقدی
+                  </div>
+                  <ul class="s13-list">
+                    <li>
+                      ✓ پرداخت کل مبلغ صورتحساب <strong>بدون کارمزد</strong>
+                    </li>
+                    <li>✓ تسویه فوری و شارژ مجدد اعتبار اولیه</li>
+                  </ul>
+                </div>
+                <div class="s13-option s13-option-installment">
+                  <div class="s13-option-title text-sky">
+                    گزینه دوم: انتخاب اقساطی
+                  </div>
+                  <ul class="s13-list">
+                    <li>✓ ورود خودکار به دوره اقساط ۱۲ تا ۲۴ ماهه</li>
+                    <li>✓ چرخه ریوالوینگ و تداوم استفاده از اعتبار</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="glass-card step-visual-box s13-visual-box s13-visual-purple"
+            >
+              <svg class="s13-visual-svg" viewBox="0 0 280 230">
+                <rect
+                  x="65"
+                  y="13"
+                  width="150"
+                  height="60"
+                  rx="14"
+                  fill="#1F2933"
+                  stroke="#A78BFA"
+                  stroke-width="2.5"
+                />
+                <text
+                  x="140"
+                  y="35"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="12"
+                  font-weight="900"
+                >
+                  صدور صورتحساب
+                </text>
+                <text
+                  x="140"
+                  y="58"
+                  text-anchor="middle"
+                  fill="#A78BFA"
+                  font-size="10.5"
+                  font-weight="800"
+                >
+                  ⏱ تنفس: ۳ روز
+                </text>
+                <path
+                  d="M140 69 L140 95 L70 95 L70 125"
+                  fill="none"
+                  stroke="#00D4B4"
+                  stroke-width="2.5"
+                  class="svg-flow-line"
+                />
+                <path
+                  d="M140 69 L140 95 L210 95 L210 125"
+                  fill="none"
+                  stroke="#0093DD"
+                  stroke-width="2.5"
+                  class="svg-flow-line"
+                />
+
+                <rect
+                  x="15"
+                  y="125"
+                  width="110"
+                  height="80"
+                  rx="16"
+                  fill="rgba(0,212,180,0.15)"
+                  stroke="#00D4B4"
+                  stroke-width="2"
+                />
+                <text
+                  x="70"
+                  y="152"
+                  text-anchor="middle"
+                  fill="#00D4B4"
+                  font-size="13"
+                  font-weight="900"
+                >
+                  تسویه نقدی
+                </text>
+                <text
+                  x="70"
+                  y="180"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="10.5"
+                  font-weight="700"
+                >
+                  بدون کارمزد
+                </text>
+
+                <rect
+                  x="155"
+                  y="125"
+                  width="110"
+                  height="80"
+                  rx="16"
+                  fill="rgba(0,147,221,0.15)"
+                  stroke="#0093DD"
+                  stroke-width="2"
+                />
+                <text
+                  x="210"
+                  y="152"
+                  text-anchor="middle"
+                  fill="#0093DD"
+                  font-size="13"
+                  font-weight="900"
+                >
+                  تقسیط
+                </text>
+                <text
+                  x="210"
+                  y="180"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="10.5"
+                  font-weight="700"
+                >
+                  دوره اقساطی
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14: JOURNEY 4 -->
+      <section
+        class="slide"
+        data-chapter="2"
+        data-title="مسیر اعتبار (گام ۴ از ۶): پرداخت اولین قسط و دوره ۱۲ ماهه ریوالوینگ"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge"
+              >فصل سوم · مسیر استفاده از اعتبار سازمانی (گام ۴ از ۶)</span
+            >
+            <span class="slide-top-meta-formula"
+              >قابلیت منحصربه‌فرد ریوالوینگ (شارژ مجدد پس از هر قسط)</span
+            >
+          </div>
+
+          <div class="journey-progress-rail anim-up delay-2">
+            <div class="rail-step done" onclick="goToSlide(10)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">شارژ اعتبار پرسنل</div>
+            </div>
+            <div class="rail-step done" onclick="goToSlide(11)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">استفاده و خرید</div>
+            </div>
+            <div class="rail-step done" onclick="goToSlide(12)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">صدور صورتحساب و تنفس</div>
+            </div>
+            <div class="rail-step current" onclick="goToSlide(13)">
+              <div class="rail-num">۴</div>
+              <div class="rail-label">پرداخت اولین قسط</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(14)">
+              <div class="rail-num">۵</div>
+              <div class="rail-label">روز معرفی به سازمان</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(15)">
+              <div class="rail-num">۶</div>
+              <div class="rail-label">روز تسویه سازمان</div>
+            </div>
+          </div>
+
+          <div class="step-hero-panel s14-panel anim-up delay-3">
+            <div class="glass-card s14-main-card s14-main-card-green">
+              <div class="s14-badge-row">
+                <span class="s14-step-badge">گام چهارم</span>
+                <span class="s14-step-hint">۴ روز پس از اتمام دوره تنفس</span>
+              </div>
+              <h2 class="s14-main-title">
+                ۴. پرداخت اولین قسط و
+                <span class="accent-green">دوره ریوالوینگ</span>
+              </h2>
+              <p class="s14-main-text">
+                با پرداخت هر قسط،
+                <strong
+                  >معادل مبلغ قسط پرداخت‌شده بلافاصله به کیف پول اعتباری کاربر
+                  بازمی‌گردد (Revolving)</strong
+                >
+                و قابلیت خرید مجدد فراهم می‌شود.
+              </p>
+
+              <div class="s14-info-grid">
+                <div class="s14-info-box s14-info-green">
+                  <div class="s14-info-title text-green">
+                    ویژگی‌های دوره اقساط:
+                  </div>
+                  <ul class="s14-list">
+                    <li>• بازپرداخت منعطف ۴ تا ۲۴ ماهه</li>
+                    <li>• ریوالوینگ و بازگشت آنی مبلغ قسط</li>
+                    <li>• تداوم قدرت خرید پرسنل در طول سال</li>
+                  </ul>
+                </div>
+                <div class="s14-info-box s14-info-orange">
+                  <div class="s14-info-title text-orange">
+                    مزیت چرخه ریوالوینگ:
+                  </div>
+                  <p class="s14-info-text">
+                    کارمند نیازی به انتظار برای پایان دوره وام ندارد و سقف
+                    اعتبار به تناسب تسویه تمدید می‌شود.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card step-visual-box s14-visual-box">
+              <svg class="s14-visual-svg" viewBox="0 0 260 220">
+                <circle
+                  cx="130"
+                  cy="110"
+                  r="86"
+                  fill="none"
+                  stroke="rgba(0,212,180,0.25)"
+                  stroke-width="8"
+                  stroke-dasharray="18 10"
+                  class="svg-flow-line"
+                ></circle>
+                <circle
+                  cx="130"
+                  cy="110"
+                  r="70"
+                  fill="#171F26"
+                  stroke="#00D4B4"
+                  stroke-width="2.5"
+                ></circle>
+                <text
+                  x="130"
+                  y="88"
+                  text-anchor="middle"
+                  fill="#00D4B4"
+                  font-size="18"
+                  font-weight="900"
+                >
+                  ۱۲ ماهه
+                </text>
+                <text
+                  x="130"
+                  y="114"
+                  text-anchor="middle"
+                  fill="#FFFFFF"
+                  font-size="12"
+                  font-weight="800"
+                >
+                  ریوالوینگ
+                </text>
+                <text
+                  x="130"
+                  y="142"
+                  text-anchor="middle"
+                  fill="#CBD5E1"
+                  font-size="10.5"
+                  font-weight="700"
+                >
+                  (Revolving)
+                </text>
+              </svg>
+              <div class="s14-visual-title">بازگشت آنی اعتبار پس از هر قسط</div>
+              <div class="s14-visual-sub">حفظ همیشگی قدرت خرید پرسنل</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: JOURNEY 5 -->
+      <section
+        class="slide"
+        data-chapter="2"
+        data-title="مسیر اعتبار (گام ۵ از ۶): روز معرفی به سازمان"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge rose"
+              >فصل سوم · مسیر استفاده از اعتبار سازمانی (گام ۵ از ۶)</span
+            >
+            <span class="s15-step-hint"
+              >تاریخ کلیدی دوم: روز معرفی به سازمان</span
+            >
+          </div>
+
+          <div class="journey-progress-rail anim-up delay-2">
+            <div class="rail-step done" onclick="goToSlide(10)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">شارژ اعتبار پرسنل</div>
+            </div>
+            <div class="rail-step done" onclick="goToSlide(11)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">استفاده و خرید</div>
+            </div>
+            <div class="rail-step done" onclick="goToSlide(12)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">صدور صورتحساب و تنفس</div>
+            </div>
+            <div class="rail-step done" onclick="goToSlide(13)">
+              <div class="rail-num">✓</div>
+              <div class="rail-label">پرداخت اولین قسط</div>
+            </div>
+            <div class="rail-step current" onclick="goToSlide(14)">
+              <div class="rail-num">۵</div>
+              <div class="rail-label">روز معرفی به سازمان</div>
+            </div>
+            <div class="rail-step" onclick="goToSlide(15)">
+              <div class="rail-num">۶</div>
+              <div class="rail-label">روز تسویه سازمان</div>
+            </div>
+          </div>
+
+          <div class="step-hero-panel s15-panel anim-up delay-3">
+            <div class="glass-card s15-main-card s15-main-card-pink">
+              <div class="s15-badge-row">
+                <span class="s15-step-badge">گام پنجم</span>
+                <span class="s15-step-hint"
+                  >مدیریت هوشمند مطالبات و اقساط معوق</span
+                >
+              </div>
+              <h2 class="s15-main-title">
+                ۵. روز معرفی به سازمان و مدیریت دیرکرد
+              </h2>
+              <p class="s15-main-text">
+                در صورت عدم پرداخت قسط توسط کاربر در سررسید مقرر، در
+                <strong>«روز معرفی به سازمان»</strong> گزارش معوقات سیستمی به
+                امور مالی سازمان ارسال می‌شود تا از حقوق کسر گردد.
+              </p>
+
+              <div class="s15-info-grid">
+                <div class="s15-info-box s15-penalty-card">
+                  <h4 class="s15-info-title text-rose">
+                    نرخ جریمه دیرکرد روزانه: ۰٫۰۱۵
+                  </h4>
+                  <p class="s15-info-text">
+                    به ازای هر روز دیرکرد محاسبه شده و از کاربر دریافت می‌شود.
+                  </p>
+                </div>
+                <div class="s15-info-box s15-neutral-card">
+                  <h4 class="s15-info-title">بدون دغدغه پیگیری برای سازمان</h4>
+                  <p class="s15-info-text">
+                    تمامی یادآوری‌های پیامکی به صورت خودکار توسط اوانو انجام
+                    می‌شود.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="glass-card step-visual-box s15-visual-box s15-visual-pink"
+            >
+              <svg class="s15-visual-svg" viewBox="0 0 260 220">
+                <circle
+                  cx="130"
+                  cy="110"
+                  r="82"
+                  fill="rgba(241,98,115,0.12)"
+                  class="svg-pulse"
+                />
+                <rect
+                  x="75"
+                  y="55"
+                  width="110"
+                  height="110"
+                  rx="24"
+                  fill="#171F26"
+                  stroke="#F16273"
+                  stroke-width="3"
+                />
+                <polygon
+                  points="130,72 95,92 165,92"
+                  fill="none"
+                  stroke="#F16273"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+                <line
+                  x1="105"
+                  y1="96"
+                  x2="105"
+                  y2="132"
+                  stroke="#F16273"
+                  stroke-width="3.5"
+                />
+                <line
+                  x1="130"
+                  y1="96"
+                  x2="130"
+                  y2="132"
+                  stroke="#F16273"
+                  stroke-width="3.5"
+                />
+                <line
+                  x1="155"
+                  y1="96"
+                  x2="155"
+                  y2="132"
+                  stroke="#F16273"
+                  stroke-width="3.5"
+                />
+                <line
+                  x1="92"
+                  y1="138"
+                  x2="168"
+                  y2="138"
+                  stroke="#00D4B4"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <div class="s15-visual-title">مدیریت خودکار و شفاف اعتبار</div>
+              <div class="s15-visual-sub">
+                مطابق با فرآیندهای مالی سازمان شما
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16: WELFARE -->
+      <section
+        class="slide"
+        data-chapter="3"
+        data-title="معرفی رفاهیات سازمانی و سرفصل‌های انتخابی"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge">فصل چهارم · رفاهیات سازمانی</span>
+            <span class="text-sm text-muted"
+              >تنوع سرفصل‌ها، گستره‌ای از پذیرندگان منتخب</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            معرفی <span class="accent-green">رفاهیات سازمانی</span>؛ سرفصل‌های
+            انتخابی متناسب با هر سازمان
+          </h2>
+
+          <div
+            class="welfare-categories-strip s16-categories-strip anim-up delay-2"
+          >
+            <span class="welfare-cat-pill wcat-active">۱. معیشتی</span>
+            <span class="welfare-cat-pill">۲. رفاهی</span>
+            <span class="welfare-cat-pill">۳. آموزشی</span>
+            <span class="welfare-cat-pill">۴. بیمه</span>
+            <span class="welfare-cat-pill wcat-orange">۵. آجیل و خشکبار</span>
+            <span class="welfare-cat-pill wcat-orange"
+              >۶. اعیاد و مناسبت‌ها</span
+            >
+            <span class="welfare-cat-pill wcat-muted"
+              >۷. سایر مزایای موردنیاز</span
+            >
+          </div>
+
+          <div class="s16-showcases-grid anim-up delay-3">
+            <div class="glass-card s16-card s16-card-green">
+              <span class="eyebrow-badge s16-card-badge">پذیرندگان منتخب</span>
+              <h3 class="s16-card-title text-green">
+                🥩 بسته پروتئین و معیشتی
+              </h3>
+              <p class="s16-card-text">
+                خرید محصولات پروتئینی و کالاهای اساسی آنلاین و حضوری:
+              </p>
+              <div class="s16-brands-row">
+                <span class="co-pill brand-logo-pill"
+                  ><span class="pill-brand-placeholder">د</span
+                  ><span>دهکده پروتئین</span></span
+                >
+                <span class="co-pill brand-logo-pill"
+                  ><img
+                    src="assets/images/logos/partners/digikala.svg"
+                    alt="دیجی‌کالا"
+                    class="pill-brand-logo"
+                  /><span>دیجی‌کالا</span></span
+                >
+                <span class="co-pill brand-logo-pill"
+                  ><img
+                    src="assets/images/logos/partners/okala.svg"
+                    alt="اُکالا"
+                    class="pill-brand-logo"
+                  /><span>اُکالا</span></span
+                >
+                <span class="co-pill brand-logo-pill"
+                  ><img
+                    src="assets/images/logos/partners/hyperstar.svg"
+                    alt="هایپراستار"
+                    class="pill-brand-logo"
+                  /><span>هایپراستار</span></span
+                >
+              </div>
+            </div>
+
+            <div class="glass-card s16-card s16-card-orange">
+              <span class="eyebrow-badge orange s16-card-badge"
+                >ویژه اعیاد و مناسبت‌ها</span
+              >
+              <h3 class="s16-card-title text-orange">
+                🌰 آجیل، خشکبار و شیرینی
+              </h3>
+              <p class="s16-card-text">
+                تخصیص بسته رفاهی برای خرید از معتبرترین برندهای خشکبار کشور:
+              </p>
+              <div class="s16-brands-row">
+                <span class="co-pill brand-logo-pill"
+                  ><span class="pill-brand-placeholder">م</span
+                  ><span>آجیل محسن</span></span
+                >
+                <span class="co-pill brand-logo-pill"
+                  ><span class="pill-brand-placeholder">ا</span
+                  ><span>خشکبار ایوب</span></span
+                >
+                <span class="co-pill brand-logo-pill"
+                  ><span class="pill-brand-placeholder">ت</span
+                  ><span>اصل تبریز</span></span
+                >
+                <span class="co-pill brand-logo-pill"
+                  ><img
+                    src="assets/images/logos/partners/okala.svg"
+                    alt="اُکالا"
+                    class="pill-brand-logo"
+                  /><span>اُکالا</span></span
+                >
+              </div>
+            </div>
+
+            <div class="glass-card s16-card s16-card-sky">
+              <span class="eyebrow-badge sky s16-card-badge"
+                >تجهیز و رفاه پرسنل</span
+              >
+              <h3 class="s16-card-title text-sky">
+                💻 کالای دیجیتال و الکترونیک
+              </h3>
+              <p class="s16-card-text">
+                خرید لپ‌تاپ، موبایل و گجت‌های هوشمند از برترین مراکز دیجیتال:
+              </p>
+              <div class="s16-brands-row">
+                <span class="co-pill brand-logo-pill"
+                  ><img
+                    src="assets/images/logos/partners/digikala.svg"
+                    alt="دیجی‌کالا"
+                    class="pill-brand-logo"
+                  /><span>دیجی‌کالا</span></span
+                >
+                <span class="co-pill brand-logo-pill"
+                  ><img
+                    src="assets/images/logos/partners/technolife.svg"
+                    alt="تکنولایف"
+                    class="pill-brand-logo"
+                  /><span>تکنولایف</span></span
+                >
+                <span class="co-pill brand-logo-pill"
+                  ><img
+                    src="assets/images/logos/partners/tapsi-shop.svg"
+                    alt="تپسی‌شاپ"
+                    class="pill-brand-logo"
+                  /><span>تپسی‌شاپ</span></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: OVERCHARGE -->
+      <section
+        class="slide"
+        data-chapter="3"
+        data-title="مدل‌های ارائه اوورشارژ رفاهیات سازمانی"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge"
+              >فصل چهارم · الگوهای تخصیص اعتبار و مزایای سازمانی</span
+            >
+            <span class="slide-top-meta-formula"
+              >انعطاف کامل متناسب با بودجه سازمان شما</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            مدل‌های ارائه <span class="accent-green">اوور شارژ رفاهیات</span> به
+            پرسنل
+          </h2>
+
+          <div class="s17-models-grid anim-up delay-3">
+            <div class="s17-alloc-stack">
+              <div class="glass-card s17-alloc-card s17-alloc-green">
+                <div class="s17-alloc-head">
+                  <div class="s17-alloc-num s17-num-green">۱</div>
+                  <h3 class="s17-alloc-title text-green">شارژ مستقیم پرسنل</h3>
+                </div>
+                <p class="s17-alloc-text">
+                  تخصیص مستقیم اوور شارژ رفاهی به کیف پول تک‌تک کارکنان بر اساس
+                  لیست تعیین‌شده.
+                </p>
+                <div class="s17-alloc-foot s17-foot-green">
+                  ✓ فعال‌سازی آنی + ارسال پیامک اطلاع‌رسانی
+                </div>
+              </div>
+
+              <div class="glass-card s17-alloc-card s17-alloc-orange">
+                <div class="s17-alloc-head">
+                  <div class="s17-alloc-num s17-num-orange">۲</div>
+                  <h3 class="s17-alloc-title text-orange">کیف پول تجمیعی</h3>
+                </div>
+                <p class="s17-alloc-text">
+                  تخصیص اوور شارژ در کیف پول مدیران واحدها برای خریدهای گروهی و
+                  مدیریت بودجه بخش‌ها.
+                </p>
+                <div class="s17-alloc-foot s17-foot-orange">
+                  ✓ مدیریت متمرکز تنخواه‌های رفاهی
+                </div>
+              </div>
+
+              <div class="glass-card s17-alloc-card s17-alloc-sky">
+                <div class="s17-alloc-head">
+                  <div class="s17-alloc-num s17-num-sky">۳</div>
+                  <h3 class="s17-alloc-title text-sky">ووچرکارت (گیفت‌کارت)</h3>
+                </div>
+                <p class="s17-alloc-text">
+                  ارائه ووچرکارت‌های فیزیکی و دیجیتال بی‌نام برای پاداش‌های
+                  مناسبتی و هدایا.
+                </p>
+                <div class="s17-alloc-foot s17-foot-sky">
+                  ✓ قابل اهدا به پرسنل و مهمانان سازمانی
+                </div>
+              </div>
+            </div>
+
+            <div class="voucher-vertical-stage s17-voucher-stage">
+              <div
+                class="voucher-card-item vc-card-1"
+                onclick="toggleVoucherFlip(this)"
+                title="کلیک برای چرخش"
+              >
+                <div class="vcard-inner">
+                  <div class="vcard-side vcard-front">
+                    <img
+                      src="assets/images/cards/voucher-4.png"
+                      alt="ووچر ۳ میلیون"
+                    />
+                  </div>
+                  <div class="vcard-side vcard-back">
+                    <img
+                      src="assets/images/cards/voucher-5.png"
+                      alt="پشت ووچر ۳ میلیون"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="voucher-card-item vc-card-2"
+                onclick="toggleVoucherFlip(this)"
+                title="کلیک برای چرخش"
+              >
+                <div class="vcard-inner">
+                  <div class="vcard-side vcard-front">
+                    <img
+                      src="assets/images/cards/voucher-6.png"
+                      alt="ووچر ۵ میلیون"
+                    />
+                  </div>
+                  <div class="vcard-side vcard-back">
+                    <img
+                      src="assets/images/cards/voucher-7.png"
+                      alt="پشت ووچر ۵ میلیون"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="voucher-card-item vc-card-3"
+                onclick="toggleVoucherFlip(this)"
+                title="کلیک برای چرخش"
+              >
+                <div class="vcard-inner">
+                  <div class="vcard-side vcard-front">
+                    <img
+                      src="assets/images/cards/voucher-8.png"
+                      alt="ووچر ۱۰ میلیون"
+                    />
+                  </div>
+                  <div class="vcard-side vcard-back">
+                    <img
+                      src="assets/images/cards/image-10.png"
+                      alt="پشت ووچر ۱۰ میلیون"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 18: SETTLEMENT -->
+      <section
+        class="slide"
+        data-chapter="3"
+        data-title="روش‌های تسویه سازمانی اوورشارژ (پیش‌پرداخت و پس‌پرداخت)"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge">فصل چهارم · انعطاف مالی و تسویه</span>
+            <span class="s18-top-hint"
+              >تخفیف نقدی تا ۶٪ در مدل پیش‌پرداخت یا تسویه اعتباری دوره‌ای</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            روش‌های تسویه سازمانی:
+            <span class="accent-green">مدل پیش‌پرداخت</span> و
+            <span class="accent-orange">مدل پس‌پرداخت</span>
+          </h2>
+
+          <div class="s18-grid anim-up delay-3">
+            <div class="glass-card s18-pay-card s18-card-green">
+              <div class="s18-card-head">
+                <div class="s18-card-head-text">
+                  <h3 class="s18-card-title">مدل پیش‌پرداخت (Pre-paid)</h3>
+                  <span class="s18-card-sub"
+                    >سازمان ابتدا پرداخت را انجام می‌دهد؛ سپس مزایا فعال
+                    می‌شود</span
+                  >
+                </div>
+                <span class="s18-bonus-badge">✨ تا ۶٪ شارژ تشویقی اوانو</span>
+              </div>
+
+              <div class="s18-flow-box s18-flow-box-green">
+                <span class="s18-flow-label"
+                  >مبلغ پرداختی سازمان:
+                  <strong class="s18-flow-value">۱۰۰ میلیون</strong></span
+                >
+                <span class="s18-flow-arrow">←</span>
+                <span class="s18-flow-label"
+                  >شارژ دریافتی پرسنل:
+                  <strong class="s18-flow-value-green"
+                    >۱۰۶ میلیون تومان</strong
+                  ></span
+                >
+              </div>
+
+              <ul class="s18-list">
+                <li>
+                  <strong>ارزش افزوده مستقیم:</strong> بهره‌مندی از حداکثر درصد
+                  شارژ تشویقی و تخفیف نقدی
+                </li>
+                <li>
+                  <strong>تضمین اعتبار خرید:</strong> تخصیص فوری و بدون وقفه در
+                  کیف پول پرسنل
+                </li>
+                <li>
+                  <strong>کاهش بروکراسی:</strong> تسویه کامل در ابتدای دوره بدون
+                  نیاز به پیگیری‌های مالی
+                </li>
+              </ul>
+            </div>
+
+            <div class="glass-card s18-pay-card s18-card-orange">
+              <div class="s18-card-head">
+                <div class="s18-card-head-text">
+                  <h3 class="s18-card-title">مدل پس‌پرداخت (Post-paid)</h3>
+                  <span class="s18-card-sub"
+                    >تسویه دوره‌ای بر اساس مصرف واقعی کارکنان در شبکه
+                    پذیرندگی</span
+                  >
+                </div>
+                <span class="s18-badge-orange"
+                  >بدون نیاز به پیش‌پرداخت نقدی</span
+                >
+              </div>
+
+              <div class="s18-flow-box s18-flow-box-orange">
+                <span class="s18-flow-note"
+                  >سازمان صرفاً هزینه خریدها و مصرف واقعی پرسنل را در انتهای
+                  دوره تسویه می‌کند.</span
+                >
+              </div>
+
+              <ul class="s18-list">
+                <li>
+                  <strong>حفظ نقدینگی سازمان:</strong> منابع مالی سازمان در طول
+                  دوره آزاد باقی می‌ماند
+                </li>
+                <li>
+                  <strong>صورتحساب دقیق مصرف:</strong> ارسال گزارش تجمیعی شفاف
+                  از مبالغ مصرف‌شده پرسنل
+                </li>
+                <li>
+                  <strong>تضمین پرداخت:</strong> تسویه از طریق سازوکارهای
+                  قراردادی و تضمین‌های معتبر
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 19: CASH SOLUTION & UX -->
+      <section
+        class="slide"
+        data-chapter="3"
+        data-title="راهکار نقدی (اوانو کارت)، ظرفیت‌های همراه اول و ارزش‌آفرینی"
+      >
+        <div class="slide-inner">
+          <div class="slide-top-meta anim-up delay-1">
+            <span class="eyebrow-badge"
+              >فصل چهارم · راهکار نقدی و هم‌افزایی سازمانی</span
+            >
+            <span class="s19-top-hint"
+              >همکاری EBCOM و بانک پارسیان (همپا) + خدمات ارتباطی همراه
+              اول</span
+            >
+          </div>
+
+          <h2 class="slide-headline anim-up delay-2">
+            راهکار نقدی <span class="accent-green">اوانو کارت</span>، ظرفیت‌های
+            همراه اول و ارزش ایجادشده
+          </h2>
+
+          <div class="s19-top-cards anim-up delay-3">
+            <div class="glass-card s19-card s19-card-sky s19-list-sky">
+              <span class="eyebrow-badge sky s19-card-badge"
+                >بانک پارسیان (همپا)</span
+              >
+              <h3 class="s19-card-title">راهکار نقدی؛ اوانو کارت</h3>
+              <ul class="s19-list">
+                <li><strong>اتصال به شتاب</strong> و امکان کارت‌به‌کارت</li>
+                <li>قابلیت <strong>تنظیم Cash Out</strong> متناسب با سازمان</li>
+                <li>مدیریت متمرکز نقدینگی کارکنان</li>
+                <li>
+                  بهره‌مندی از <strong>معافیت‌ها و مزایای مالیاتی</strong>
+                </li>
+              </ul>
+            </div>
+
+            <div class="glass-card s19-card s19-card-orange s19-list-orange">
+              <span class="eyebrow-badge orange s19-card-badge"
+                >باندل سازمانی</span
+              >
+              <h3 class="s19-card-title">ظرفیت‌های همراه اول</h3>
+              <ul class="s19-list">
+                <li>ارائه <strong>سیم‌کارت شخصی و سازمانی</strong></li>
+                <li><strong>بسته اینترنت خانواده</strong> ویژه پرسنل</li>
+                <li><strong>معافیت مکالمه</strong> درون‌سازمانی</li>
+                <li>خدمات <strong>APN امن، MVPN و دیتاسنتر</strong></li>
+              </ul>
+            </div>
+
+            <div class="glass-card s19-value-card s19-card-green">
+              <span class="eyebrow-badge s19-card-badge"
+                >ارزش دوگانه B2B2C</span
+              >
+              <h3 class="s19-card-title">
+                ارزش ایجادشده برای سازمان و کارکنان
+              </h3>
+
+              <div class="s19-val-reveal">
+                <div class="s19-val-section s19-val-section-green">
+                  <div class="s19-val-title text-green">برای سازمان:</div>
+                  <div class="s19-val-bullets">
+                    <span>• کنترل و مدیریت یکپارچه</span>
+                    <span>• شفافیت مالی و گزارش‌گیری</span>
+                    <span>• کاهش بار عملیاتی</span>
+                    <span>• نگهداشت منابع انسانی</span>
+                  </div>
+                </div>
+                <div class="s19-val-section s19-val-section-orange">
+                  <div class="s19-val-title text-orange">برای کارکنان:</div>
+                  <div class="s19-val-bullets">
+                    <span>• افزایش قدرت خرید</span>
+                    <span>• تنوع گسترده پذیرندگان</span>
+                    <span>• دریافت آسان و سریع</span>
+                    <span>• تجربه یکپارچه دیجیتال</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card no-collapse s19-ux-card anim-up delay-4">
+            <div class="s19-ux-title">✨ تجربه کاربر (از اعتبار تا خرید):</div>
+            <div class="s19-ux-steps">
+              <span class="ux-step-pill">۱. تخصیص اعتبار</span>
+              <span class="ux-step-arrow">←</span>
+              <span class="ux-step-pill">۲. مشاهده موجودی</span>
+              <span class="ux-step-arrow">←</span>
+              <span class="ux-step-pill">۳. انتخاب کالا</span>
+              <span class="ux-step-arrow">←</span>
+              <span class="ux-step-pill">۴. انتخاب پذیرنده</span>
+              <span class="ux-step-arrow">←</span>
+              <span class="ux-step-pill">۵. پرداخت</span>
+              <span class="ux-step-arrow">←</span>
+              <span class="ux-step-pill">۶. تأیید تراکنش</span>
+              <span class="ux-step-arrow">←</span>
+              <span class="ux-step-pill ux-step-final">۷. تکمیل فرآیند</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- اسلاید 20 -->
+    </main>
+
+    <!-- فوتر -->
+    <footer class="deck-footer">
+      <!-- (کدهای فوتر دقیقا از سورس اصلی) -->
+      <!-- می‌توانید کدهای خودتان را در صورت نیاز اینجا کپی کنید -->
+    </footer>
+  </body>
+</html>
