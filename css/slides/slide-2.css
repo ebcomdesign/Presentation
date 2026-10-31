@@ -1,0 +1,308 @@
+/* =========================================================================
+   SLIDE 02 — ECOSYSTEM & COMPANIES
+   ========================================================================= */
+
+/* گرید اصلی اسلاید */
+.ecosystem-layout {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* ---------- کارت شرکت‌ها ---------- */
+.ecosystem-companies-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: visible;
+}
+
+.ecosystem-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ecosystem-card-header h3 {
+  font-size: 17px;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ecosystem-card-header-badge {
+  font-size: 11px;
+  color: var(--persian-green);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ---------- گرید ۱۲ شرکت ---------- */
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.company-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+  color: #e2e8f0;
+}
+
+.company-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--persian-green);
+  transform: translateX(-4px);
+}
+
+.company-pill.featured-ebcom {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 180, 0.22),
+    rgba(0, 212, 180, 0.06)
+  );
+  border: 1.5px solid var(--persian-green);
+  color: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(0, 212, 180, 0.2);
+}
+
+.comp-logo-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.comp-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.comp-logo-box.placeholder-logo {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--persian-green);
+  background: rgba(0, 212, 180, 0.12);
+  border-color: rgba(0, 212, 180, 0.3);
+}
+
+.comp-name {
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* ---------- فوتر سرویس‌های دیجیتال ---------- */
+.ecosystem-services-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-glass);
+}
+
+.ecosystem-services-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--persian-orange);
+  margin-bottom: 10px;
+}
+
+.ecosystem-services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-pill {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px solid var(--border-glass);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.service-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--persian-green);
+}
+
+.service-pill-featured {
+  background: var(--persian-green) !important;
+  color: #0b0f13 !important;
+  font-weight: 900 !important;
+  border-color: var(--persian-green) !important;
+  box-shadow: 0 4px 12px var(--persian-green-glow);
+}
+
+/* ---------- کارت دیاگرام ---------- */
+.s2-diagram-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 212, 180, 0.16) 0%,
+    rgba(17, 24, 31, 0.98) 72%
+  ) !important;
+  padding: 18px 14px !important;
+}
+
+.s2-diagram-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  overflow: visible;
+}
+
+.s2-diagram-caption {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* =========================================================================
+   SLIDE 02 — RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 1100px) {
+  .ecosystem-layout {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .s2-diagram-card {
+    max-width: 560px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .s2-diagram-svg {
+    max-height: 340px;
+  }
+}
+
+@media (max-width: 900px) {
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ecosystem-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ecosystem-card-header h3 {
+    font-size: 16px !important;
+    line-height: 1.4;
+  }
+  .ecosystem-card-header-badge {
+    font-size: 10.5px;
+  }
+  .companies-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px;
+  }
+  .company-pill {
+    padding: 10px 12px !important;
+    font-size: 12.5px !important;
+    gap: 8px;
+    height: auto;
+    min-height: 52px;
+  }
+  .comp-logo-box {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .comp-name {
+    font-size: 12.5px;
+  }
+  .ecosystem-services-footer {
+    padding-top: 12px;
+  }
+  .ecosystem-services-title {
+    font-size: 12px;
+  }
+  .service-pill {
+    padding: 5px 12px !important;
+    font-size: 12px !important;
+  }
+  .s2-diagram-card {
+    padding: 14px 10px !important;
+  }
+  .s2-diagram-svg text {
+    font-size: 13px !important;
+  }
+  .s2-diagram-svg text[font-size="20"] {
+    font-size: 16px !important;
+  }
+  .s2-diagram-svg text[font-size="17"] {
+    font-size: 14px !important;
+  }
+  .s2-diagram-svg text[font-size="15"] {
+    font-size: 12px !important;
+  }
+  .s2-diagram-caption {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-pill {
+    padding: 9px 10px !important;
+    gap: 6px;
+  }
+  .comp-logo-box {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .comp-name {
+    font-size: 11.5px;
+  }
+  .s2-diagram-svg {
+    max-height: 280px;
+  }
+  .ecosystem-services-title {
+    font-size: 11.5px;
+  }
+}
