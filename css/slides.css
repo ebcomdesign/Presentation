@@ -194,7 +194,6 @@
   flex-direction: column;
   justify-content: flex-start; /* جلوگیری از فشرده شدن محتوای اضافی در وسط صفحه */
   gap: 20px;
-  padding-bottom: 40px;
 }
 
 /* اسلایدهای خاص که عمداً وسط‌چین می‌مونن */
