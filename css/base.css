@@ -92,7 +92,7 @@ body, button, input, select, textarea, svg text, .phone-screen, .city-lbl, .city
 
 .stage-container {
   position: fixed; top: 76px; bottom: 72px; left: 0; right: 0; z-index: 10;
-  overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  overflow: hidden; -webkit-overflow-scrolling: touch;
 }
 
 @keyframes floatOrb {

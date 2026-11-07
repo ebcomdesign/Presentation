@@ -40,21 +40,24 @@
 }
 
 .hero-stat-card.border-right-green {
-  border-color: var(--persian-green) !important;
+  border-right: 4px solid var(--persian-green);
 }
 .hero-stat-card.border-right-green:hover {
+  border-color: var(--persian-green);
   box-shadow: 0 18px 42px rgba(0, 212, 180, 0.2) !important;
 }
 .hero-stat-card.border-right-orange {
-  border-color: var(--persian-orange) !important;
+  border-right: 4px solid var(--persian-orange);
 }
 .hero-stat-card.border-right-orange:hover {
-  box-shadow: 0 18px 42px rgba(255, 119, 34, 0.2) !important;
+  border-color: var(--persian-orange);
+    box-shadow: 0 18px 42px rgba(255, 119, 34, 0.2) !important;
 }
 .hero-stat-card.border-right-sky {
-  border-color: var(--sky-blue) !important;
+  border-right: 4px solid var(--sky-blue);
 }
 .hero-stat-card.border-right-sky:hover {
+  border-color: var(--sky-blue);
   box-shadow: 0 18px 42px rgba(0, 147, 221, 0.2) !important;
 }
 
@@ -84,6 +87,7 @@
 .card-badge {
   background: rgba(0, 0, 0, 0.22);
   padding: 4px 10px;
+  border-radius: 8px;
 }
 
 /* 3D Cards */

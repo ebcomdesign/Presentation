@@ -53,12 +53,31 @@
 
 /* --- Slide Basics --- */
 .slide {
-  position: absolute; inset: 0; padding: 120px 56px 28px; display: flex; flex-direction: column; justify-content: flex-start;
-  opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(28px) scale(0.985);
+  position: absolute;
+  inset: 0;
+  padding: 120px 56px 0; /* پدینگ پایین را صفر کردیم تا به داخل منتقل شود */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(28px) scale(0.985);
   transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.55s;
+  overflow-y: auto; 
+  overflow-x: hidden;
 }
 .slide.active { opacity: 1; visibility: visible; transform: translateY(0) scale(1); pointer-events: auto; z-index: 20; }
-.slide-inner { width: 100%; max-width: 1440px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; padding-bottom: 40px; min-height: 100%; }
+.slide-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1; 
+  padding-bottom: 120px; /* ایجاد ۱۲۰ پیکسل فضای خالی در انتهای اسکرول */
+}
 .slide.center-slide .slide-inner { justify-content: center; }
 
 .anim-up { opacity: 0; transform: translateY(22px); }

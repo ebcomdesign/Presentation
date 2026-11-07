@@ -15,7 +15,11 @@ function initDeck() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
       prevSlide(); // با توجه به جهت RTL
-    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown' || e.key === ' ') {
+      // اگر کلید Space زده شد، جلوی اسکرول شدن پیش‌فرض مرورگر را بگیر
+      if (e.key === ' ') {
+        e.preventDefault();
+      }
       nextSlide();
     } else if (e.key.toLowerCase() === 'f') {
       toggleFullScreen();
