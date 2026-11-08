@@ -128,63 +128,30 @@
   margin-top: 4px;
 }
 .s21-marquee .client-org-unit {
-  width: clamp(120px, 14vw, 180px);
-}
+  width: clamp(100px, 11vw, 140px);
+} /* عرض برای قرارگیری چند آیتم در سطر */
 .s21-marquee .client-circle-logo {
-  width: clamp(52px, 5.5vw, 68px);
-  height: clamp(52px, 5.5vw, 68px);
+  width: clamp(48px, 5vw, 64px);
+  height: clamp(48px, 5vw, 64px);
   padding: clamp(6px, 0.7vw, 8px);
 }
 .s21-marquee .client-unit-name {
-  font-size: clamp(11px, 0.9vw, 13.5px);
+  font-size: clamp(11px, 0.9vw, 13px);
 }
 
 .client-marquee-wrapper {
   position: relative;
-  overflow: hidden;
   width: 100%;
   padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent 0%,
-    #000 7%,
-    #000 93%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    90deg,
-    transparent 0%,
-    #000 7%,
-    #000 93%,
-    transparent 100%
-  );
 }
-.client-track-container {
-  overflow: hidden;
+
+/* ساختار شبکه ثابت (Grid) برای دسکتاپ */
+.client-track.static-grid {
+  display: flex;
+  flex-wrap: wrap; /* اجازه شکستن خط را می‌دهد */
+  justify-content: center; /* لوگوها را در مرکز تراز می‌کند */
+  gap: 16px 20px; /* فاصله عمودی و افقی بین لوگوها */
   width: 100%;
-  padding-top: 8px;
-}
-.client-track {
-  display: grid;
-  width: max-content;
-  row-gap: 16px;
-}
-.client-set {
-  display: flex;
-  gap: 20px;
-  padding-inline-end: 20px;
-}
-.track-move-right {
-  animation: clientScrollRight 38s linear infinite;
-}
-.track-move-left {
-  animation: clientScrollLeft 38s linear infinite;
-}
-.client-marquee-wrapper:hover .client-track {
-  animation-play-state: paused;
 }
 
 .client-org-unit {
@@ -270,39 +237,31 @@
 .s21-pillar-green {
   border-top: 4px solid var(--persian-green);
 }
-
 .s21-pillar-green:hover {
   border-color: var(--persian-green) !important;
   box-shadow: 0 20px 44px rgba(0, 212, 180, 0.25) !important;
 }
-
 .s21-pillar-orange {
   border-top: 4px solid var(--persian-orange);
 }
-
 .s21-pillar-orange:hover {
   border-color: var(--persian-orange) !important;
   box-shadow: 0 20px 44px rgba(255, 119, 34, 0.25) !important;
 }
-
 .s21-pillar-sky {
   border-top: 4px solid var(--sky-blue);
 }
-
 .s21-pillar-sky:hover {
   border-color: var(--sky-blue) !important;
   box-shadow: 0 20px 44px rgba(0, 147, 221, 0.25) !important;
 }
-
 .s21-pillar-pastel {
   border-top: 4px solid var(--pastel-green);
 }
-
 .s21-pillar-pastel:hover {
   border-color: var(--pastel-green) !important;
   box-shadow: 0 20px 44px rgba(61, 213, 152, 0.25) !important;
 }
-
 .s21-pillar-purple {
   border-top: 4px solid var(--royal-purple);
 }
@@ -372,6 +331,7 @@
     grid-column: 2 / 3;
   }
 }
+
 @media (max-width: 768px) {
   .s21-stats-grid {
     grid-template-columns: 1fr;
@@ -398,6 +358,20 @@
     font-size: 11px;
     padding: 4px 12px;
   }
+
+  /* تنظیمات برای اسکرول افقی در موبایل */
+  .client-track.static-grid {
+    flex-wrap: nowrap; /* جلوگیری از شکستن خط */
+    justify-content: flex-start;
+    overflow-x: auto; /* فعال کردن اسکرول افقی */
+    padding-bottom: 10px; /* فضای لازم برای اسکرول بار */
+    -webkit-overflow-scrolling: touch; /* اسکرول نرم در iOS */
+    scroll-snap-type: x mandatory; /* اسنپ شدن به آیتم‌ها */
+  }
+  .client-org-unit {
+    scroll-snap-align: start; /* هم‌ترازی هنگام اسکرول */
+  }
+
   .s21-marquee .client-org-unit {
     width: 140px;
   }
@@ -435,6 +409,7 @@
     font-size: 11.5px !important;
   }
 }
+
 @media (max-width: 480px) {
   .s21-stat-card {
     padding: 12px 14px;
@@ -458,8 +433,17 @@
     font-size: 10.5px;
     padding: 3px 10px;
   }
+
+  .client-track.static-grid {
+    /* در موبایل‌های کوچکتر، برای نمایش 2 تایی، می‌توان عرض آیتم‌ها را تنظیم کرد */
+    gap: 12px;
+    padding-top: 8px;
+  }
+
   .s21-marquee .client-org-unit {
-    width: 120px;
+    /* تنظیم عرض به حدود 45٪ تا دو آیتم در صفحه جا شوند */
+    width: calc(50% - 12px);
+    min-width: 110px;
   }
   .s21-marquee .client-circle-logo {
     width: 50px;
@@ -491,6 +475,7 @@
     line-height: 1.55 !important;
   }
 }
+
 @media (max-width: 360px) {
   .s21-stat-value {
     font-size: 18px;
