@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
   gap: 36px;
-  align-items: center;
+  align-items: start;
   margin-top: 10px;
 }
 
@@ -56,6 +56,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 6px;
+  min-height: 150px;
   padding: 14px 22px !important;
   border-radius: 18px !important;
   align-self: start;
@@ -69,7 +70,7 @@
 
 /* افکت هاور اختصاصی ۳ کارت بالانس */
 #balCard-welfare {
-  border-right: 6px solid var(--sky-blue) !important;
+  border-right: 4px solid var(--sky-blue) !important;
 }
 #balCard-welfare:hover {
   border-color: var(--sky-blue) !important;
@@ -79,7 +80,7 @@
 }
 
 #balCard-credit {
-  border-right: 6px solid var(--persian-orange) !important;
+  border-right: 4px solid var(--persian-orange) !important;
 }
 #balCard-credit:hover {
   border-color: var(--persian-orange) !important;
@@ -89,7 +90,7 @@
 }
 
 #balCard-cash {
-  border-right: 6px solid var(--persian-green) !important;
+  border-right: 4px solid var(--persian-green) !important;
 }
 #balCard-cash:hover {
   border-color: var(--persian-green) !important;
@@ -145,7 +146,7 @@
   border-color: rgba(0, 212, 180, 0.4);
 }
 
-.s8-balance-text {
+/* .s8-balance-text {
   font-size: 14.5px;
   line-height: 1.85;
   color: #e2e8f0;
@@ -156,21 +157,47 @@
   transform: none !important;
   overflow: visible !important;
   display: block !important;
+} */
+
+.s8-balance-text {
+  font-size: 14.5;
+  color: #e2e8f0;
+  line-height: 1.85;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin 0.35s ease;
 }
+.s8-balance-text:hover .s8-balance-text,
+.s8-balance-text:focus-within .s8-balance-text {
+  max-height: 200px;
+  opacity: 1;
+  overflow: visible;
+  margin-top: 6px;
+  transform: translateY(0);
+}
+
 
 /* ستون راست: iPhone */
 .demo-phone-col {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
 }
 
 .iphone-18-pro-max {
   width: 100%;
-  max-width: 440px;
+  max-width: 400px;
   height: 720px;
-  aspect-ratio: 9 / 19.5;
+  aspect-ratio: 9 / 16;
   background: #0b0f13;
   border: 11px solid #1f2937 !important;
   border-radius: 52px !important;
