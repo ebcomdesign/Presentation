@@ -143,8 +143,17 @@
     margin 0.35s ease !important;
 }
 .pill-brand-logo {
+  display: flex;
+  background-color: white;
   width: 24px;
-  /* height: 24px; */
+  height: 24px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+}
+.pill-brand-logo img {
+  width: 20px;
+  height: 20px;
 }
 
 .s16-card:hover .s16-card-text,
