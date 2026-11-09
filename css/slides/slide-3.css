@@ -18,6 +18,9 @@
   padding: 22px 24px;
   position: relative;
   overflow: hidden;
+  align-self: start !important; /* جلوگیری از کشیده شدن کارت همسایه */
+  height: max-content !important; /* ارتفاع کارت فقط به اندازه محتوای خودش باشد */
+  transform-origin: top center; /* برای اینکه انیمیشن دقیقاً رو به پایین باز شود */
 }
 
 /* متن مخفی و هاور اختصاصی */
@@ -45,10 +48,8 @@
 
 /* بردر هاور */
 .slide3-equal-card.border-top-green {
-  border-top:4px solid var(--persian-green);
-  
+  border-top: 4px solid var(--persian-green);
 }
-
 
 .slide3-equal-card.border-top-green:hover {
   border-top-color: var(--persian-green) !important;
@@ -56,8 +57,7 @@
   border-color: var(--persian-green);
 }
 .slide3-equal-card.border-top-orange {
-  border-top:4px solid var(--persian-orange);
-  
+  border-top: 4px solid var(--persian-orange);
 }
 
 .slide3-equal-card.border-top-orange:hover {

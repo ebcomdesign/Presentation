@@ -2,24 +2,172 @@
    SLIDE 04 — 10 SERVICES
    ========================================================================= */
 
-.s4-services-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; align-items: stretch; }
-.s4-service-tile { background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); border-radius: 18px; padding: 16px 14px; display: flex; flex-direction: column; align-items: flex-start; text-align: right; gap: 10px; cursor: pointer; align-self: start; transform-origin: top center; transition: border-color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease; height: 100%; }
-.s4-service-tile:hover, .s4-service-tile.active { background: linear-gradient(180deg, rgba(0, 212, 180, 0.18) 0%, rgba(0, 212, 180, 0.04) 100%); border-color: var(--persian-green); box-shadow: 0 12px 26px rgba(0, 212, 180, 0.18); transform: none !important; }
+.s4-services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  align-items: stretch;
+}
+.s4-service-tile {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  border-radius: 18px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+  gap: 16px;
+  cursor: pointer;
+  align-self: start;
+  transform-origin: top center;
+  transition:
+    border-color 0.28s ease,
+    background 0.28s ease,
+    box-shadow 0.28s ease;
+  height: 100%;
+}
+.s4-service-tile p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin: 0 !important;
+  transform: translateY(-8px);
+  transition: 
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin 0.35s ease;
+  font-size: 13.5px; /* سایز فونت توضیحات - قابل تغییر */
+  color: var(--text-muted, #cbd5e1);
+  line-height: 1.65;
+}
 
-.s4-service-tile .service-icon-box { width: clamp(48px, 4.5vw, 60px); height: clamp(48px, 4.5vw, 60px); border-radius: clamp(14px, 1.4vw, 18px); background: rgba(0, 212, 180, 0.12); display: flex; align-items: center; justify-content: center; color: var(--persian-green); flex-shrink: 0; transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease; }
-.s4-service-tile .service-icon-box svg { width: clamp(22px, 2vw, 26px); height: clamp(22px, 2vw, 26px); }
-.s4-service-tile:hover .service-icon-box, .s4-service-tile.active .service-icon-box { background: var(--persian-green); color: #0b0f13; transform: scale(1.08); }
+.s4-service-tile:hover,
+.s4-service-tile.active {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 212, 180, 0.18) 0%,
+    rgba(0, 212, 180, 0.04) 100%
+  );
+  border-color: var(--persian-green);
+  box-shadow: 0 12px 26px rgba(0, 212, 180, 0.18);
+  transform: none !important;
+}
 
-.s4-service-tile h4 { font-size: clamp(12.5px, 0.95vw, 14px); font-weight: 800; color: #ffffff; line-height: 1.4; text-align: right; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0; }
-.s4-service-tile p { font-size: clamp(10.5px, 0.8vw, 11.5px); color: var(--text-muted); line-height: 1.5; font-weight: 700; text-align: right; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: none !important; opacity: 1 !important; transform: none !important; margin: 0 !important; padding: 0 !important; display: block !important; }
+.s4-service-tile .service-icon-box {
+  width: clamp(48px, 4.5vw, 60px);
+  height: clamp(48px, 4.5vw, 60px);
+  border-radius: clamp(14px, 1.4vw, 18px);
+  background: rgba(0, 212, 180, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--persian-green);
+  flex-shrink: 0;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+.s4-service-tile .service-icon-box svg {
+  width: clamp(22px, 2vw, 26px);
+  height: clamp(22px, 2vw, 26px);
+}
+.s4-service-tile:hover .service-icon-box,
+.s4-service-tile.active .service-icon-box {
+  background: var(--persian-green);
+  color: #0b0f13;
+  transform: scale(1.08);
+}
 
-@media (max-width: 1280px) { .s4-services-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; } }
-@media (max-width: 1024px) { .s4-services-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
-@media (max-width: 768px) { .s4-services-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } .s4-service-tile { padding: 14px 12px; gap: 8px; } }
+.s4-service-tile h4 {
+  font-size: clamp(18px, 0.95vw, 14px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.4;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.s4-service-tile p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin: 0 !important;
+  transform: translateY(-8px);
+  transition: 
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    margin 0.35s ease;
+  font-size: 15px; /* سایز فونت توضیحات - قابل تغییر */
+  color: var(--text-muted, #cbd5e1);
+  line-height: 1.65;
+}
+.s4-service-tile:hover p,
+.s4-service-tile:focus-within p {
+  max-height: 250px; /* اگر متن طولانی‌تر است این عدد را بیشتر کنید */
+  opacity: 1;
+  overflow: visible;
+  margin-top: 10px !important; /* فاصله توضیحات از المان بالایی پس از باز شدن */
+  transform: translateY(0);
+
+@media (max-width: 1280px) {
+  .s4-services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+}
+@media (max-width: 1024px) {
+  .s4-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .s4-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .s4-service-tile {
+    padding: 14px 12px;
+    gap: 8px;
+  }
+}
 @media (max-width: 480px) {
-  .s4-services-grid { grid-template-columns: 1fr; gap: 8px; }
-  .s4-service-tile { display: grid; grid-template-columns: 44px 1fr; grid-template-rows: auto auto; grid-template-areas: "icon title" "icon badge"; column-gap: 12px; row-gap: 2px; align-items: center; padding: 12px 14px; border-radius: 14px; }
-  .s4-service-tile .service-icon-box { grid-area: icon; align-self: center; width: 44px; height: 44px; border-radius: 12px; }
-  .s4-service-tile h4 { grid-area: title; align-self: end; }
-  .s4-service-tile p { grid-area: badge; align-self: start; margin-top: 2px !important; }
+  .s4-services-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .s4-service-tile {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "icon title" "icon badge";
+    column-gap: 12px;
+    row-gap: 2px;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 14px;
+  }
+  .s4-service-tile .service-icon-box {
+    grid-area: icon;
+    align-self: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+  .s4-service-tile h4 {
+    grid-area: title;
+    align-self: end;
+  }
+  .s4-service-tile p {
+    grid-area: badge;
+    align-self: start;
+    margin-top: 2px !important;
+  }
 }

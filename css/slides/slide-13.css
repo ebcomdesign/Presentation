@@ -186,6 +186,25 @@
   display: block;
   overflow: visible;
 }
+/* Slide 13 — Animated Dashed Flow Lines */
+.s13-visual-svg .svg-flow-line {
+  stroke-dasharray: 7 6;
+  stroke-dashoffset: 0;
+  animation: s13-flow-animation 1.5s linear infinite;
+}
+
+@keyframes s13-flow-animation {
+  to {
+    stroke-dashoffset: -26;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .s13-visual-svg .svg-flow-line {
+    animation: none;
+  }
+}
 
 @media (max-width: 1100px) {
   .s13-panel {

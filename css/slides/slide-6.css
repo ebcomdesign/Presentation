@@ -30,6 +30,9 @@
   min-height: auto;
   height: 100%;
   overflow: visible;
+  align-self: start !important; /* جلوگیری از کشیده شدن کارت همسایه */
+  height: max-content !important; /* ارتفاع کارت فقط به اندازه محتوای خودش باشد */
+  transform-origin: top center; /* برای اینکه انیمیشن دقیقاً رو به پایین باز شود */
 }
 .s6-challenge-card:hover {
   border-color: var(--persian-orange);

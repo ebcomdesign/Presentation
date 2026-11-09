@@ -161,18 +161,22 @@
 .slide {
   position: absolute;
   inset: 0;
-  padding: 40px 56px; /* پدینگ پایین را صفر کردیم تا به داخل منتقل شود */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  padding-top: 0;
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
   transform: translateY(28px) scale(0.985);
+
   transition:
     opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
     visibility 0.55s;
+
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -186,12 +190,13 @@
 .slide-inner {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  flex: 1;
+  flex: 0 0 auto;
 }
+
 .slide.center-slide .slide-inner {
   justify-content: center;
 }
@@ -222,7 +227,7 @@
 .slide-top-meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   gap: 16px;
   flex-wrap: wrap;
 }

@@ -131,26 +131,131 @@
   width: clamp(100px, 11vw, 140px);
 } /* عرض برای قرارگیری چند آیتم در سطر */
 .s21-marquee .client-circle-logo {
-  width: clamp(48px, 5vw, 64px);
-  height: clamp(48px, 5vw, 64px);
+  width: clamp(76px, 5vw, 76px);
+  height: clamp(76px, 5vw, 76px);
   padding: clamp(6px, 0.7vw, 8px);
 }
 .s21-marquee .client-unit-name {
   font-size: clamp(11px, 0.9vw, 13px);
 }
 
-.client-marquee-wrapper {
+/* .client-marquee-wrapper {
   position: relative;
   width: 100%;
   padding: 10px 0;
+} */
+
+
+/* Main wrapper */
+.s21-marquee {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 0;
+    direction: ltr;
 }
+
+.s21-marquee .client-marquee-row {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.s21-marquee .client-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    flex-shrink: 0;
+    gap: 0;
+    direction: ltr;
+    animation: marquee-forward 25s linear infinite;
+    will-change: transform;
+}
+
+.s21-marquee .client-track.reverse {
+    animation-name: marquee-backward;
+    animation-duration: 25s;
+}
+
+.s21-marquee .client-track-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 28px;
+    padding-right: 28px;
+}
+
+.s21-marquee .client-org-unit {
+    flex: 0 0 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* حرکت ردیف اول: چپ به راست */
+@keyframes marquee-forward {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* حرکت ردیف دوم: راست به چپ */
+@keyframes marquee-backward {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.s21-marquee:hover .client-track {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .s21-marquee {
+        gap: 18px;
+    }
+
+    .s21-marquee .client-track-group {
+        gap: 18px;
+        padding-right: 18px;
+    }
+
+    .s21-marquee .client-org-unit {
+        flex-basis: 120px;
+        width: 120px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .s21-marquee .client-track {
+        animation: none;
+    }
+}
+
+
+
+
+
+
 
 /* ساختار شبکه ثابت (Grid) برای دسکتاپ */
 .client-track.static-grid {
   display: flex;
   flex-wrap: wrap; /* اجازه شکستن خط را می‌دهد */
   justify-content: center; /* لوگوها را در مرکز تراز می‌کند */
-  gap: 16px 20px; /* فاصله عمودی و افقی بین لوگوها */
+  gap: 32px 20px; /* فاصله عمودی و افقی بین لوگوها */
   width: 100%;
 }
 
@@ -227,6 +332,9 @@
     border-color 0.3s ease,
     box-shadow 0.3s ease;
   height: 100%;
+  align-self: start !important; /* جلوگیری از کشیده شدن کارت همسایه */
+  height: max-content !important; /* ارتفاع کارت فقط به اندازه محتوای خودش باشد */
+  transform-origin: top center; /* برای اینکه انیمیشن دقیقاً رو به پایین باز شود */
 }
 .s21-pillar:hover,
 .why-pillar-card:hover {

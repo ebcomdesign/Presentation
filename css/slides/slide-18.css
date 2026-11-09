@@ -28,7 +28,10 @@
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
-}
+  align-self: start !important; /* جلوگیری از کشیده شدن کارت همسایه */
+  height: max-content !important; /* ارتفاع کارت فقط به اندازه محتوای خودش باشد */
+  transform-origin: top center; /* برای اینکه انیمیشن دقیقاً رو به پایین باز شود */
+  }
 .s18-pay-card:hover {
   transform: none !important;
   z-index: 10;
