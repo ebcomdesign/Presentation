@@ -33,7 +33,7 @@
   background: var(--persian-green-soft);
   border: 1px solid var(--border-green);
   color: var(--persian-green);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
 }
 .eyebrow-badge.orange {
@@ -244,7 +244,7 @@
   color: var(--persian-orange);
 }
 .slide-subtitle {
-  font-size: clamp(13.5px, 1.1vw, 16px);
+  font-size: clamp(15px, 1.1vw, 16px);
   color: #ffffff;
   line-height: 1.75;
   max-width: 960px;
@@ -315,13 +315,13 @@
   color: #cbd5e1;
 }
 .text-green {
-  color: var(--persian-green);
+  color: var(--persian-green) !important;
 }
 .text-orange {
-  color: var(--persian-orange);
+  color: var(--persian-orange) !important;
 }
 .text-sky {
-  color: var(--sky-blue);
+  color: var(--sky-blue) !important;
 }
 .text-purple {
   color: #a78bfa;
@@ -395,18 +395,13 @@
   border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 .header-partner-logos img {
-  height: 24px;
+  height: 40px;
   width: auto;
   object-fit: contain;
   display: block;
-  opacity: 0.85;
-  filter: grayscale(20%);
-  transition: all 0.3s ease;
 }
 .header-partner-logos img:hover {
-  opacity: 1;
-  filter: grayscale(0%);
-  transform: translateY(-2px);
+  transform: scale(1.04);
 }
 .logo-divider {
   width: 1px;

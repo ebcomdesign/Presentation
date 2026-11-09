@@ -24,7 +24,7 @@
 }
 
 .s7-main-title {
-  font-size: clamp(17px, 1.45vw, 22px);
+  font-size: clamp(20px, 1.45vw, 22px);
   font-weight: 900;
   color: #ffffff;
   line-height: 1.4;
@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  font-size: clamp(12px, 0.95vw, 14px);
+  font-size: clamp(13px, 0.95vw, 14px);
   text-align: center;
   white-space: nowrap;
   transition:
@@ -92,7 +92,7 @@
 }
 
 .s7-node-label {
-  font-size: clamp(10px, 0.75vw, 11.5px);
+  font-size: clamp(13px, 0.75vw, 11.5px);
   color: var(--text-muted);
   font-weight: 700;
   white-space: nowrap;
@@ -221,7 +221,7 @@
 }
 
 .s7-item-title {
-  font-size: clamp(13.5px, 1.05vw, 15.5px);
+  font-size: clamp(18px, 1.05vw, 16px);
   font-weight: 900;
   color: #ffffff;
   line-height: 1.45;

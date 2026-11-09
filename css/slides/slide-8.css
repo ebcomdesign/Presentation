@@ -32,12 +32,6 @@
   flex-wrap: wrap;
 }
 
-.s8-top-meta span:last-child {
-  font-size: 13px;
-  color: var(--text-muted);
-  font-weight: 700;
-}
-
 .s8-headline {
   margin: 0;
   line-height: 1.35;
@@ -108,7 +102,7 @@
 }
 
 .s8-balance-title {
-  font-size: clamp(14px, 1.15vw, 17px);
+  font-size: clamp(20px, 1.15vw, 19px);
   font-weight: 900;
   line-height: 1.4;
   margin: 0;
@@ -160,7 +154,7 @@
 } */
 
 .s8-balance-text {
-  font-size: 14.5;
+  font-size: 16;
   color: #e2e8f0;
   line-height: 1.85;
   max-height: 0;

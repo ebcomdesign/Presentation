@@ -118,7 +118,7 @@
 
 /* عنوان */
 .s9-title {
-  font-size: clamp(18px, 1.2vw, 20px);
+  font-size: clamp(20px, 1.2vw, 20px);
   font-weight: 900;
   color: #ffffff;
   line-height: 1.4;
@@ -128,7 +128,7 @@
 
 /* متن: در حالت عادی مخفی */
 .s9-text {
-  font-size: clamp(12.5px, 0.95vw, 14px);
+  font-size: 15px;
   line-height: 1.75;
   color: #cbd5e1;
   max-height: 0 !important;

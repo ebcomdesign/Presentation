@@ -22,14 +22,14 @@
   gap: 8px;
 }
 .ecosystem-card-header h3 {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 900;
   color: #ffffff;
   margin: 0;
   line-height: 1.4;
 }
 .ecosystem-card-header-badge {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--persian-green);
   font-weight: 800;
   white-space: nowrap;
@@ -117,10 +117,10 @@
   border-top: 1px dashed var(--border-glass);
 }
 .ecosystem-services-title {
-  font-size: 12.5px;
+  font-size: 15px;
   font-weight: 800;
   color: var(--persian-orange);
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .ecosystem-services-list {
   display: flex;
