@@ -34,7 +34,7 @@
   overflow: hidden;
   margin: 0 !important;
   transform: translateY(-8px);
-  transition: 
+  transition:
     max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.35s ease,
     transform 0.35s ease,
@@ -101,7 +101,7 @@
   overflow: hidden;
   margin: 0 !important;
   transform: translateY(-8px);
-  transition: 
+  transition:
     max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.35s ease,
     transform 0.35s ease,
@@ -117,6 +117,11 @@
   overflow: visible;
   margin-top: 10px !important; /* فاصله توضیحات از المان بالایی پس از باز شدن */
   transform: translateY(0);
+}
+
+/* =========================================================================
+   SLIDE 04 — RESPONSIVE
+   ========================================================================= */
 
 @media (max-width: 1280px) {
   .s4-services-grid {
@@ -124,12 +129,39 @@
     gap: 12px;
   }
 }
+
 @media (max-width: 1024px) {
   .s4-services-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
+  .s4-service-tile {
+    padding: 16px 12px;
+    gap: 12px;
+  }
+  .s4-service-tile .service-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+  }
+  .s4-service-tile .service-icon-box svg {
+    width: 24px;
+    height: 24px;
+  }
+  .s4-service-tile h4 {
+    font-size: 15px !important;
+  }
+  /* نمایش دائمی متن توضیحات روی تبلت */
+  .s4-service-tile p {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    font-size: 12px !important;
+  }
 }
+
 @media (max-width: 768px) {
   .s4-services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -137,9 +169,27 @@
   }
   .s4-service-tile {
     padding: 14px 12px;
-    gap: 8px;
+    gap: 10px;
+    border-radius: 16px;
+  }
+  .s4-service-tile .service-icon-box {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+  }
+  .s4-service-tile .service-icon-box svg {
+    width: 22px;
+    height: 22px;
+  }
+  .s4-service-tile h4 {
+    font-size: 14px !important;
+  }
+  .s4-service-tile p {
+    font-size: 11.5px !important;
+    line-height: 1.55;
   }
 }
+
 @media (max-width: 480px) {
   .s4-services-grid {
     grid-template-columns: 1fr;
@@ -147,29 +197,40 @@
   }
   .s4-service-tile {
     display: grid;
-    grid-template-columns: 44px 1fr;
+    grid-template-columns: 46px 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "icon title" "icon badge";
+    grid-template-areas:
+      'icon title'
+      'icon desc';
     column-gap: 12px;
-    row-gap: 2px;
+    row-gap: 4px;
     align-items: center;
+    text-align: right;
     padding: 12px 14px;
     border-radius: 14px;
+    height: auto;
   }
   .s4-service-tile .service-icon-box {
     grid-area: icon;
-    align-self: center;
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     border-radius: 12px;
+  }
+  .s4-service-tile .service-icon-box svg {
+    width: 22px;
+    height: 22px;
   }
   .s4-service-tile h4 {
     grid-area: title;
-    align-self: end;
+    text-align: right;
+    font-size: 14px !important;
+    line-height: 1.35;
   }
   .s4-service-tile p {
-    grid-area: badge;
-    align-self: start;
-    margin-top: 2px !important;
+    grid-area: desc;
+    text-align: right;
+    margin-top: 0 !important;
+    font-size: 11.5px !important;
+    line-height: 1.5;
   }
 }

@@ -1,4 +1,3 @@
-
 /* =========================================================================
    SLIDE 07 — EBCOM & WELFARE
    ========================================================================= */
@@ -280,158 +279,111 @@
   box-shadow: 0 18px 42px rgba(167, 139, 250, 0.35) !important;
 }
 
-/* RESPONSIVE — TABLET */
+/* =========================================================================
+   SLIDE 07 — RESPONSIVE
+   ========================================================================= */
 
 @media (max-width: 1100px) {
   .slide7-aligned-grid {
     grid-template-columns: 1fr !important;
     gap: 18px;
+    min-height: auto;
   }
-
   .slide7-right-box {
     min-height: auto !important;
   }
-
   .slide7-left-stack {
     height: auto;
   }
+  /* باز بودن دائمی توضیحات آیتم‌ها در تبلت و موبایل */
+  .s7-item-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 4px !important;
+    font-size: 12.5px !important;
+  }
 }
-
-/* RESPONSIVE — MOBILE */
 
 @media (max-width: 768px) {
-  .s7-flow {
-    padding: 12px 10px;
-    gap: 4px;
+  .slide7-aligned-grid {
+    gap: 14px;
   }
-
+  .s7-main-title {
+    font-size: 17px !important;
+  }
+  .s7-main-text {
+    font-size: 13px !important;
+    line-height: 1.75;
+  }
+  .s7-flow {
+    padding: 14px 10px;
+    margin-top: 10px;
+  }
   .s7-node {
-    min-width: 52px;
-    padding: 8px 10px;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 6px 10px;
     font-size: 12px;
   }
-
   .s7-node-label {
-    font-size: 10px;
+    font-size: 11px;
   }
-
-  .s7-main-title {
-    font-size: 17px;
+  .s7-flow-line {
+    margin-bottom: 14px;
   }
-
-  .s7-main-text {
-    font-size: 13px;
-    line-height: 1.8;
+  .slide7-left-item {
+    padding: 12px 14px !important;
+    gap: 10px !important;
+    border-radius: 16px;
   }
-
-  .s7-item-title {
+  .s7-item-num {
+    width: 36px;
+    height: 36px;
     font-size: 13.5px;
   }
-
+  .s7-item-title {
+    font-size: 14px !important;
+  }
   .s7-item-text {
-    font-size: 11.5px;
+    font-size: 12px !important;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 540px) {
   .s7-flow {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
     padding: 14px 12px;
-    gap: 10px;
-    align-items: stretch;
   }
-
   .s7-flow-node {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .s7-flow-line {
+    justify-content: flex-start;
+    gap: 12px;
     width: 100%;
-    min-width: 0;
-    height: 20px;
-    stroke-dasharray: 8, 8;
-    animation: flow-move 1.5s linear infinite;
   }
-
-  .s7-flow-line svg {
-    width: 40px;
-    height: 20px;
-    margin: 0 auto;
-    transform: rotate(90deg);
-    stroke-dasharray: 8, 8;
-    animation: flow-move 1.5s linear infinite;
-  }
-
   .s7-node {
-    min-width: 80px;
-    padding: 8px 14px;
-    font-size: 12.5px;
+    min-width: 76px;
+    min-height: 40px;
+    font-size: 12px;
   }
-
   .s7-node-label {
-    font-size: 11px;
+    font-size: 11.5px;
     text-align: right;
   }
-
+  .s7-flow-line {
+    display: none; /* در حالت عمودی موبایل نیازی به خط افقی متحرک نیست */
+  }
   .slide7-left-item {
-    padding: 12px 14px;
-    gap: 12px;
+    padding: 10px 12px !important;
   }
-
-  .s7-item-num {
-    width: 38px;
-    height: 38px;
-    font-size: 13.5px;
-    border-radius: 10px;
-  }
-
   .s7-item-title {
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 13px !important;
   }
-
   .s7-item-text {
-    font-size: 11.5px;
-    line-height: 1.6;
-  }
-}
-
-/* RESPONSIVE — SMALL MOBILE */
-
-@media (max-width: 480px) {
-  .s7-main-title {
-    font-size: 16px;
-  }
-
-  .s7-main-text {
-    font-size: 12.5px;
-  }
-
-  .s7-flow {
-    padding: 12px 10px;
-  }
-
-  .s7-node {
-    min-width: 70px;
-    font-size: 12px;
-    padding: 7px 12px;
-  }
-
-  .s7-item-title {
-    font-size: 12.5px;
-  }
-
-  .s7-item-text {
-    font-size: 11px;
-  }
-
-  .s7-item-num {
-    width: 34px;
-    height: 34px;
-    font-size: 12.5px;
+    font-size: 11.5px !important;
   }
 }
 
@@ -441,7 +393,6 @@
   0% {
     stroke-dashoffset: 20;
   }
-
   100% {
     stroke-dashoffset: 0;
   }

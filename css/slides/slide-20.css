@@ -380,7 +380,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(50%); 
+    transform: translateX(50%);
   }
 }
 
@@ -390,89 +390,180 @@
   animation: infinite-scroll var(--lm-dur, 42s) linear infinite;
 }
 
+/* =========================================================================
+   SLIDE 20 — RESPONSIVE
+   ========================================================================= */
 
 @media (max-width: 1100px) {
   .s20-map-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
   }
-  .s20-imap-svg {
-    max-height: 420px;
+  .s20-imap-svg,
+  .imap-svg {
+    max-height: 400px;
+  }
+  .s20-stats-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 }
+
+@media (max-width: 1024px) {
+  /* نمایش همیشگی محتوای هاور در تبلت و موبایل */
+  .s20-stat-card .s20-stat-text,
+  .s20-stat-card p,
+  .s20-stat-card .hover-reveal {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    font-size: 13.5px !important;
+    line-height: 1.7 !important;
+  }
+  .s20-stat-card {
+    min-height: auto !important;
+    height: 100% !important;
+  }
+  .s20-marquee .logo-dots {
+    --dot: 64px;
+    --gap: 12px;
+  }
+  .lm-set {
+    gap: 18px;
+    padding-right: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .imap > div {
     padding: 12px 14px;
+    border-radius: 18px;
   }
-  .s20-imap-svg {
-    max-height: 380px;
-  }
-  .s20-stat-card {
-    padding: 14px 16px;
-  }
-  .s20-stat-title {
-    font-size: 14px;
-  }
-  .s20-stat-text {
-    font-size: 12px;
-    line-height: 1.65;
+  .s20-imap-svg,
+  .imap-svg {
+    max-height: 360px;
   }
   .imap-legend {
-    font-size: 10.5px;
+    font-size: 11px;
     gap: 6px 12px;
   }
   .imap-legend i {
     width: 10px;
     height: 10px;
   }
+  .imap-tip-rich {
+    min-width: 180px;
+    max-width: calc(100% - 24px);
+    padding: 10px 12px;
+  }
+
+  .s20-stats-col {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .s20-stat-card {
+    padding: 14px 16px !important;
+    height: auto !important;
+  }
+  .s20-stat-title {
+    font-size: 16px !important;
+  }
+  .s20-stat-card .s20-stat-text {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+  }
+
+  .s20-marquee {
+    margin-top: 10px;
+  }
+  .s20-marquee .logo-dots {
+    --dot: 56px;
+    --gap: 10px;
+  }
+  .lm-track {
+    padding: 10px 0;
+  }
+  .lm-set {
+    gap: 14px;
+    padding-right: 14px;
+  }
 }
+
 @media (max-width: 480px) {
   .imap > div {
     padding: 10px 10px;
     border-radius: 16px;
   }
-  .s20-imap-svg {
-    max-height: 320px;
+  .s20-imap-svg,
+  .imap-svg {
+    max-height: 300px;
   }
   .imap-legend {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6px 8px;
-    font-size: 10px;
+    font-size: 10.5px;
   }
+  .imap-tip-rich {
+    min-width: 160px;
+    padding: 8px 10px;
+  }
+  .tip-prov-name {
+    font-size: 12.5px;
+  }
+  .tip-merch-num {
+    font-size: 13.5px;
+  }
+
   .s20-stat-card {
-    padding: 12px 14px;
+    padding: 12px 14px !important;
     border-right-width: 4px !important;
-    border-radius: 14px;
+    border-radius: 14px !important;
   }
   .s20-stat-title {
-    font-size: 13px;
+    font-size: 14.5px !important;
     line-height: 1.45;
   }
-  .s20-stat-text {
-    font-size: 11.5px;
-    line-height: 1.6;
+  .s20-stat-card .s20-stat-text {
+    font-size: 12px !important;
+    line-height: 1.65 !important;
   }
+
   .s20-marquee {
-    margin-top: 12px;
+    margin-top: 8px;
   }
   .s20-marquee .logo-dots {
-    --dot: 44px;
-    --gap: 10px;
+    --dot: 46px;
+    --gap: 8px;
+  }
+  .lm-track {
+    padding: 8px 0;
+  }
+  .lm-set {
+    gap: 12px;
+    padding-right: 12px;
   }
   .logo-dot img {
     max-width: 72%;
-    max-height: 52%;
+    max-height: 72%;
   }
 }
+
 @media (max-width: 360px) {
-  .s20-imap-svg {
-    max-height: 280px;
+  .s20-imap-svg,
+  .imap-svg {
+    max-height: 260px;
   }
   .s20-stat-title {
-    font-size: 12.5px;
+    font-size: 13.5px !important;
   }
-  .s20-stat-text {
-    font-size: 11px;
+  .s20-stat-card .s20-stat-text {
+    font-size: 11.5px !important;
+  }
+  .s20-marquee .logo-dots {
+    --dot: 42px;
   }
 }

@@ -31,8 +31,8 @@
     box-shadow 0.3s ease;
   align-self: start !important;
   height: max-content !important;
-  transform-origin: top center; 
-  }
+  transform-origin: top center;
+}
 .s19-card:hover,
 .s19-value-card:hover {
   transform: none !important;
@@ -92,7 +92,7 @@
   padding-right: 18px;
 }
 .s19-list li::before {
-  content: "✓";
+  content: '✓';
   position: absolute;
   right: 0;
   top: 0;
@@ -234,7 +234,7 @@
   gap: 8px;
   flex-wrap: wrap;
 }
-.ux-step-pill:hover{
+.ux-step-pill:hover {
   background-color: var(--persian-green);
   color: black;
 }
@@ -261,116 +261,188 @@
   line-height: 1;
 }
 
+/* =========================================================================
+   SLIDE 19 — RESPONSIVE
+   ========================================================================= */
+
 @media (max-width: 1100px) {
   .s19-top-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
   }
   .s19-value-card {
     grid-column: 1 / -1;
-    min-height: auto;
-  }
-  .s19-ux-steps .ux-step-pill {
-    font-size: 11.5px;
-    padding: 7px 12px;
+    height: auto !important;
   }
 }
+
+@media (max-width: 1024px) {
+  /* نمایش همیشگی لیست‌ها و محتوای مخفی هاور در تبلت و موبایل */
+  .s19-card ul,
+  .s19-card p,
+  .s19-card .s19-list,
+  .s19-card .hover-reveal,
+  .s19-value-card ul,
+  .s19-value-card p,
+  .s19-value-card .s19-val-reveal,
+  .s19-value-card .hover-reveal {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+  }
+  .s19-card,
+  .s19-value-card {
+    height: auto !important;
+  }
+  .s19-list li {
+    font-size: 13px !important;
+  }
+  .s19-val-title {
+    font-size: 13px !important;
+  }
+  .s19-val-bullets {
+    font-size: 12px !important;
+  }
+  .s19-ux-steps {
+    justify-content: center;
+    gap: 10px;
+  }
+  .s19-ux-steps .ux-step-pill {
+    font-size: 13.5px;
+    padding: 10px 14px;
+  }
+}
+
 @media (max-width: 768px) {
   .s19-top-cards {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
   .s19-value-card {
     grid-column: auto;
   }
   .s19-card,
   .s19-value-card {
-    padding: 16px 18px;
-    gap: 10px;
+    padding: 16px 18px !important;
+    gap: 12px;
   }
   .s19-card-title {
-    font-size: 18px !important;
+    font-size: 17px !important;
   }
   .s19-list {
-    gap: 6px;
+    gap: 8px !important;
   }
   .s19-list li {
-    font-size: 11.5px;
-    padding-right: 16px;
+    font-size: 12.5px !important;
+    padding-right: 18px !important;
+  }
+  .s19-val-title {
+    font-size: 12.5px !important;
+  }
+  .s19-val-bullets {
+    font-size: 11.5px !important;
   }
   .s19-ux-card {
-    padding: 16px 18px;
-    margin-top: 12px;
+    padding: 16px 18px !important;
+    margin-top: 4px;
+    gap: 16px;
+  }
+  .s19-ux-title {
+    font-size: 14px !important;
   }
   .s19-ux-steps {
-    gap: 6px;
-  }
-  .s19-ux-steps .ux-step-pill {
-    font-size: 11px;
-    padding: 6px 10px;
-  }
-  .s19-ux-steps .ux-step-arrow {
-    font-size: 14px;
-  }
-}
-@media (max-width: 480px) {
-  .s19-card,
-  .s19-value-card {
-    padding: 14px 16px;
-    border-radius: 16px;
     gap: 8px;
   }
+  .s19-ux-steps .ux-step-pill {
+    font-size: 12.5px;
+    padding: 8px 12px;
+  }
+  .s19-ux-steps .ux-step-arrow {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .s19-top-hint {
+    font-size: 11.5px !important;
+  }
+  .s19-card,
+  .s19-value-card {
+    padding: 14px 16px !important;
+    border-radius: 16px !important;
+    gap: 10px;
+  }
   .s19-card-badge {
-    font-size: 10px;
-    padding: 3px 10px;
+    font-size: 11px !important;
+    padding: 4px 10px !important;
   }
   .s19-card-title {
-    font-size: 16.5px !important;
-    line-height: 1.4;
+    font-size: 15.5px !important;
+    line-height: 1.45;
+  }
+  .s19-list {
+    gap: 6px !important;
   }
   .s19-list li {
-    font-size: 11px;
-    line-height: 1.6;
-    padding-right: 14px;
+    font-size: 12px !important;
+    line-height: 1.65;
+    padding-right: 16px !important;
   }
   .s19-val-section {
     padding: 10px 12px;
   }
   .s19-val-title {
-    font-size: 11px;
+    font-size: 12px !important;
     margin-bottom: 6px;
   }
   .s19-val-bullets {
     grid-template-columns: 1fr;
-    gap: 4px;
-    font-size: 10.5px;
+    gap: 6px;
+    font-size: 11.5px !important;
+  }
+  .s19-val-bullets span {
+    white-space: normal;
+    overflow: visible;
+  }
+  .s19-ux-card {
+    padding: 14px 16px !important;
+    gap: 14px;
+  }
+  .s19-ux-title {
+    font-size: 13px !important;
   }
   .s19-ux-steps {
     flex-direction: column;
     align-items: stretch;
-    gap: 4px;
+    gap: 6px;
   }
   .s19-ux-steps .ux-step-pill {
     text-align: center;
-    font-size: 11.5px;
-    padding: 7px 12px;
+    font-size: 12.5px;
+    padding: 10px 14px;
   }
   .s19-ux-steps .ux-step-arrow {
-    transform: rotate(-90deg);
+    display: inline-block;
+    transform: rotate(-90deg) !important;
     align-self: center;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1;
+    margin: 2px 0;
   }
 }
+
 @media (max-width: 360px) {
   .s19-card-title {
-    font-size: 13.5px !important;
+    font-size: 14.5px !important;
   }
-  .s19-list li {
-    font-size: 10.5px;
+  .s19-list li,
+  .s19-val-bullets {
+    font-size: 11px !important;
   }
   .s19-ux-steps .ux-step-pill {
-    font-size: 10.5px;
-    padding: 6px 10px;
+    font-size: 11.5px;
+    padding: 8px 10px;
   }
 }

@@ -93,7 +93,6 @@
   font-weight: 900;
 }
 
-
 .s15-info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -204,7 +203,7 @@
   margin: 0;
 }
 .s15-visual-sub {
-  /* font-size: clamp(10.5px, 0.85vw, 14px); */
+  font-size: clamp(10.5px, 0.85vw, 14px);
   color: var(--persian-rose);
   line-height: 1.55;
   font-weight: 700;
@@ -218,7 +217,8 @@
 }
 
 @keyframes s15-circle-pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(0.92);
     opacity: 0.65;
   }
@@ -229,12 +229,9 @@
   }
 }
 
-/* رعایت تنظیمات کاهش حرکت سیستم کاربر */
-@media (prefers-reduced-motion: reduce) {
-  .s15-visual-svg .svg-pulse {
-    animation: none;
-  }
-}
+/* =========================================================================
+   SLIDE 15 — RESPONSIVE
+   ========================================================================= */
 
 @media (max-width: 1100px) {
   .s15-panel {
@@ -242,13 +239,31 @@
     gap: 16px;
   }
   .s15-visual-box {
-    min-height: 260px;
+    min-height: 320px;
     height: auto;
   }
   .s15-visual-svg {
-    max-width: 220px;
+    max-width: 260px;
   }
 }
+
+@media (max-width: 1024px) {
+  .s15-main-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 8px !important;
+  }
+  .s15-info-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 4px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .s15-main-card {
     padding: 18px 20px;
@@ -258,7 +273,7 @@
     font-size: 19px;
   }
   .s15-main-text {
-    font-size: 13px;
+    font-size: 13.5px !important;
     line-height: 1.8;
   }
   .s15-info-grid {
@@ -267,21 +282,20 @@
   }
   .s15-info-box {
     padding: 12px 14px;
+    min-height: auto;
   }
   .s15-info-title {
     font-size: 14px;
   }
-  .s15-info-text {
-    font-size: 11.5px;
-  }
   .s15-visual-box {
-    min-height: 220px;
+    min-height: 280px;
     padding: 18px 16px;
   }
   .s15-visual-svg {
-    max-width: 200px;
+    max-width: 220px;
   }
 }
+
 @media (max-width: 480px) {
   .s15-main-card {
     padding: 16px 16px;
@@ -289,44 +303,43 @@
     border-right-width: 4px !important;
   }
   .s15-step-badge {
-    font-size: 10.5px;
+    font-size: 11px;
     padding: 4px 12px;
   }
   .s15-step-hint {
-    font-size: 11px;
+    font-size: 11.5px;
   }
   .s15-main-title {
     font-size: 17px;
     line-height: 1.4;
   }
   .s15-main-text {
-    font-size: 12.5px;
+    font-size: 12.5px !important;
     line-height: 1.75;
   }
   .s15-info-box {
     padding: 10px 12px;
     border-radius: 12px;
-    gap: 6px;
   }
   .s15-info-title {
     font-size: 13px;
   }
   .s15-info-text {
-    font-size: 11px;
+    font-size: 11.5px;
     line-height: 1.65;
   }
   .s15-visual-box {
-    min-height: 200px;
+    min-height: 240px;
     padding: 16px 12px;
     gap: 10px;
   }
   .s15-visual-svg {
-    max-width: 180px;
+    max-width: 145px;
   }
   .s15-visual-title {
-    font-size: 12.5px;
+    font-size: 13.5px;
   }
   .s15-visual-sub {
-    font-size: 10.5px;
+    font-size: 11.5px;
   }
 }

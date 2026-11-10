@@ -123,6 +123,10 @@
   flex-shrink: 0;
 }
 
+/* =========================================================================
+   SLIDE 06 — RESPONSIVE
+   ========================================================================= */
+
 @media (max-width: 1280px) {
   .s6-challenges-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -132,63 +136,88 @@
     grid-column: 2 / span 2;
   }
 }
+
 @media (max-width: 1024px) {
   .s6-challenges-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
-  .s6-challenge-card {
-    min-height: auto;
-  }
   .s6-challenge-card:nth-child(5) {
     grid-column: auto;
   }
+  /* باز بودن دائمی متون در حالت لمسی */
+  .s6-challenge-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    font-size: 13px !important;
+  }
+  .s6-solution {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    padding-top: 10px !important;
+    border-top-color: var(--border-glass) !important;
+    font-size: 12.5px !important;
+  }
 }
+
 @media (max-width: 768px) {
   .s6-challenges-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
   .s6-challenge-card {
-    padding: 16px 14px;
-    min-height: auto;
-    gap: 10px;
+    padding: 14px 14px;
+    gap: 8px;
+    border-radius: 16px;
   }
   .s6-challenge-card:nth-child(5) {
     grid-column: 1 / -1;
-    max-width: 50%;
-    margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .s6-num {
+    width: 38px;
+    height: 38px;
+    font-size: 13.5px;
+    border-radius: 10px;
+  }
+  .s6-challenge-title {
+    font-size: 14.5px !important;
+  }
+  .s6-challenge-text {
+    font-size: 12px !important;
+    line-height: 1.65;
+  }
+  .s6-solution {
+    font-size: 11.5px !important;
   }
 }
+
 @media (max-width: 480px) {
   .s6-challenges-grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
   .s6-challenge-card {
-    padding: 16px 16px;
-  }
-  .s6-challenge-card:nth-child(5) {
-    max-width: 100%;
-    grid-column: auto;
-    margin: 0;
-  }
-  .s6-solution {
-    max-height: 80px !important;
-    opacity: 1 !important;
-    padding-top: 10px !important;
-    border-top-color: var(--border-glass) !important;
-  }
-  .s6-challenge-title {
-    font-size: 15px;
-  }
-  .s6-challenge-text {
-    font-size: 12.5px;
+    padding: 14px 14px;
+    gap: 8px;
   }
   .s6-num {
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+  .s6-challenge-title {
+    font-size: 14px !important;
+  }
+  .s6-challenge-text {
+    font-size: 12px !important;
+  }
+  .s6-solution {
+    font-size: 11.5px !important;
   }
 }

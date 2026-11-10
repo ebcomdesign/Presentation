@@ -112,7 +112,7 @@
   margin: 0;
 }
 .s16-card-text {
-  /* font-size: clamp(12px, 0.9vw, 13.5px); */
+  font-size: clamp(12px, 0.9vw, 13.5px);
   line-height: 1.75;
   color: #cbd5e1;
   max-height: 0 !important;
@@ -180,7 +180,6 @@
 .s16-brands-row .co-pill.brand-logo-pill {
   display: inline-flex;
   align-items: center;
-  /* line-height: 24px; */
   gap: 6px;
   padding: 5px 10px !important;
   background: rgba(255, 255, 255, 0.06);
@@ -199,6 +198,10 @@
   border-color: rgba(0, 212, 180, 0.4);
 }
 
+/* =========================================================================
+   SLIDE 16 — RESPONSIVE
+   ========================================================================= */
+
 @media (max-width: 1280px) {
   .s16-showcases-grid {
     gap: 14px;
@@ -207,6 +210,7 @@
     padding: 18px 20px;
   }
 }
+
 @media (max-width: 1024px) {
   .s16-showcases-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -216,14 +220,30 @@
     grid-column: 1 / -1;
     max-width: 100%;
   }
+  .s16-card-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+  }
+  .s16-brands-row {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 8px !important;
+    padding-top: 2px !important;
+  }
 }
+
 @media (max-width: 768px) {
   .s16-categories-strip {
     gap: 8px;
   }
   .s16-categories-strip .welfare-cat-pill {
     padding: 6px 14px;
-    font-size: 12px;
+    font-size: 12.5px;
   }
   .s16-showcases-grid {
     grid-template-columns: 1fr;
@@ -237,20 +257,21 @@
     gap: 10px;
   }
   .s16-card-title {
-    font-size: 16px;
+    font-size: 16.5px;
   }
   .s16-card-text {
-    font-size: 12.5px;
+    font-size: 13px;
     line-height: 1.7;
   }
 }
+
 @media (max-width: 480px) {
   .s16-categories-strip {
     gap: 6px;
   }
   .s16-categories-strip .welfare-cat-pill {
     padding: 5px 12px;
-    font-size: 11px;
+    font-size: 11.5px;
   }
   .s16-card {
     padding: 14px 16px;
@@ -258,11 +279,11 @@
     gap: 8px;
   }
   .s16-card-badge {
-    font-size: 10px;
+    font-size: 10.5px;
     padding: 3px 10px;
   }
   .s16-card-title {
-    font-size: 15px;
+    font-size: 15.5px;
     line-height: 1.35;
   }
   .s16-card-text {
@@ -274,16 +295,26 @@
   }
   .s16-brands-row .co-pill.brand-logo-pill {
     padding: 4px 8px !important;
-    font-size: 11px;
+    font-size: 11.5px;
+  }
+  .pill-brand-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+  .pill-brand-logo img {
+    width: 16px;
+    height: 16px;
   }
 }
+
 @media (max-width: 360px) {
   .s16-categories-strip .welfare-cat-pill {
-    font-size: 10px;
+    font-size: 10.5px;
     padding: 4px 10px;
   }
   .s16-card-title {
-    font-size: 14px;
+    font-size: 14.5px;
   }
   .s16-card-text {
     font-size: 11.5px;

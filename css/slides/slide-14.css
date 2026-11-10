@@ -232,30 +232,56 @@
   }
 }
 
+/* =========================================================================
+   SLIDE 14 — RESPONSIVE
+   ========================================================================= */
+
 @media (max-width: 1100px) {
   .s14-panel {
     grid-template-columns: 1fr;
     gap: 16px;
   }
   .s14-visual-box {
-    min-height: 260px;
+    min-height: 240px !important;
     height: auto;
+    padding: 24px 20px !important;
   }
   .s14-visual-svg {
-    max-width: 220px;
+    max-width: 210px;
+    transform: scale(1);
+  }
+  .s14-info-grid {
+    margin-top: 10px;
+  }
+  /* نمایش دائمی متون و لیست‌ها در تبلت و موبایل */
+  .s14-main-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+  }
+  .s14-info-box .s14-list,
+  .s14-info-box .s14-info-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
   }
 }
+
 @media (max-width: 768px) {
   .s14-main-card {
-    padding: 18px 20px;
-    gap: 12px;
+    padding: 18px 18px !important;
+    gap: 10px;
   }
   .s14-main-title {
-    font-size: 19px;
+    font-size: 18px !important;
   }
   .s14-main-text {
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 13px !important;
+    line-height: 1.75;
   }
   .s14-info-grid {
     grid-template-columns: 1fr;
@@ -263,25 +289,36 @@
   }
   .s14-info-box {
     padding: 12px 14px;
+    min-height: auto;
   }
   .s14-info-title {
-    font-size: 12.5px;
+    font-size: 13.5px !important;
   }
-  .s14-list li {
-    font-size: 11.5px;
+  .s14-list li,
+  .s14-info-text {
+    font-size: 12px !important;
+    line-height: 1.65;
   }
   .s14-visual-box {
-    min-height: 220px;
-    padding: 18px 16px;
+    min-height: 200px !important;
+    padding: 18px 16px !important;
+    gap: 10px;
   }
   .s14-visual-svg {
-    max-width: 200px;
+    max-width: 175px;
+  }
+  .s14-visual-title {
+    font-size: 14px;
+  }
+  .s14-visual-sub {
+    font-size: 12px;
   }
 }
+
 @media (max-width: 480px) {
   .s14-main-card {
-    padding: 16px 16px;
-    gap: 10px;
+    padding: 14px 16px !important;
+    gap: 8px;
     border-right-width: 4px !important;
   }
   .s14-step-badge {
@@ -292,58 +329,40 @@
     font-size: 11px;
   }
   .s14-main-title {
-    font-size: 17px;
+    font-size: 16.5px !important;
     line-height: 1.4;
   }
   .s14-main-text {
-    font-size: 12.5px;
-    line-height: 1.75;
+    font-size: 12.5px !important;
+    line-height: 1.7;
   }
   .s14-info-box {
     padding: 10px 12px;
     border-radius: 12px;
-    gap: 6px;
   }
   .s14-info-title {
-    font-size: 12px;
+    font-size: 13px !important;
   }
   .s14-list {
     gap: 4px;
   }
-  .s14-list li {
-    font-size: 11px;
-    line-height: 1.55;
-  }
+  .s14-list li,
   .s14-info-text {
-    font-size: 11px;
-    line-height: 1.65;
+    font-size: 11.5px !important;
+    line-height: 1.6;
   }
   .s14-visual-box {
-    min-height: 200px;
-    padding: 16px 12px;
-    gap: 10px;
+    min-height: 180px !important;
+    padding: 16px 12px !important;
+    gap: 8px;
   }
   .s14-visual-svg {
-    max-width: 180px;
+    max-width: 150px;
   }
   .s14-visual-title {
-    font-size: 12.5px;
+    font-size: 13px;
   }
   .s14-visual-sub {
-    font-size: 10.5px;
-  }
-  .s14-visual-svg text[font-size="18"] {
-    font-size: 16px !important;
-  }
-  .s14-visual-svg text[font-size="12"] {
-    font-size: 11px !important;
-  }
-  .s14-visual-svg text[font-size="10.5"] {
-    font-size: 9.5px !important;
-  }
-}
-@media (max-width: 360px) {
-  .s14-visual-svg {
-    max-width: 160px;
+    font-size: 11px;
   }
 }

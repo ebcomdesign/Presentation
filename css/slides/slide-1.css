@@ -46,7 +46,7 @@
 }
 .hero-stat-card.border-right-orange:hover {
   border-color: var(--persian-orange);
-    box-shadow: 0 18px 42px rgba(255, 119, 34, 0.2) !important;
+  box-shadow: 0 18px 42px rgba(255, 119, 34, 0.2) !important;
 }
 .hero-stat-card.border-right-sky {
   border-right: 4px solid var(--sky-blue);
@@ -238,7 +238,11 @@
   display: block;
 }
 
-@media (max-width: 1024px) {
+/* =========================================================================
+   SLIDE 01 — RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 1180px) {
   .hero-grid {
     grid-template-columns: 1fr !important;
     gap: 28px;
@@ -247,53 +251,108 @@
     grid-template-columns: repeat(3, 1fr) !important;
   }
   .hero-cards-stage {
-    height: 380px !important;
-    margin-top: 10px;
+    height: 420px !important;
+    margin-top: 12px;
   }
 }
+
 @media (max-width: 768px) {
   .hero-stats {
     grid-template-columns: 1fr !important;
     gap: 10px !important;
   }
   .hero-stat-card {
-    padding: 14px 16px !important;
+    padding: 14px 18px !important;
+    min-height: auto;
+  }
+  .hero-stat-card .hero-stat-label {
+    max-height: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin-top: 4px !important;
+    font-size: 13px !important;
   }
   .hero-cta-row {
     flex-direction: column;
     gap: 10px;
+    width: 100%;
   }
   .hero-btn-primary,
   .hero-btn-secondary {
-    width: 100%;
-    justify-content: center;
+    width: 100% !important;
+    justify-content: center !important;
+    height: 46px !important;
+    padding: 0 20px !important;
   }
+
+  /* حفظ چیدمان سه‌بعدی کارت‌ها متناسب با عرض تبلت و موبایل */
   .hero-cards-stage {
-    height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    align-items: stretch !important;
-    perspective: none !important;
-    margin-top: 16px;
-    transform: none !important;
+    height: 350px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .ewano-3d-card {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 160px;
-    transform: none !important;
-    left: auto !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: auto !important;
+    width: 270px !important;
+    height: 164px !important;
+    padding: 15px 18px !important;
+    border-radius: 18px !important;
   }
-  .ewano-3d-card:hover {
-    transform: none !important;
+  .card-balance-title {
+    font-size: 15.5px;
+    margin-top: 8px;
+  }
+  .ewano-3d-card .card-balance-sub {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .card-chip {
+    width: 32px;
+    height: 24px;
+  }
+  .debit-flipper-inner,
+  .debit-side,
+  .debit-img {
+    border-radius: 18px;
+  }
+
+  .ewano-3d-card.card-welfare {
+    transform: translate3d(-42px, -82px, 10px) rotate(-7deg) !important;
+  }
+  .ewano-3d-card.card-credit {
+    transform: translate3d(-14px, -28px, 30px) rotate(-2deg) !important;
+  }
+  .ewano-3d-card.card-cash {
+    transform: translate3d(14px, 24px, 50px) rotate(3deg) !important;
   }
   .ewano-3d-card.card-debit-black {
-    min-height: 200px;
+    transform: translate3d(42px, 78px, 70px) rotate(7deg) !important;
     padding: 0 !important;
+  }
+
+  .ewano-3d-card.card-welfare:hover {
+    transform: translate3d(-42px, -90px, 110px) rotate(0deg) scale(1.04) !important;
+  }
+  .ewano-3d-card.card-credit:hover {
+    transform: translate3d(-14px, -36px, 110px) rotate(0deg) scale(1.04) !important;
+  }
+  .ewano-3d-card.card-cash:hover {
+    transform: translate3d(14px, 16px, 110px) rotate(0deg) scale(1.04) !important;
+  }
+  .ewano-3d-card.card-debit-black:hover {
+    transform: translate3d(42px, 70px, 110px) rotate(0deg) scale(1.04) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stat-value {
+    font-size: 20px;
+  }
+  .hero-stat-card .hero-stat-label {
+    font-size: 12px !important;
+  }
+  .hero-cards-stage {
+    height: 320px !important;
+    transform: scale(0.88);
+    transform-origin: center center;
   }
 }

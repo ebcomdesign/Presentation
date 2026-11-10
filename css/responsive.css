@@ -3,59 +3,176 @@
    ========================================================================= */
 
 @media (max-width: 1180px) {
-  .slide { padding: 20px 28px; }
-  .grid-2, .grid-2-asym { grid-template-columns: 1fr; }
-  .chapter-btn { padding: 8px 12px; font-size: 11.5px; }
-  .brand-cluster { gap: 16px; }
-  .header-partner-logos { padding-right: 16px; gap: 12px; }
-  .slide-dots { display: none !important; }
+  .slide {
+    padding: 28px 28px 40px;
+    justify-content: flex-start !important;
+  }
+  .slide-inner {
+    margin: 0 auto !important;
+  }
+  .grid-2,
+  .grid-2-asym {
+    grid-template-columns: 1fr;
+  }
+  .chapter-btn {
+    padding: 8px 12px;
+    font-size: 11.5px;
+  }
+  .brand-cluster {
+    gap: 16px;
+  }
+  .header-partner-logos {
+    padding-right: 16px;
+    gap: 12px;
+  }
+  .slide-dots {
+    display: none !important;
+  }
 }
 
 @media (max-width: 1024px) {
-  .chapter-nav { display: none !important; }
-  .header-actions .action-text { display: none; }
-  .header-actions .icon-btn { width: 40px; padding: 0; justify-content: center; }
+  .chapter-nav {
+    display: none !important;
+  }
+  .header-actions .action-text,
+  .header-actions .icon-btn span {
+    display: none !important;
+  }
+  .header-actions .icon-btn {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
-  .deck-header { height: 64px; padding: 0 16px; }
-  .deck-footer { height: 64px; padding: 0 16px; }
-  .stage-container { top: 64px; bottom: 64px; }
-  
-  .header-ewano-logo img { height: 32px; }
-  .header-partner-logos img { height: 20px; }
-  .header-actions .icon-btn[onclick="toggleFullScreen()"] { display: none !important; }
+  .deck-header {
+    height: 64px;
+    padding: 0 16px;
+  }
+  .deck-footer {
+    height: 64px;
+    padding: 0 16px;
+  }
+  .stage-container {
+    top: 64px !important;
+    bottom: 64px !important;
+  }
 
-  .slide { padding: 16px 14px 28px !important; }
-  .slide-inner { gap: 14px !important; padding-bottom: 16px; }
-  .slide-headline { font-size: 21px !important; line-height: 1.38 !important; }
-  .slide-subtitle { font-size: 12.5px !important; line-height: 1.65 !important; }
-  
-  .eyebrow-badge { font-size: 10.5px; padding: 4px 10px; }
-  .glass-card { padding: 15px 16px !important; border-radius: 16px !important; }
-  .grid-2, .grid-2-asym, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .header-ewano-logo img {
+    height: 32px !important;
+  }
+  .header-partner-logos img {
+    height: 20px !important;
+  }
+  .header-actions .icon-btn[onclick='toggleFullScreen()'] {
+    display: none !important;
+  }
 
-  .keyboard-hints { display: none !important; }
-  .nav-controls { width: 100%; justify-content: space-between; }
-  .nav-arrow-btn { height: 40px; padding: 0 14px; }
-  .nav-arrow-btn .btn-text { display: none; }
+  .slide {
+    padding: 20px 16px 32px !important;
+    justify-content: flex-start !important;
+  }
+  .slide-inner {
+    margin: 0 auto !important;
+    gap: 16px !important;
+    padding-bottom: 20px;
+  }
+  .slide-headline {
+    font-size: 22px !important;
+    line-height: 1.4 !important;
+  }
+  .slide-subtitle {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+  }
+
+  .eyebrow-badge {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+  .glass-card {
+    padding: 15px 16px !important;
+    border-radius: 16px !important;
+  }
+  .grid-2,
+  .grid-2-asym,
+  .grid-3,
+  .grid-4,
+  .grid-5 {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .keyboard-hints {
+    display: none !important;
+  }
+  .nav-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .deck-footer .nav-arrow-btn {
+    height: 40px;
+    padding: 0 14px;
+  }
+  .deck-footer .nav-arrow-btn .btn-text,
+  .deck-footer .nav-arrow-btn span {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  .deck-header { height: 58px; padding: 0 12px; }
-  .deck-footer { height: 58px; padding: 0 12px; }
-  .stage-container { top: 58px; bottom: 58px; }
-  
-  .brand-cluster { gap: 10px; flex-wrap: nowrap !important; }
-  .header-partner-logos { padding-right: 10px; gap: 8px; flex-wrap: nowrap !important; }
-  .header-ewano-logo img { height: 28px; }
-  .header-partner-logos img { height: 18px; }
-  .logo-divider { height: 16px; }
-  .header-actions .icon-btn { width: 36px; height: 36px; }
+  .deck-header {
+    height: 58px;
+    padding: 0 12px;
+  }
+  .deck-footer {
+    height: 58px;
+    padding: 0 12px;
+  }
+  .stage-container {
+    top: 58px !important;
+    bottom: 58px !important;
+  }
 
-  .slide { padding: 14px 12px 24px !important; }
-  .slide-headline { font-size: 19.5px !important; line-height: 1.35 !important; }
-  
-  .nav-arrow-btn { width: 44px; padding: 0; justify-content: center; }
-  .slide-counter-pill { padding: 6px 14px; font-size: 13px; }
+  .brand-cluster {
+    gap: 10px;
+    flex-wrap: nowrap !important;
+  }
+  .header-partner-logos {
+    padding-right: 10px;
+    gap: 8px;
+    flex-wrap: nowrap !important;
+  }
+  .header-ewano-logo img {
+    height: 28px !important;
+  }
+  .header-partner-logos img {
+    height: 18px !important;
+  }
+  .logo-divider {
+    height: 16px;
+  }
+  .header-actions .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slide {
+    padding: 16px 12px 28px !important;
+  }
+  .slide-headline {
+    font-size: 19.5px !important;
+    line-height: 1.38 !important;
+  }
+
+  .deck-footer .nav-arrow-btn {
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+  .slide-counter-pill {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
 }

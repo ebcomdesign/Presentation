@@ -253,7 +253,7 @@
   text-align: right;
   line-height: 1.5;
   margin-top: 4px;
-  font-family: "IRANYekanX", "Vazirmatn", monospace;
+  font-family: 'IRANYekanX', 'Vazirmatn', monospace;
   word-break: break-word;
 }
 
@@ -389,6 +389,10 @@
   word-break: break-word;
 }
 
+/* =========================================================================
+   SLIDE 10 — RESPONSIVE
+   ========================================================================= */
+
 @media (max-width: 1100px) {
   .s10-calc-grid,
   .calc-grid-layout {
@@ -408,7 +412,16 @@
   .calc-side-card {
     height: 100%;
   }
+  /* باز بودن دائمی متن کارت‌های جانبی در تبلت */
+  .s10-side-card .s10-side-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+  }
 }
+
 @media (max-width: 900px) {
   .calc-side-stack,
   .s10-side-stack {
@@ -418,7 +431,8 @@
     grid-column: 1 / -1;
   }
 }
-@media (max-width: 640px) {
+
+@media (max-width: 768px) {
   .calc-inputs {
     padding: 16px 18px;
     gap: 12px;
@@ -427,47 +441,34 @@
     font-size: 18px;
   }
   .calc-row-head label {
-    font-size: 12.5px;
-    line-height: 1.4;
-  }
-  .calc-row-head {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .calc-ticks b {
-    font-size: 9.5px;
-  }
-  .calc-ticks i {
-    width: 12px;
-    height: 12px;
-    margin: -6px;
+    font-size: 13px;
   }
   .calc-result {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
     padding: 16px 18px;
   }
   .calc-res-main b {
-    font-size: 24px;
-  }
-  .calc-res-main span {
-    font-size: 12px;
+    font-size: 26px;
   }
   .calc-res-list,
   .s10-res-list {
     grid-template-columns: 1fr 1fr;
     border-right: none;
     padding-right: 0;
-    padding-top: 12px;
+    padding-top: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    gap: 8px 14px;
+    gap: 10px 14px;
   }
-  .s10-res-list dt {
-    font-size: 11px;
+  .s10-side-title {
+    font-size: 16px;
   }
-  .s10-res-list dd {
-    font-size: 12.5px;
+  .s10-side-badge {
+    font-size: 12px;
   }
+}
+
+@media (max-width: 640px) {
   .calc-side-stack,
   .s10-side-stack {
     grid-template-columns: 1fr !important;
@@ -479,45 +480,56 @@
   .s10-side-card {
     padding: 14px 16px !important;
     gap: 8px;
+    border-radius: 16px !important;
   }
   .s10-side-title {
     font-size: 14.5px;
   }
   .s10-side-text {
-    font-size: 12px;
-    line-height: 1.7;
+    font-size: 12.5px;
+    line-height: 1.65;
   }
   .s10-side-formula {
-    font-size: 11.5px;
-    margin-top: 6px;
+    font-size: 12px;
+    margin-top: 4px;
   }
   .s10-fee-input {
-    width: 54px;
-    font-size: 13px;
+    width: 56px;
+    font-size: 13.5px;
     padding: 3px 6px;
   }
+  .calc-ticks b {
+    font-size: 10px;
+  }
+  .calc-ticks i {
+    width: 14px;
+    height: 14px;
+    margin: -7px;
+  }
 }
+
 @media (max-width: 480px) {
   .calc-inputs {
     padding: 14px 14px;
+    gap: 10px;
   }
   .calc-res-main b {
     font-size: 22px;
   }
   .s10-formula-hint {
     font-size: 11px;
-    line-height: 1.6;
+    line-height: 1.5;
   }
   .s10-formula-text {
-    font-size: 10px;
+    font-size: 11px;
   }
   .calc-ticks b {
-    display: none;
+    display: none; /* مخفی‌کردن اعداد متراکم زیر ترک روی موبایل‌های کوچک */
   }
-  .s10-side-title {
-    font-size: 14px;
+  .s10-res-list dt {
+    font-size: 11px;
   }
-  .s10-side-text {
-    font-size: 11.5px;
+  .s10-res-list dd {
+    font-size: 12.5px;
   }
 }

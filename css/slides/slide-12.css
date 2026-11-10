@@ -229,56 +229,92 @@
   }
 }
 
+/* =========================================================================
+   SLIDE 12 — RESPONSIVE
+   ========================================================================= */
+
 @media (max-width: 1100px) {
   .s12-panel {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  .s12-visual-box {
-    min-height: 280px;
+  .s12-visual-box,
+  .s12-visual-sky {
+    min-height: 240px !important;
     height: auto;
+    padding: 24px 20px !important;
   }
   .s12-visual-svg {
-    max-width: 220px;
+    max-width: 210px;
+    transform: scale(1);
+  }
+  .s12-tips-grid {
+    margin-top: 10px;
+  }
+  /* نمایش دائمی متون در تبلت و موبایل */
+  .s12-main-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+  }
+  .s12-tip-sub {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
   }
 }
+
 @media (max-width: 768px) {
   .s12-main-card {
-    padding: 18px 20px;
-    gap: 12px;
+    padding: 18px 18px !important;
+    gap: 10px;
   }
   .s12-main-title {
-    font-size: 19px;
+    font-size: 18px !important;
   }
   .s12-main-text {
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 13px !important;
+    line-height: 1.75;
   }
   .s12-tips-grid {
     grid-template-columns: 1fr;
     gap: 8px;
   }
   .s12-tip-box {
-    padding: 10px 12px;
+    padding: 12px 14px;
+    min-height: auto;
   }
   .s12-tip-title {
-    font-size: 12.5px;
+    font-size: 13.5px !important;
   }
   .s12-tip-sub {
-    font-size: 11px;
+    font-size: 12px !important;
   }
-  .s12-visual-box {
-    min-height: 240px;
+  .s12-visual-box,
+  .s12-visual-sky {
+    min-height: 200px !important;
     padding: 18px 16px !important;
+    gap: 10px;
   }
   .s12-visual-svg {
-    max-width: 180px;
+    max-width: 170px;
+  }
+  .s12-visual-title {
+    font-size: 14px;
+  }
+  .s12-visual-sub {
+    font-size: 12px;
   }
 }
+
 @media (max-width: 480px) {
   .s12-main-card {
-    padding: 16px 16px;
-    gap: 10px;
+    padding: 14px 16px !important;
+    gap: 8px;
     border-right-width: 4px !important;
   }
   .s12-step-badge {
@@ -289,35 +325,36 @@
     font-size: 11.5px;
   }
   .s12-main-title {
-    font-size: 17px;
+    font-size: 16.5px !important;
     line-height: 1.4;
   }
   .s12-main-text {
-    font-size: 12.5px;
-    line-height: 1.75;
+    font-size: 12.5px !important;
+    line-height: 1.7;
   }
   .s12-tip-box {
-    padding: 9px 11px;
+    padding: 10px 12px;
     border-radius: 12px;
   }
   .s12-tip-title {
-    font-size: 12px;
+    font-size: 13px !important;
   }
   .s12-tip-sub {
-    font-size: 10.5px;
+    font-size: 11.5px !important;
   }
-  .s12-visual-box {
-    min-height: 220px;
+  .s12-visual-box,
+  .s12-visual-sky {
+    min-height: 180px !important;
     padding: 16px 12px !important;
-    gap: 10px;
+    gap: 8px;
   }
   .s12-visual-svg {
-    max-width: 160px;
+    max-width: 145px;
   }
   .s12-visual-title {
-    font-size: 12.5px;
+    font-size: 13px;
   }
   .s12-visual-sub {
-    font-size: 10.5px;
+    font-size: 11px;
   }
 }

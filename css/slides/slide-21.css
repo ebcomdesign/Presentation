@@ -148,112 +148,105 @@
   padding: 10px 0;
 } */
 
-
 /* Main wrapper */
 .s21-marquee {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 20px 0;
-    direction: ltr;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px 0;
+  direction: ltr;
 }
 
 .s21-marquee .client-marquee-row {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding-top: 12px;
-    padding-bottom: 12px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .s21-marquee .client-track {
-    display: flex;
-    flex-wrap: nowrap;
-    width: max-content;
-    flex-shrink: 0;
-    gap: 0;
-    direction: ltr;
-    animation: marquee-forward 25s linear infinite;
-    will-change: transform;
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  flex-shrink: 0;
+  gap: 0;
+  direction: ltr;
+  animation: marquee-forward 25s linear infinite;
+  will-change: transform;
 }
 
 .s21-marquee .client-track.reverse {
-    animation-name: marquee-backward;
-    animation-duration: 25s;
+  animation-name: marquee-backward;
+  animation-duration: 25s;
 }
 
 .s21-marquee .client-track-group {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    gap: 28px;
-    padding-right: 28px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 28px;
+  padding-right: 28px;
 }
 
 .s21-marquee .client-org-unit {
-    flex: 0 0 150px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  flex: 0 0 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* حرکت ردیف اول: چپ به راست */
 @keyframes marquee-forward {
-    from {
-        transform: translateX(-50%);
-    }
-    to {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 /* حرکت ردیف دوم: راست به چپ */
 @keyframes marquee-backward {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .s21-marquee:hover .client-track {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @media (max-width: 768px) {
-    .s21-marquee {
-        gap: 18px;
-    }
+  .s21-marquee {
+    gap: 18px;
+  }
 
-    .s21-marquee .client-track-group {
-        gap: 18px;
-        padding-right: 18px;
-    }
+  .s21-marquee .client-track-group {
+    gap: 18px;
+    padding-right: 18px;
+  }
 
-    .s21-marquee .client-org-unit {
-        flex-basis: 120px;
-        width: 120px;
-    }
+  .s21-marquee .client-org-unit {
+    flex-basis: 120px;
+    width: 120px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .s21-marquee .client-track {
-        animation: none;
-    }
+  .s21-marquee .client-track {
+    animation: none;
+  }
 }
-
-
-
-
-
-
 
 /* ساختار شبکه ثابت (Grid) برای دسکتاپ */
 .client-track.static-grid {
@@ -425,39 +418,62 @@
   transform: translateY(0);
 }
 
+/* =========================================================================
+   SLIDE 21 — RESPONSIVE
+   ========================================================================= */
+
 @media (max-width: 1100px) {
   .s21-stats-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
   }
   .s21-pillars-grid,
   .why-ewano-5grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
   }
-  .s21-pillar:nth-child(4),
-  .why-pillar-card:nth-child(4) {
-    grid-column: 1 / 2;
+}
+
+@media (max-width: 1024px) {
+  /* نمایش دائمی توضیحات و زیرنویس‌ها در تبلت و موبایل (نبودن Hover) */
+  .s21-stat-card .s21-stat-label,
+  .s21-stat-card p {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 4px !important;
+    font-size: 13px !important;
   }
-  .s21-pillar:nth-child(5),
-  .why-pillar-card:nth-child(5) {
-    grid-column: 2 / 3;
+  .s21-pillar .why-pillar-desc,
+  .why-pillar-card .why-pillar-desc {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 6px !important;
+    font-size: 12.5px !important;
+    line-height: 1.65 !important;
   }
 }
 
 @media (max-width: 768px) {
   .s21-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
   }
   .s21-stat-card {
-    padding: 14px 16px;
+    padding: 14px 16px !important;
   }
   .s21-stat-value {
     font-size: 22px;
   }
+  .s21-stat-card .s21-stat-label {
+    font-size: 13px !important;
+  }
+
   .s21-clients-panel {
-    padding: 16px 18px;
+    padding: 16px 18px !important;
   }
   .s21-clients-head {
     flex-direction: column;
@@ -465,46 +481,54 @@
     gap: 8px;
   }
   .s21-clients-title {
-    font-size: 15px;
+    font-size: 15.5px;
   }
   .s21-clients-badge {
     font-size: 11px;
     padding: 4px 12px;
   }
 
-  /* تنظیمات برای اسکرول افقی در موبایل */
-  .client-track.static-grid {
-    flex-wrap: nowrap; /* جلوگیری از شکستن خط */
-    justify-content: flex-start;
-    overflow-x: auto; /* فعال کردن اسکرول افقی */
-    padding-bottom: 10px; /* فضای لازم برای اسکرول بار */
-    -webkit-overflow-scrolling: touch; /* اسکرول نرم در iOS */
-    scroll-snap-type: x mandatory; /* اسنپ شدن به آیتم‌ها */
+  /* تنظیمات مارکیو و گرید لوگوها در تبلت */
+  .s21-marquee {
+    padding: 12px 0;
+    gap: 14px;
   }
-  .client-org-unit {
-    scroll-snap-align: start; /* هم‌ترازی هنگام اسکرول */
+  .s21-marquee .client-marquee-row {
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
-
+  .s21-marquee .client-track-group {
+    gap: 18px;
+    padding-right: 18px;
+  }
   .s21-marquee .client-org-unit {
-    width: 140px;
+    flex: 0 0 115px !important;
+    width: 115px !important;
   }
   .s21-marquee .client-circle-logo {
-    width: 58px;
-    height: 58px;
+    width: 60px !important;
+    height: 60px !important;
   }
   .s21-marquee .client-unit-name {
     font-size: 12px;
   }
+
+  .client-track.static-grid {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .client-org-unit {
+    scroll-snap-align: start;
+  }
+
   .s21-pillars-grid,
   .why-ewano-5grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-  .s21-pillar:nth-child(4),
-  .why-pillar-card:nth-child(4),
-  .s21-pillar:nth-child(5),
-  .why-pillar-card:nth-child(5) {
-    grid-column: auto;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
   }
   .s21-pillar:nth-child(5),
   .why-pillar-card:nth-child(5) {
@@ -512,34 +536,35 @@
   }
   .s21-pillar,
   .why-pillar-card {
-    padding: 14px 12px !important;
+    padding: 16px 14px !important;
     gap: 6px;
   }
   .s21-pillar .why-pillar-title {
-    font-size: 15px !important;
+    font-size: 15.5px !important;
   }
   .s21-pillar .why-pillar-desc {
-    font-size: 11.5px !important;
+    font-size: 12px !important;
   }
 }
 
 @media (max-width: 480px) {
   .s21-stat-card {
-    padding: 12px 14px;
-    border-bottom-width: 3px;
+    padding: 12px 14px !important;
   }
   .s21-stat-value {
     font-size: 20px;
   }
-  .s21-stat-label {
-    font-size: 11.5px;
+  .s21-stat-card .s21-stat-label {
+    font-size: 12px !important;
   }
+
   .s21-clients-panel {
-    padding: 14px 14px;
-    border-radius: 16px;
+    padding: 14px 14px !important;
+    border-radius: 16px !important;
+    gap: 10px;
   }
   .s21-clients-title {
-    font-size: 13.5px;
+    font-size: 14px;
     line-height: 1.45;
   }
   .s21-clients-badge {
@@ -547,29 +572,31 @@
     padding: 3px 10px;
   }
 
-  .client-track.static-grid {
-    /* در موبایل‌های کوچکتر، برای نمایش 2 تایی، می‌توان عرض آیتم‌ها را تنظیم کرد */
-    gap: 12px;
-    padding-top: 8px;
+  .s21-marquee {
+    padding: 8px 0;
+    gap: 10px;
   }
-
+  .s21-marquee .client-track-group {
+    gap: 14px;
+    padding-right: 14px;
+  }
   .s21-marquee .client-org-unit {
-    /* تنظیم عرض به حدود 45٪ تا دو آیتم در صفحه جا شوند */
-    width: calc(50% - 12px);
-    min-width: 110px;
+    flex: 0 0 96px !important;
+    width: 96px !important;
   }
   .s21-marquee .client-circle-logo {
-    width: 50px;
-    height: 50px;
-    padding: 6px;
+    width: 52px !important;
+    height: 52px !important;
+    padding: 6px !important;
   }
   .s21-marquee .client-unit-name {
     font-size: 11px;
   }
+
   .s21-pillars-grid,
   .why-ewano-5grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
   }
   .s21-pillar:nth-child(5),
   .why-pillar-card:nth-child(5) {
@@ -577,15 +604,15 @@
   }
   .s21-pillar,
   .why-pillar-card {
-    padding: 12px 14px !important;
-    border-radius: 14px;
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
   }
   .s21-pillar .why-pillar-title {
-    font-size: 14.5px !important;
+    font-size: 15px !important;
   }
   .s21-pillar .why-pillar-desc {
-    font-size: 11.5px !important;
-    line-height: 1.55 !important;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
   }
 }
 
@@ -593,10 +620,18 @@
   .s21-stat-value {
     font-size: 18px;
   }
+  .s21-marquee .client-org-unit {
+    flex: 0 0 86px !important;
+    width: 86px !important;
+  }
+  .s21-marquee .client-circle-logo {
+    width: 46px !important;
+    height: 46px !important;
+  }
   .s21-pillar .why-pillar-title {
-    font-size: 13.5px !important;
+    font-size: 14px !important;
   }
   .s21-pillar .why-pillar-desc {
-    font-size: 11px !important;
+    font-size: 11.5px !important;
   }
 }

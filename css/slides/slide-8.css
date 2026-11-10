@@ -140,19 +140,6 @@
   border-color: rgba(0, 212, 180, 0.4);
 }
 
-/* .s8-balance-text {
-  font-size: 14.5px;
-  line-height: 1.85;
-  color: #e2e8f0;
-  margin-top: 6px !important;
-  margin-bottom: 0 !important;
-  max-height: none !important;
-  opacity: 1 !important;
-  transform: none !important;
-  overflow: visible !important;
-  display: block !important;
-} */
-
 .s8-balance-text {
   font-size: 16;
   color: #e2e8f0;
@@ -177,7 +164,6 @@
   margin-top: 6px;
   transform: translateY(0);
 }
-
 
 /* ستون راست: iPhone */
 .demo-phone-col {
@@ -268,52 +254,63 @@
     gap: 22px;
   }
   .iphone-18-pro-max {
-    max-width: 300px;
-    height: 620px;
+    max-width: 320px;
+    height: 600px;
   }
 }
 
 @media (max-width: 1024px) {
   .demo-slide-grid {
     grid-template-columns: 1fr !important;
-    gap: 22px;
+    gap: 24px;
   }
   .demo-phone-col {
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .iphone-18-pro-max {
     max-width: 320px;
     margin: 0 auto;
-    height: 640px;
+    height: 600px;
   }
   .s8-balance-card {
+    min-height: auto !important;
     padding: 16px 18px !important;
+  }
+  /* باز شدن دائمی متن بالانس‌ها در لمسی */
+  .s8-balance-text {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-top: 8px !important;
+    font-size: 13.5px !important;
   }
 }
 
 @media (max-width: 768px) {
   .demo-left-col {
-    gap: 10px;
+    gap: 12px;
   }
   .s8-balance-card {
     padding: 14px 16px !important;
-    gap: 8px;
+    gap: 6px;
+    border-radius: 16px !important;
   }
   .s8-balance-title {
-    font-size: 14px !important;
+    font-size: 15px !important;
   }
   .s8-balance-badge {
-    font-size: 10.5px;
-    padding: 4px 10px;
+    font-size: 11px;
+    padding: 3px 10px;
   }
   .s8-balance-text {
     font-size: 12.5px !important;
     line-height: 1.7 !important;
   }
   .iphone-18-pro-max {
-    max-width: 280px;
-    height: 580px;
+    max-width: 290px;
+    height: 540px;
     border-width: 8px !important;
     border-radius: 44px !important;
   }
@@ -324,7 +321,7 @@
 
 @media (max-width: 480px) {
   .demo-slide-grid {
-    gap: 14px;
+    gap: 16px;
   }
   .s8-balance-card {
     padding: 12px 14px !important;
@@ -335,48 +332,24 @@
     gap: 6px;
   }
   .s8-balance-title {
-    font-size: 13px !important;
-    line-height: 1.45;
+    font-size: 14px !important;
   }
   .s8-balance-badge {
-    align-self: flex-start;
     font-size: 10px;
-    padding: 3px 10px;
+    padding: 2px 8px;
   }
   .s8-balance-text {
     font-size: 12px !important;
-    line-height: 1.65 !important;
   }
   .iphone-18-pro-max {
-    max-width: 240px;
-    height: 500px;
+    max-width: 260px;
+    height: 480px;
     border-radius: 38px !important;
-    padding: 0 !important;
   }
   .iphone-screen-wrap {
-    border-radius: 32px;
-  }
-  .iphone-dynamic-island {
-    width: 76px;
-    height: 20px;
-    top: 12px;
-  }
-  .island-camera {
-    width: 8px;
-    height: 8px;
-  }
-  .island-sensor {
-    width: 6px;
-    height: 6px;
+    border-radius: 30px;
   }
   .headline-divider {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 360px) {
-  .iphone-18-pro-max {
-    max-width: 200px;
-    height: 420px;
+    font-size: 22px;
   }
 }
