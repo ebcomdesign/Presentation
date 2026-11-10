@@ -19,7 +19,7 @@
 .s19-card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   padding: 20px 22px;
   border-top-width: 4px;
   border-top-style: solid;
@@ -63,7 +63,7 @@
 
 .s19-card-badge {
   align-self: flex-start;
-  font-size: clamp(10.5px, 0.8vw, 12px);
+  /* font-size: clamp(10.5px, 0.8vw, 12px); */
   padding: 4px 12px;
   margin: 0;
 }
@@ -85,7 +85,7 @@
   gap: 8px;
 }
 .s19-list li {
-  font-size: clamp(11.5px, 0.88vw, 13px);
+  /* font-size: clamp(11.5px, 0.88vw, 13px); */
   color: #cbd5e1;
   line-height: 1.65;
   position: relative;
@@ -182,7 +182,7 @@
 }
 
 .s19-val-title {
-  font-size: clamp(11.5px, 0.9vw, 13px);
+  /* font-size: clamp(11.5px, 0.9vw, 13px); */
   font-weight: 900;
   margin-bottom: 8px;
   line-height: 1.4;
@@ -191,7 +191,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6px 10px;
-  font-size: clamp(10.5px, 0.8vw, 12px);
+  /* font-size: clamp(10.5px, 0.8vw, 12px); */
   color: #ffffff;
   font-weight: 500;
   line-height: 1.5;
@@ -212,7 +212,7 @@
   );
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 32px;
   width: 100%;
 }
 .s19-ux-card:hover {

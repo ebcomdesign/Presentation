@@ -207,7 +207,7 @@
   margin: 0;
 }
 .s14-visual-sub {
-  font-size: clamp(10.5px, 0.85vw, 14px);
+  /* font-size: clamp(10.5px, 0.85vw, 14px); */
   color: var(--persian-green);
   line-height: 1.55;
   font-weight: 700;

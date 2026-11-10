@@ -145,7 +145,7 @@
   max-height: 150px !important;
   opacity: 1 !important;
   overflow: visible !important;
-  margin-top: 6px !important;
+  margin-top: 12px !important;
   transform: translateY(0);
 }
 
@@ -187,7 +187,7 @@
   margin: 0;
 }
 .s11-visual-sub {
-  font-size: clamp(10.5px, 0.85vw, 14px);
+  /* font-size: clamp(10.5px, 0.85vw, 15px); */
   color: var(--persian-green);
   line-height: 1.55;
   font-weight: 700;

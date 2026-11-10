@@ -101,9 +101,9 @@
 
 .s16-card-badge {
   align-self: flex-start;
-  font-size: clamp(10.5px, 0.8vw, 12px);
-  padding: 4px 12px;
-  margin: 0;
+  font-size: clamp(10.5px, 0.8vw, 14px);
+  padding: 8px 14px;
+  margin-bottom: 8px;
 }
 .s16-card-title {
   font-size: clamp(16px, 1.25vw, 19px);
@@ -112,7 +112,7 @@
   margin: 0;
 }
 .s16-card-text {
-  font-size: clamp(12px, 0.9vw, 13.5px);
+  /* font-size: clamp(12px, 0.9vw, 13.5px); */
   line-height: 1.75;
   color: #cbd5e1;
   max-height: 0 !important;
@@ -186,7 +186,7 @@
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 10px;
-  font-size: clamp(11px, 0.85vw, 12.5px);
+  font-size: clamp(11px, 0.85vw, 13px);
   font-weight: 400;
   color: #ffffff;
   white-space: nowrap;

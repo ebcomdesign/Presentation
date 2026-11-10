@@ -63,7 +63,7 @@
 }
 
 .s15-main-text {
-  /* font-size: clamp(13px, 1.05vw, 17px) !important; */
+  font-size: clamp(13px, 1.05vw, 17px) !important;
   line-height: 1.85;
   color: #cbd5e1;
   text-align: justify;
@@ -204,7 +204,7 @@
   margin: 0;
 }
 .s15-visual-sub {
-  font-size: clamp(10.5px, 0.85vw, 14px);
+  /* font-size: clamp(10.5px, 0.85vw, 14px); */
   color: var(--persian-rose);
   line-height: 1.55;
   font-weight: 700;

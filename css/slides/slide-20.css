@@ -245,14 +245,14 @@
   box-shadow: 0 20px 44px rgba(167, 139, 250, 0.25);
 }
 .s20-stat-title {
-  font-size: clamp(14px, 1.15vw, 17px);
+  font-size: clamp(14px, 1.15vw, 20px);
   font-weight: 900;
   line-height: 1.4;
-  letter-spacing: -0.2px;
+  /* letter-spacing: -0.2px; */
   margin: 0;
 }
 .s20-stat-text {
-  font-size: clamp(11.5px, 0.9vw, 13px);
+  /* font-size: clamp(11.5px, 0.9vw, 13px); */
   line-height: 1.7;
   color: #cbd5e1;
   max-height: 0 !important;
