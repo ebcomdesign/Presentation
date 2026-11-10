@@ -6,17 +6,20 @@ let currentSlideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 
+// تبدیل ارقام لاتین به فارسی
+function faDigits(n) {
+  return String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+}
+
 function initDeck() {
-  document.getElementById('totalSlideNum').textContent = totalSlides;
+  document.getElementById('totalSlideNum').textContent = faDigits(totalSlides);
   buildSlideDots();
   updateDeckState();
   
-  // گوش دادن به کلیدهای کیبورد
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
-      prevSlide(); // با توجه به جهت RTL
+      prevSlide();
     } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown' || e.key === ' ') {
-      // اگر کلید Space زده شد، جلوی اسکرول شدن پیش‌فرض مرورگر را بگیر
       if (e.key === ' ') {
         e.preventDefault();
       }
@@ -36,18 +39,15 @@ function updateDeckState() {
     }
   });
 
-  // به‌روزرسانی شماره صفحه در فوتر
-  document.getElementById('currentSlideNum').textContent = currentSlideIndex + 1;
+  // شماره اسلاید فعلی — فارسی
+  document.getElementById('currentSlideNum').textContent = faDigits(currentSlideIndex + 1);
 
-  // به‌روزرسانی نوار پیشرفت (Progress Bar)
   const progressPercent = ((currentSlideIndex + 1) / totalSlides) * 100;
   document.getElementById('progressBar').style.width = progressPercent + '%';
 
-  // غیرفعال کردن دکمه‌ها در ابتدا یا انتها
   document.getElementById('btnPrev').disabled = currentSlideIndex === 0;
   document.getElementById('btnNext').disabled = currentSlideIndex === totalSlides - 1;
 
-  // به‌روزرسانی دات‌های فوتر
   const dots = document.querySelectorAll('.slide-dots .dot');
   dots.forEach((dot, idx) => {
     if (idx === currentSlideIndex) {
@@ -57,7 +57,6 @@ function updateDeckState() {
     }
   });
 
-  // به‌روزرسانی دکمه‌های هدر (Chapter Nav)
   updateChapterNav();
 }
 
@@ -93,7 +92,7 @@ function buildSlideDots() {
   slides.forEach((_, idx) => {
     const dot = document.createElement('button');
     dot.className = 'dot';
-    dot.title = `اسلاید ${idx + 1}`;
+    dot.title = `اسلاید ${faDigits(idx + 1)}`;
     dot.onclick = () => goToSlide(idx);
     dotsContainer.appendChild(dot);
   });
@@ -101,7 +100,6 @@ function buildSlideDots() {
 
 function updateChapterNav() {
   const chapterBtns = document.querySelectorAll('.chapter-btn');
-  // تعیین فصل بر اساس اسلاید فعلی
   let chapterIdx = 0;
   if (currentSlideIndex >= 5 && currentSlideIndex < 10) chapterIdx = 1;
   else if (currentSlideIndex >= 10 && currentSlideIndex < 15) chapterIdx = 2;
@@ -136,5 +134,4 @@ function toggleFullScreen() {
   }
 }
 
-// راه‌اندازی اولیه پس از لود صفحه
 window.addEventListener('DOMContentLoaded', initDeck);

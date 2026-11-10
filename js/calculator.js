@@ -22,8 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const installmentOptions = [4, 6, 12, 18, 24];
 
+  // تبدیل هر رقم لاتین به فارسی
+  function faDigits(str) {
+    return String(str).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+  }
+
+  // عدد را با جداکننده هزارگان فارسی + ارقام فارسی برمی‌گرداند
   function formatNum(num) {
     return new Intl.NumberFormat('fa-IR').format(num);
+  }
+
+  // برای اعدادی که ممکن است اعشار داشته باشند (نرخ کارمزد)
+  function faDecimal(num) {
+    return faDigits(String(num)).replace('.', '٫');
   }
 
   function updateCalculator() {
@@ -40,23 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalInstallment = baseInstallment + feeInstallment;
     const totalPayment = totalInstallment * months;
 
-    // نمایش مقدارها
+    // نمایش مقدارها — همه از faDigits/formatNum عبور می‌کنند
     amountOut.innerHTML = `${formatNum(principal)} <small>تومان</small>`;
-    countOut.innerHTML = `${months} <small>ماهه</small>`;
-    feeOut.innerHTML = `${feeRate}٪`;
+    countOut.innerHTML = `${faDigits(months)} <small>ماهه</small>`;
+    feeOut.innerHTML = `${faDecimal(feeRate)}٪`;
     
     if (feeInput && document.activeElement !== feeInput) {
-      feeInput.value = feeRate;
+      feeInput.value = faDecimal(feeRate);
     }
 
     instOut.textContent = formatNum(Math.round(totalInstallment));
     resBase.textContent = `${formatNum(Math.round(baseInstallment))} تومان`;
     resFee.textContent = `${formatNum(Math.round(feeInstallment))} تومان`;
-    resCount.textContent = `${months} ماهه · کارمزد ${feeRate}٪`;
+    resCount.textContent = `${faDigits(months)} ماهه · کارمزد ${faDecimal(feeRate)}٪`;
     resTotal.textContent = `${formatNum(Math.round(totalPayment))} تومان`;
 
     if (formulaText) {
-      formulaText.textContent = `(${formatNum(principal)} ÷ ${months}) + (${formatNum(principal)} × ${feeRate}٪) = ${formatNum(Math.round(totalInstallment))}`;
+      formulaText.textContent = `(${formatNum(principal)} ÷ ${faDigits(months)}) + (${formatNum(principal)} × ${faDecimal(feeRate)}٪) = ${formatNum(Math.round(totalInstallment))}`;
     }
 
     // به‌روزرسانی ظاهر رینج اسلایدرها (Track Fill)
@@ -86,11 +97,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (feeInput) {
       feeInput.addEventListener('input', (e) => {
-        let val = parseFloat(e.target.value);
+        // ارقام فارسی/عربی را به لاتین برگردان تا parseFloat کار کند
+        const latin = e.target.value
+          .replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d))
+          .replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d))
+          .replace('٫', '.')
+          .replace('،', '.');
+
+        let val = parseFloat(latin);
         if (isNaN(val)) val = 0;
         if (val < 0) val = 0;
         if (val > 5) val = 5;
+
         feeRange.value = val;
+
+        // نمایش را دوباره فارسی کن (بدون اینکه مکان‌نما بپرد)
+        const pos = e.target.selectionStart;
+        e.target.value = faDecimal(val);
+        try { e.target.setSelectionRange(pos, pos); } catch (_) {}
+
         updateCalculator();
       });
     }
