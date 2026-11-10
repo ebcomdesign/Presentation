@@ -162,6 +162,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 400px;
   height: 100%;
 }
 .s11-visual-svg {

@@ -161,6 +161,8 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .s21-marquee .client-track {

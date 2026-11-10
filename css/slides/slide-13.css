@@ -178,6 +178,7 @@
 }
 .s13-visual-purple {
   border-color: rgba(167, 139, 250, 0.5) !important;
+  min-height: 400px;
 }
 .s13-visual-svg {
   width: 100%;

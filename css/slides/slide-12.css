@@ -171,6 +171,7 @@
 }
 .s12-visual-sky {
   border-color: rgba(0, 147, 221, 0.5) !important;
+  min-height: 400px;
 }
 .s12-visual-svg {
   width: 100%;
