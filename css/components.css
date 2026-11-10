@@ -28,12 +28,12 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 14px;
+  padding: 8px 16px;
   border-radius: 999px;
   background: var(--persian-green-soft);
   border: 1px solid var(--border-green);
   color: var(--persian-green);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
 }
 .eyebrow-badge.orange {
@@ -232,10 +232,9 @@
   flex-wrap: wrap;
 }
 .slide-headline {
-  font-size: clamp(30px, 3.1vw, 46px) !important;
-  font-weight: 900 !important;
-  line-height: 1.28 !important;
-  letter-spacing: -0.4px;
+  font-size: clamp(28px, 3.1vw, 48px);
+  font-weight: 900;
+  line-height: 150%;
 }
 .accent-green {
   color: var(--persian-green);
@@ -244,10 +243,9 @@
   color: var(--persian-orange);
 }
 .slide-subtitle {
-  font-size: clamp(15px, 1.1vw, 16px);
+  font-size: clamp(14px, 1.1vw, 18px);
   color: #ffffff;
-  line-height: 1.75;
-  max-width: 960px;
+  line-height: 180%;
 }
 
 /* --- Grids & Utils --- */

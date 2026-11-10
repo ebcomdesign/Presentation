@@ -11,7 +11,7 @@
 .ecosystem-companies-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
   overflow: visible;
 }
 .ecosystem-card-header {
@@ -163,6 +163,7 @@
     rgba(17, 24, 31, 0.98) 72%
   ) !important;
   padding: 18px 14px !important;
+  height: 100%;
 }
 .s2-diagram-svg {
   display: block;
@@ -195,6 +196,38 @@
         opacity: 0.95;
         filter: drop-shadow(0 0 18px rgba(0, 212, 180, 0.65));
     }
+}
+
+/* Outer circle — Clockwise */
+.s2-diagram-svg .svg-flow-line {
+  transform-box: view-box;
+  transform-origin: 270px 218px;
+  animation: s2-rotate-clockwise 30s linear infinite;
+}
+
+/* Inner circle — Counter Clockwise */
+.s2-diagram-svg circle[cx="270"][cy="218"][r="118"] {
+  transform-box: view-box;
+  transform-origin: 270px 218px;
+  animation: s2-rotate-counterclockwise 20s linear infinite;
+}
+
+@keyframes s2-rotate-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes s2-rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @media (max-width: 1100px) {
