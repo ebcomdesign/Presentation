@@ -117,14 +117,14 @@
   border: 1px solid var(--border-green);
 }
 .s13-option-cash:hover {
-  background: rgba(0, 212, 180, 0.18);
+  background: rgba(0, 212, 180, 0.08);
   box-shadow: 0 8px 24px rgba(0, 212, 180, 0.15);
 }
 .s13-option-installment {
   border: 1px solid rgba(0, 147, 221, 0.4)
 }
 .s13-option-installment:hover {
-  background: rgba(0, 147, 221, 0.18);
+  background: rgba(0, 147, 221, 0.08);
   box-shadow: 0 8px 24px rgba(0, 147, 221, 0.15);
 }
 .s13-option-title {
@@ -186,10 +186,12 @@
 }
 .s13-visual-svg {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   height: auto;
   display: block;
   overflow: visible;
+  transform: scale(1.2);
+  transform-origin: center;
 }
 /* Slide 13 — Animated Dashed Flow Lines */
 .s13-visual-svg .svg-flow-line {

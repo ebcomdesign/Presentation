@@ -192,20 +192,22 @@
 }
 .s14-visual-svg {
   width: 100%;
-  max-width: 240px;
+  max-width: 300px;
   height: auto;
   display: block;
   overflow: visible;
+  transform: scale(1.2);
+  transform-origin: center;
 }
 .s14-visual-title {
-  font-size: clamp(13px, 1.05vw, 15px);
+  font-size: clamp(13px, 1.05vw, 17px);
   font-weight: 900;
   color: #ffffff;
   line-height: 1.4;
   margin: 0;
 }
 .s14-visual-sub {
-  font-size: clamp(10.5px, 0.85vw, 12px);
+  font-size: clamp(10.5px, 0.85vw, 14px);
   color: var(--persian-green);
   line-height: 1.55;
   font-weight: 700;
