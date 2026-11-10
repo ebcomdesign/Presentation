@@ -64,7 +64,7 @@
   margin: 0;
 }
 .s6-challenge-text {
-  font-size: clamp(12px, 0.9vw, 13.5px);
+  font-size: clamp(12px, 0.9vw, 15px);
   line-height: 1.7;
   color: #cbd5e1;
   max-height: 0 !important;
@@ -84,7 +84,7 @@
   margin-top: auto;
   padding-top: 10px;
   border-top: 1px dashed var(--border-glass);
-  font-size: clamp(11px, 0.85vw, 12.5px);
+  font-size: clamp(11px, 0.85vw, 14px);
   font-weight: 900;
   color: var(--persian-green);
   display: flex;

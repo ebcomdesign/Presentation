@@ -33,7 +33,7 @@
 }
 
 .s7-main-text {
-  font-size: clamp(13px, 1vw, 14.5px);
+  /* font-size: clamp(13px, 1vw, 15px); */
   line-height: 1.85;
   color: #cbd5e1;
   text-align: justify;
@@ -229,7 +229,7 @@
 }
 
 .s7-item-text {
-  font-size: clamp(11.5px, 0.88vw, 13px);
+  /* font-size: clamp(11.5px, 0.88vw, 13px); */
   color: var(--text-muted);
   line-height: 1.65;
   max-height: 0 !important;

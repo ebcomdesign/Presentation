@@ -27,11 +27,11 @@
   line-height: 1.15;
 }
 .hero-stat-label {
-  font-size: clamp(12px, 0.95vw, 13.5px);
+  font-size: clamp(12px, 0.95vw, 15px);
   font-weight: 700;
-  color: var(--text-muted);
+  color: white;
   margin-top: 6px;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .hero-stat-card.border-right-green {

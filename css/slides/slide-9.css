@@ -128,8 +128,8 @@
 
 /* متن: در حالت عادی مخفی */
 .s9-text {
-  font-size: 15px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.85;
   color: #cbd5e1;
   max-height: 0 !important;
   opacity: 0 !important;

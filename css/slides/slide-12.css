@@ -60,7 +60,7 @@
 }
 
 .s12-main-text {
-  font-size: clamp(13px, 1.05vw, 15.5px);
+  font-size: clamp(13px, 1.05vw, 17px);
   line-height: 1.85;
   color: #cbd5e1;
   text-align: justify;

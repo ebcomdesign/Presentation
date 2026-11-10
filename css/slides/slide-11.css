@@ -61,7 +61,7 @@
 }
 
 .s11-main-text {
-  font-size: clamp(12px, 1.05vw, 18px) !important;
+  font-size: clamp(13px, 1.05vw, 17px);
   line-height: 1.85;
   color: #cbd5e1;
   text-align: justify;
@@ -173,10 +173,10 @@
 .s11-visual-svg {
   width: 100%;
   max-width: 300px;
-  transform: scale(1.2);
   height: auto;
   display: block;
   overflow: visible;
+  transform: scale(1.2);
   transform-origin: center;
 }
 .s11-visual-title {
