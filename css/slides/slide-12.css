@@ -101,6 +101,9 @@
   border-radius: 14px;
   padding: 14px 16px;
   min-height: 60px;
+  align-self: start !important; /* جلوگیری از کشیده شدن کارت همسایه */
+  height: max-content !important; /* ارتفاع کارت فقط به اندازه محتوای خودش باشد */
+  transform-origin: top center; /* برای اینکه انیمیشن دقیقاً رو به پایین باز شود */
   align-content: center;
   transition:
     border-color 0.25s ease,
