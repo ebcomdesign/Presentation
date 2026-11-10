@@ -719,7 +719,7 @@ kbd {
   color: var(--persian-green);
 }
 .rail-label {
-  /* font-size: clamp(10.5px, 0.85vw, 13.5px); */
+  font-size: clamp(10.5px, 0.85vw, 14px);
   font-weight: 800;
   line-height: 1.3;
   white-space: nowrap;
