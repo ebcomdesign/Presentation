@@ -94,14 +94,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-top: 6px;
+  margin-top: 24px;
 }
 .s14-info-box {
   border-radius: 14px;
   padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  align-content: center;
+  min-height: 60px;
+  align-self: start !important; /* جلوگیری از کشیده شدن کارت همسایه */
+  height: max-content !important; /* ارتفاع کارت فقط به اندازه محتوای خودش باشد */
+  transform-origin: top center; /* برای اینکه انیمیشن دقیقاً رو به پایین باز شود */
   gap: 8px;
   transition:
     border-color 0.25s ease,
@@ -127,10 +129,9 @@
   box-shadow: 0 8px 24px rgba(255, 119, 34, 0.15);
 }
 .s14-info-title {
-  font-size: clamp(12.5px, 1vw, 14.5px);
+  font-size: clamp(12px, 0.95vw, 18px);
   font-weight: 900;
   line-height: 1.4;
-  margin-bottom: 2px;
 }
 
 .s14-list,
@@ -152,15 +153,16 @@
     margin 0.3s ease !important;
 }
 .s14-info-text {
-  font-size: clamp(11px, 0.88vw, 12.5px);
-  color: #cbd5e1;
-  line-height: 1.7;
-  display: block !important;
+  font-size: clamp(10.5px, 0.8vw, 15px);
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-weight: 700;
 }
 .s14-list li {
-  font-size: clamp(11px, 0.88vw, 12.5px);
-  color: #cbd5e1;
-  line-height: 1.6;
+  font-size: clamp(10.5px, 0.8vw, 15px);
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-weight: 700;
 }
 .s14-list li strong {
   color: #ffffff;

@@ -12,3 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const faDigits = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+el.textContent = faDigits(count);

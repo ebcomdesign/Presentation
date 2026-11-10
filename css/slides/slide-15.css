@@ -97,14 +97,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-top: 6px;
+  margin-top: 24px;
 }
 .s15-info-box {
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 14px;
   padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  min-height: 60px;
+  align-content: center;
+  align-self: start !important; /* جلوگیری از کشیده شدن کارت همسایه */
+  height: max-content !important; /* ارتفاع کارت فقط به اندازه محتوای خودش باشد */
+  transform-origin: top center; /* برای اینکه انیمیشن دقیقاً رو به پایین باز شود */
   gap: 8px;
   transition:
     border-color 0.25s ease,
@@ -114,7 +117,6 @@
 
 /* اصلاح باگ رنگ: کارت جریمه (Penalty) در هاور همان رنگ صورتی/رز می‌ماند */
 .s15-penalty-card {
-  background: rgba(255, 34, 67, 0.08);
   border: 1px solid rgba(241, 98, 115, 0.4);
 }
 .s15-penalty-card:hover {
@@ -135,19 +137,19 @@
 }
 
 .s15-info-title {
-  font-size: clamp(13.5px, 1.1vw, 16px);
+  font-size: clamp(12px, 0.95vw, 18px);
   font-weight: 900;
   line-height: 1.4;
-  margin: 0;
 }
 .text-rose {
   color: var(--persian-rose);
 }
 
 .s15-info-text {
-  font-size: clamp(11.5px, 0.9vw, 13px);
-  color: #cbd5e1;
-  line-height: 1.7;
+  font-size: clamp(10.5px, 0.8vw, 15px);
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-weight: 700;
   max-height: 0 !important;
   opacity: 0 !important;
   overflow: hidden !important;
