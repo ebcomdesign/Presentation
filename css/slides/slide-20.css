@@ -2,6 +2,25 @@
    SLIDE 20 — NETWORK MAP & STATS
    ========================================================================= */
 
+@media (min-width: 1181px) {
+  .stage-container {
+    top: 76px !important;
+    bottom: 72px !important;
+    height: auto !important;
+  }
+  .slide,
+  .slide.center-slide {
+    justify-content: flex-start !important;
+    padding-top: 28px !important;
+    padding-bottom: 32px !important;
+    box-sizing: border-box !important;
+  }
+  .slide-inner,
+  .slide.center-slide .slide-inner {
+    margin: auto !important;
+  }
+}
+
 .s20-map-grid {
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
