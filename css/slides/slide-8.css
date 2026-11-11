@@ -309,8 +309,8 @@
     line-height: 1.7 !important;
   }
   .iphone-18-pro-max {
-    max-width: 290px;
-    height: 540px;
+    max-width: 360px;
+    height: 640px;
     border-width: 8px !important;
     border-radius: 44px !important;
   }
@@ -342,12 +342,46 @@
     font-size: 12px !important;
   }
   .iphone-18-pro-max {
-    max-width: 260px;
-    height: 480px;
+    max-width: 360px;
+    height: 640px;
     border-radius: 38px !important;
   }
   .iphone-screen-wrap {
     border-radius: 30px;
+  }
+  .headline-divider {
+    font-size: 22px;
+  }
+}
+@media (max-width: 360px) {
+  .demo-slide-grid {
+    gap: 16px;
+  }
+  .s8-balance-card {
+    padding: 12px 14px !important;
+  }
+  .s8-balance-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .s8-balance-title {
+    font-size: 14px !important;
+  }
+  .s8-balance-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+  .s8-balance-text {
+    font-size: 12px !important;
+  }
+  .iphone-18-pro-max {
+    max-width: 300px;
+    height: 533px;
+    border-radius: 30px !important;
+  }
+  .iphone-screen-wrap {
+    border-radius: 24px;
   }
   .headline-divider {
     font-size: 22px;

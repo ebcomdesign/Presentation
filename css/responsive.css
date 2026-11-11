@@ -167,6 +167,7 @@
     justify-content: space-between;
   }
   .deck-footer .nav-arrow-btn {
+    width: 80px;
     height: 40px;
     padding: 0 14px;
   }
@@ -224,7 +225,7 @@
   }
 
   .deck-footer .nav-arrow-btn {
-    width: 44px;
+    width: 80px;
     padding: 0;
     justify-content: center;
   }
